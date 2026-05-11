@@ -1,10 +1,9 @@
 # Netlify build configuration for the jacobbowie.com Quarto site.
 #
-# Build flow: Netlify resolves @quarto/netlify-plugin-quarto from
-# package.json (dependencies, not devDependencies — Netlify plugins must
-# resolve from dependencies); the plugin installs Quarto into the build
-# image and runs the render. The _site/ tree is gitignored — Netlify
-# regenerates it on every build.
+# The @quarto/netlify-plugin-quarto plugin installs Quarto AND runs
+# `quarto render` itself in its onBuild step. Do NOT set
+# `build.command = "quarto render"` — that runs before the plugin's
+# onBuild, so Quarto isn't on PATH yet (exit 127, "command not found").
 #
 # Do NOT add QUARTO_VERSION to [build.environment] — it triggers an
 # onPreBuild IPC clone error (plugin issue #4). The plugin uses latest
@@ -12,7 +11,6 @@
 
 [build]
   publish = "_site"
-  command = "quarto render"
 
 [[plugins]]
   package = "@quarto/netlify-plugin-quarto"
