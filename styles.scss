@@ -35,6 +35,27 @@ body {
   line-height: 1.65;
 }
 
+/* Signature accent: fixed 4px gradient stripe at the very top of every
+   page. Reads "this site has a palette" without taking visual real
+   estate. The three stops match the three project-card gradient stops
+   (navy + aqua + teal) so the home page and the chrome rhyme. */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    #3C5488 0%,
+    #4DBBD5 45%,
+    #00A087 100%
+  );
+  z-index: 9999;
+  pointer-events: none;
+}
+
 /* Hide Quarto's default title block; we render our own hero in the qmd body. */
 #title-block-header { display: none; }
 
