@@ -21,7 +21,7 @@ format:
     linkcolor: "#3C5488"
     page-layout: article
     grid:
-      body-width: 760px
+      body-width: 1000px
 
 execute:
   echo: false

@@ -85,7 +85,7 @@ preference for reproducible, version-controlled, container-portable analysis.
 <!-- Project 2: leg-extension EMG fatigue salvage paper, in prep. -->
 
 <div class="project project-thumb-image">
-<div class="project-thumb"><img src="img/emg-fatigue-plane.png" alt="Fatigue plane: median normalized RMS amplitude versus median normalized median frequency by 10% bout-completion bin, 40% versus 70% one-rep-max load" /></div>
+<div class="project-thumb"><img src="img/emg-model-effects.png" alt="Mixed-model marginal effects: predicted EMG features (RMS, MDF, MNF, sample entropy) as a function of bout completion at 40% versus 70% one-rep-max load" /></div>
 <div class="project-body">
   <h3>Surface EMG amplitude rises faster at low than high load during knee extension to failure</h3>
   <div class="project-meta">Reanalysis of an unpublished 2017 honors thesis &middot; manuscript in preparation</div>
@@ -186,7 +186,7 @@ question and any data or design constraints I should know about up front.
 <footer class="site-footer">
   <a href="https://orcid.org/0000-0002-6055-8220">ORCID</a> &middot;
   <a href="https://github.com/JacobBowie">GitHub</a> &middot;
-  <a href="https://www.linkedin.com/in/jacob-bowie/">LinkedIn</a> &middot;
+  <a href="https://www.linkedin.com/in/jacobbowie/">LinkedIn</a> &middot;
   <a href="mailto:jacob.bowie2@gmail.com">Email</a>
   <br/>
   <span style="font-size: 0.8rem;">&copy; 2026 Jacob Bowie. Built with <a href="https://quarto.org">Quarto</a>.</span>
