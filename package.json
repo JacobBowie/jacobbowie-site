@@ -2,7 +2,7 @@
   "name": "jacobbowie-site",
   "private": true,
   "description": "Source for jacobbowie.com — Quarto site deployed via Netlify.",
-  "devDependencies": {
-    "@quarto/netlify-plugin-quarto": "latest"
+  "dependencies": {
+    "@quarto/netlify-plugin-quarto": "^0.0.5"
   }
 }
