@@ -136,10 +136,23 @@ h2.section-heading {
   font-weight: 600;
   letter-spacing: -0.01em;
   text-align: center;
+  overflow: hidden;
 }
 .project-thumb span {
   display: inline-block;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+/* Image cards: white background (so contained image floats cleanly).
+   The card class needs to be `project-thumb-image` (no gradient override). */
+.project-thumb-image .project-thumb {
+  background: #ffffff;
+  padding: 0.4rem;
 }
 /* NPG-derived gradients — one per card so the grid doesn't feel template. */
 .project-thumb-navy .project-thumb {

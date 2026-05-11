@@ -64,8 +64,8 @@ preference for reproducible, version-controlled, container-portable analysis.
 <!-- Project 1: published heat-tolerance paper. Public-safe, links to DOI only;
      do NOT link the private Physiological_Data repo. -->
 
-<div class="project project-thumb-navy">
-<div class="project-thumb"><span>Heat tolerance &middot; clustering</span></div>
+<div class="project project-thumb-image">
+<div class="project-thumb"><img src="img/bowie-2026-heat-tolerance.png" alt="Graphical abstract: methods, outcomes, and population-specific threshold criteria for heat tolerance classification" /></div>
 <div class="project-body">
   <h3>Heat tolerance classification criteria require population-specific thresholds</h3>
   <div class="project-meta">Bowie et al., 2026 &middot; <em>Physiological Reports</em> &middot; published</div>
