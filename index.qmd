@@ -95,7 +95,8 @@ preference for reproducible, version-controlled, container-portable analysis.
   (Holm-adjusted <em>p</em> &lt; 0.001 for the load &times; time interaction).
   Spectral indices and sample entropy did not separate the two loads. The
   pipeline is built end-to-end in R + Quarto inside a pinned Docker image for
-  reproducibility; targeting the <em>International Journal of Exercise Science</em>.
+  reproducibility. Manuscript in preparation for the
+  <em>International Journal of Exercise Science</em>.
   </p>
 <div class="project-links">
 <a href="https://github.com/JacobBowie/leg-extension-emg-fatigue-2026">Repository</a>
