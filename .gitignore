@@ -17,8 +17,11 @@ Thumbs.db
 .idea/
 *.log
 
-# Node (if the netlify plugin is added later)
+# Node (no longer used — Path A doesn't need package.json or node_modules)
 node_modules/
 
 /.quarto/
 **/*.quarto_ipynb
+
+# Case-study content drafts not yet ready for the public site
+_drafts/
