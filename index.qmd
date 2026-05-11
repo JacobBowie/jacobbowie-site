@@ -59,10 +59,14 @@ preference for reproducible, version-controlled, container-portable analysis.
 
 ## Selected work {.section-heading}
 
+<div class="project-grid">
+
 <!-- Project 1: published heat-tolerance paper. Public-safe, links to DOI only;
      do NOT link the private Physiological_Data repo. -->
 
-<div class="project">
+<div class="project project-thumb-navy">
+<div class="project-thumb"><span>Heat tolerance &middot; clustering</span></div>
+<div class="project-body">
   <h3>Heat tolerance classification criteria require population-specific thresholds</h3>
   <div class="project-meta">Bowie et al., 2026 &middot; <em>Physiological Reports</em> &middot; published</div>
   <p>
@@ -76,15 +80,13 @@ preference for reproducible, version-controlled, container-portable analysis.
 <a href="https://doi.org/10.14814/phy2.70745">DOI: 10.14814/phy2.70745</a>
 </div>
 </div>
+</div>
 
-<!-- Project 2: leg-extension EMG fatigue salvage paper, in prep.
-     Repo on GitHub is currently private (as of 2026-05-10) — link is
-     intentionally omitted until the repo is flipped public. The headline
-     finding stands without a code link.
-     v1.1 TODO: add link to JacobBowie/leg-extension-emg-fatigue-2026
-     once that repo is flipped public alongside Netlify_website. -->
+<!-- Project 2: leg-extension EMG fatigue salvage paper, in prep. -->
 
-<div class="project">
+<div class="project project-thumb-warm">
+<div class="project-thumb"><span>EMG fatigue &middot; sEMG</span></div>
+<div class="project-body">
   <h3>Surface EMG amplitude rises faster at low than high load during knee extension to failure</h3>
   <div class="project-meta">Reanalysis of an unpublished 2017 honors thesis &middot; manuscript in preparation</div>
   <p>
@@ -99,15 +101,13 @@ preference for reproducible, version-controlled, container-portable analysis.
 <a href="https://github.com/JacobBowie/leg-extension-emg-fatigue-2026">Repository</a>
 </div>
 </div>
+</div>
 
-<!-- Project 3: literature pipeline tool. Currently lives at
-     Projects/_tools/literature_pipeline/ — NOT yet its own GitHub repo.
-     Honest framing per the brief: describe as a personal research workflow
-     tool without a public link. v1.1 TODO: link the repo once it ships.
-     Also a v1.1 placeholder spot for marimo-unlearning once Jacob audits
-     and flips that repo public. -->
+<!-- Project 3: literature pipeline tool. -->
 
-<div class="project">
+<div class="project project-thumb-teal">
+<div class="project-thumb"><span>Literature &middot; citation graph</span></div>
+<div class="project-body">
   <h3>Literature acquisition and citation-graph toolkit</h3>
   <div class="project-meta">Personal research tooling &middot; Python + DuckDB</div>
   <p>
@@ -118,6 +118,9 @@ preference for reproducible, version-controlled, container-portable analysis.
   retrieved full-text articles). Public release planned alongside the
   publications it supports.
   </p>
+</div>
+</div>
+
 </div>
 
 ## Publications {.section-heading}
