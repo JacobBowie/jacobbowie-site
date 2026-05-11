@@ -10,14 +10,22 @@ format:
 
 <!-- Hero. Blended voice per the 2026-05-10 decision: open with PhD + KSI postdoc
      framing, close with the ML / wearables / signal-processing pivot framing.
-     Bridges academic and industry audiences. -->
+     Bridges academic and industry audiences. Side-by-side photo + text layout
+     per aesthetics audit 2026-05-11 (Schmitt/Husain pattern). -->
 
+<div class="hero-row">
+<div class="hero-text">
 <h1 class="hero-name">Jacob Bowie, PhD</h1>
 <p class="hero-tagline">
 Postdoctoral researcher, UConn Human Performance Laboratory & Korey Stringer Institute.
 Applying machine learning, wearable sensor signal processing, and reproducible
 analysis pipelines to questions in exercise and environmental physiology.
 </p>
+</div>
+<div class="hero-photo">
+<img src="profile.jpg" alt="Jacob Bowie" />
+</div>
+</div>
 
 <hr/>
 

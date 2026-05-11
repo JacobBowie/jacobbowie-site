@@ -32,6 +32,26 @@ h1, h2, h3 {
   color: #111827;
 }
 
+/* Hero — side-by-side photo + text on desktop, stacked on mobile. */
+.hero-row {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin: 1.5rem 0 2rem;
+}
+.hero-text { flex: 1 1 0; min-width: 0; }
+.hero-photo {
+  flex: 0 0 auto;
+}
+.hero-photo img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 0 2px 12px rgba(31, 41, 55, 0.12);
+}
+
 h1.hero-name {
   font-size: 2.4rem;
   margin-bottom: 0.25rem;
@@ -42,7 +62,7 @@ p.hero-tagline {
   font-size: 1.15rem;
   color: var(--jb-muted);
   margin-top: 0;
-  margin-bottom: 1.75rem;
+  margin-bottom: 0;
 }
 
 a, a:visited { color: var(--jb-accent); text-decoration: none; }
@@ -155,10 +175,16 @@ footer.site-footer {
 }
 footer.site-footer a { color: var(--jb-muted); margin: 0 0.5rem; }
 
-/* Mobile: tighten the hero, drop card padding. */
+/* Mobile: tighten the hero, drop card padding, stack the hero. */
 @media (max-width: 600px) {
   h1.hero-name { font-size: 1.9rem; }
   p.hero-tagline { font-size: 1.05rem; }
   .project, .contact { padding: 0.9rem 1rem; }
   main.content { padding-top: 1rem; padding-bottom: 2rem; }
+  .hero-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+  }
+  .hero-photo img { width: 160px; height: 160px; }
 }
