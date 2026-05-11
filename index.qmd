@@ -1,0 +1,179 @@
+---
+title: "Jacob Bowie"
+description: "Statistical analysis and machine learning for human physiology research."
+pagetitle: "Jacob Bowie, PhD — Physiology, ML, Wearables"
+title-prefix: ""
+format:
+  html:
+    page-layout: article
+---
+
+<!-- Hero. Blended voice per the 2026-05-10 decision: open with PhD + KSI postdoc
+     framing, close with the ML / wearables / signal-processing pivot framing.
+     Bridges academic and industry audiences. -->
+
+<h1 class="hero-name">Jacob Bowie, PhD</h1>
+<p class="hero-tagline">
+Postdoctoral researcher, UConn Human Performance Laboratory & Korey Stringer Institute.
+Applying machine learning, wearable sensor signal processing, and reproducible
+analysis pipelines to questions in exercise and environmental physiology.
+</p>
+
+<hr/>
+
+## About {.section-heading}
+
+I study how the human body adapts to exercise and heat &mdash; how to measure
+those adaptations rigorously, how individual responses vary, and how to translate
+physiological signals from wearables and laboratory instruments into decisions
+about training, recovery, and risk.
+
+My methodological work combines mixed-effects models, unsupervised clustering,
+and time-series feature extraction across heart rate, heart rate variability,
+core temperature, accelerometry, and multi-omics data (transcriptomics,
+proteomics, metabolomics). I work primarily in R and Python, with a strong
+preference for reproducible, version-controlled, container-portable analysis.
+
+<ul class="skill-chips">
+  <li>R (tidyverse, lme4, brms)</li>
+  <li>Python (pandas, scikit-learn)</li>
+  <li>Mixed-effects models</li>
+  <li>Unsupervised clustering</li>
+  <li>Time-series signal processing</li>
+  <li>Wearable sensor data</li>
+  <li>Multi-omics analysis</li>
+  <li>Bayesian methods</li>
+  <li>Quarto / R Markdown</li>
+  <li>Git &amp; reproducible pipelines</li>
+  <li>Docker</li>
+  <li>Clinical study design &amp; IRB</li>
+</ul>
+
+## Selected work {.section-heading}
+
+<!-- Project 1: published heat-tolerance paper. Public-safe, links to DOI only;
+     do NOT link the private Physiological_Data repo. -->
+
+<div class="project">
+  <h3>Heat tolerance classification criteria require population-specific thresholds</h3>
+  <div class="project-meta">Bowie et al., 2026 &middot; <em>Physiological Reports</em> &middot; published</div>
+  <p>
+  Re-examined the standard heat tolerance test classification criteria in a young
+  adult cohort and showed that a single fixed threshold misclassifies acclimation
+  state. Population-specific thresholds &mdash; built from clustering of
+  thermoregulatory response curves &mdash; yield substantially better agreement
+  with downstream physiological markers of acclimation.
+  </p>
+  <div class="project-links">
+    <a href="https://doi.org/10.14814/phy2.70745">DOI: 10.14814/phy2.70745</a>
+  </div>
+</div>
+
+<!-- Project 2: leg-extension EMG fatigue salvage paper, in prep.
+     Repo on GitHub is currently private (as of 2026-05-10) — link is
+     intentionally omitted until the repo is flipped public. The headline
+     finding stands without a code link.
+     v1.1 TODO: add link to JacobBowie/leg-extension-emg-fatigue-2026
+     once that repo is flipped public alongside Netlify_website. -->
+
+<div class="project">
+  <h3>Surface EMG amplitude rises faster at low than high load during knee extension to failure</h3>
+  <div class="project-meta">Reanalysis of an unpublished 2017 honors thesis &middot; manuscript in preparation</div>
+  <p>
+  Within-bout root-mean-square EMG amplitude rose more steeply during unilateral
+  leg extension to failure at 40% than at 70% of one-repetition maximum
+  (Holm-adjusted <em>p</em> &lt; 0.001 for the load &times; time interaction).
+  Spectral indices and sample entropy did not separate the two loads. The
+  pipeline is built end-to-end in R + Quarto inside a pinned Docker image for
+  reproducibility; targeting the <em>International Journal of Exercise Science</em>.
+  </p>
+</div>
+
+<!-- Project 3: literature pipeline tool. Currently lives at
+     Projects/_tools/literature_pipeline/ — NOT yet its own GitHub repo.
+     Honest framing per the brief: describe as a personal research workflow
+     tool without a public link. v1.1 TODO: link the repo once it ships.
+     Also a v1.1 placeholder spot for marimo-unlearning once Jacob audits
+     and flips that repo public. -->
+
+<div class="project">
+  <h3>Literature acquisition and citation-graph toolkit</h3>
+  <div class="project-meta">Personal research tooling &middot; Python + DuckDB</div>
+  <p>
+  An open-source biomedical paper acquisition and citation-graph snowballing
+  toolkit I use across my own portfolio of research projects. Currently 368
+  papers indexed across six active projects. Includes a small MathML-to-LaTeX
+  rendering layer for JATS XML sidecars (76% pass rate through pdflatex on
+  retrieved full-text articles). Public release planned alongside the
+  publications it supports.
+  </p>
+</div>
+
+## Publications {.section-heading}
+
+<!-- Source-of-truth: ORCID public works feed at
+     https://pub.orcid.org/v3.0/0000-0002-6055-8220/works
+     Verified 2026-05-10. Static list per the Option A brief — keeps the
+     Netlify build pure-static (no R/Python on CI). Refresh manually when a
+     new work is registered against the ORCID. Preprints / under-review
+     work intentionally excluded per the OPSEC + curation rules. -->
+
+<ol class="pub-list">
+  <li>
+    <strong>Bowie JS</strong>, Szymanski MR, Struder JF, Filep EM,
+    Morrissey-Basler MC, Brewer GJ, Thornton SN, Mahoney KJ, Sekiguchi Y,
+    Kwon OS, Chon K, Casa DJ, Lee EC.
+    Heat tolerance classification criteria require population-specific
+    thresholds for accurate assessment of acclimation state in adults.
+    <span class="pub-venue">Physiological Reports</span>,
+    <span class="pub-year">2026</span>.
+    <a href="https://doi.org/10.14814/phy2.70745">doi:10.14814/phy2.70745</a>
+  </li>
+  <li>
+    Mahoney KJ, <strong>Bowie JS</strong>, Ford AE, Perera N, Sekiguchi Y,
+    Fothergill DM, Lee EC.
+    Plasma proteomics-based discovery of mechanistic biomarkers of hyperbaric
+    stress and pulmonary oxygen toxicity.
+    <span class="pub-venue">Metabolites</span>,
+    <span class="pub-year">2023</span>; 13(9): 970.
+    <a href="https://doi.org/10.3390/metabo13090970">doi:10.3390/metabo13090970</a>
+  </li>
+  <li>
+    Lee EC, <strong>Bowie JS</strong>, Fiol A, Huggins RA.
+    Molecular aspects of thermal tolerance and exertional heat illness
+    susceptibility. In: Adams WM, Jardine JF, eds.
+    <span class="pub-venue">Exertional Heat Illness: A Clinical and Evidence-Based Guide</span>.
+    Springer International Publishing,
+    <span class="pub-year">2020</span>: 149&ndash;168.
+    <a href="https://doi.org/10.1007/978-3-030-27805-2_8">doi:10.1007/978-3-030-27805-2_8</a>
+  </li>
+</ol>
+
+<p style="font-size: 0.9rem; color: #6b7280;">
+Full publication list, including works in preparation and conference
+abstracts, is available
+<a href="https://orcid.org/0000-0002-6055-8220">on ORCID</a>.
+</p>
+
+## Contact {.section-heading}
+
+<div class="contact">
+<p>
+The best way to reach me is by email:
+<a href="mailto:jacob.bowie2@gmail.com">jacob.bowie2@gmail.com</a>.
+</p>
+<p style="margin-bottom: 0; font-size: 0.95rem; color: #4b5563;">
+I read messages most days and reply within a few business days. For
+collaboration inquiries please include a one-paragraph summary of the
+question and any data or design constraints I should know about up front.
+</p>
+</div>
+
+<footer class="site-footer">
+  <a href="https://orcid.org/0000-0002-6055-8220">ORCID</a> &middot;
+  <a href="https://github.com/JacobBowie">GitHub</a> &middot;
+  <a href="https://www.linkedin.com/in/jacob-bowie/">LinkedIn</a> &middot;
+  <a href="mailto:jacob.bowie2@gmail.com">Email</a>
+  <br/>
+  <span style="font-size: 0.8rem;">&copy; 2026 Jacob Bowie. Built with <a href="https://quarto.org">Quarto</a>.</span>
+</footer>

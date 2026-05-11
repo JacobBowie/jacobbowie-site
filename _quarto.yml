@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Jacob Bowie, PhD"
+  description: "Statistical analysis and machine learning for human physiology research."
+  favicon: ""
+  open-graph: true
+  twitter-card: true
+  site-url: "https://jacobbowie.com"
+  page-navigation: false
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
+    anchor-sections: false
+    smooth-scroll: true
+    mainfont: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+    fontsize: "1.05rem"
+    linkcolor: "#3C5488"
+    page-layout: article
+    grid:
+      body-width: 760px
+
+execute:
+  echo: false
+  warning: false
+  message: false

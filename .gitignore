@@ -1,0 +1,23 @@
+# Quarto build artifacts
+_site/
+.quarto/
+_freeze/
+
+# RStudio
+.Rproj.user/
+*.Rproj
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor / tool caches
+.vscode/
+.idea/
+*.log
+
+# Node (if the netlify plugin is added later)
+node_modules/
+
+/.quarto/
+**/*.quarto_ipynb
