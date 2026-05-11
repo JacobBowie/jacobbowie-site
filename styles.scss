@@ -1,7 +1,28 @@
+/*-- scss:defaults --*/
+
+// Type pairing: Inter for body + UI, Source Serif 4 for display headings.
+// Loaded via @import at top of compiled CSS so they show up before paint.
+$web-font-path: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap";
+$web-font-path-import: true;
+
+$font-family-sans-serif: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !default;
+$font-family-serif:      "Source Serif 4", Georgia, "Times New Roman", serif !default;
+$headings-font-family:   $font-family-serif !default;
+$headings-font-weight:   600 !default;
+
+$link-color:             #3C5488 !default;
+$link-decoration:        none !default;
+
+/*-- scss:rules --*/
+
+// Inline font import (Quarto's $web-font-path-import flag doesn't always
+// emit the @import for custom hosts; force it here to be safe).
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap");
+
 /* jacobbowie.com — light overrides on top of Quarto's cosmo theme.
    Goal: scientific portfolio chrome, ample whitespace, one accent color
    (NPG navy #3C5488 — matches the figure palette used in published work).
-   Typography stays system-font for performance + zero-load FOIT.
+   Type pairing: Inter (body/UI) + Source Serif 4 (display headings).
 */
 
 :root {

@@ -13,12 +13,10 @@ website:
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme: [cosmo, styles.scss]
     toc: false
     anchor-sections: false
     smooth-scroll: true
-    mainfont: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
     fontsize: "1.05rem"
     linkcolor: "#3C5488"
     page-layout: article
