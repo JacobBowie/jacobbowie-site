@@ -1,21 +1,31 @@
 # Netlify build configuration for the jacobbowie.com Quarto site.
 #
-# v1 strategy: no build step on Netlify. The _site/ directory is
-# rendered locally (via `quarto render`) and committed to git.
-# Netlify just serves the static files. This avoids the unreliable
-# @quarto/netlify-plugin-quarto (masks real errors behind a generic
-# "Error message" string, and uses an Octokit call without
-# GITHUB_TOKEN that hits anonymous rate limits).
+# v1 strategy: pre-rendered. The _site/ directory is rendered locally
+# (via `quarto render`) and committed to git. Netlify serves it as-is.
+#
+# Build command is a no-op echo (Netlify Build seems to require a
+# command — a fully-empty [build] section caused a different exit-2
+# failure on commit d98a6cf, while a no-op command succeeds).
+#
+# History of approaches that failed (all in this same session, kept
+# as breadcrumbs):
+#   - @quarto/netlify-plugin-quarto: masks all errors behind a generic
+#     "Error message" string. Plugin source uses Octokit without
+#     GITHUB_TOKEN → anonymous rate limits. Last npm release 0.0.5
+#     against @netlify/build@^26 while Netlify is on v35.
+#   - Inline Quarto tarball install, extract into repo root: works for
+#     install, but `quarto render` then scans the repo and finds .qmd
+#     templates inside the Quarto install dir itself (the
+#     extensions/shortcode/*.qmd files), which crash render.
 #
 # Workflow for content changes:
 #   1. Edit .qmd source files
-#   2. quarto render          # regenerate _site/
+#   2. quarto render          # regenerate _site/ locally
 #   3. git add . && git commit && git push
-#
-# For Option B (week-of-5/18+), revisit with a proper build pipeline.
 
 [build]
   publish = "_site"
+  command = "echo 'Pre-rendered Quarto site — serving _site/ as-is'"
 
 [[headers]]
   for = "/*"
