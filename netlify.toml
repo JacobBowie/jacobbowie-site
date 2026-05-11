@@ -1,21 +1,21 @@
 # Netlify build configuration for the jacobbowie.com Quarto site.
 #
-# Quarto is installed inline via the official tarball release because
-# @quarto/netlify-plugin-quarto has been unreliable on the noble image.
-# This approach has no third-party plugin dependency and the build log
-# tells us exactly what's happening at each step.
+# v1 strategy: no build step on Netlify. The _site/ directory is
+# rendered locally (via `quarto render`) and committed to git.
+# Netlify just serves the static files. This avoids the unreliable
+# @quarto/netlify-plugin-quarto (masks real errors behind a generic
+# "Error message" string, and uses an Octokit call without
+# GITHUB_TOKEN that hits anonymous rate limits).
+#
+# Workflow for content changes:
+#   1. Edit .qmd source files
+#   2. quarto render          # regenerate _site/
+#   3. git add . && git commit && git push
+#
+# For Option B (week-of-5/18+), revisit with a proper build pipeline.
 
 [build]
   publish = "_site"
-  command = """
-    set -euxo pipefail && \
-    QUARTO_VERSION=1.5.57 && \
-    curl -fsSL "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz" -o quarto.tar.gz && \
-    tar -xzf quarto.tar.gz && \
-    export PATH="$PWD/quarto-${QUARTO_VERSION}/bin:$PATH" && \
-    quarto --version && \
-    quarto render
-  """
 
 [[headers]]
   for = "/*"

@@ -1,5 +1,5 @@
 {
   "name": "jacobbowie-site",
   "private": true,
-  "description": "Source for jacobbowie.com — Quarto site deployed via Netlify."
+  "description": "Source for jacobbowie.com — pre-rendered Quarto site, no build step."
 }

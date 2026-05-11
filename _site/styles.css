@@ -1,0 +1,164 @@
+/* jacobbowie.com — light overrides on top of Quarto's cosmo theme.
+   Goal: scientific portfolio chrome, ample whitespace, one accent color
+   (NPG navy #3C5488 — matches the figure palette used in published work).
+   Typography stays system-font for performance + zero-load FOIT.
+*/
+
+:root {
+  --jb-accent: #3C5488;
+  --jb-accent-soft: #4DBBD5;
+  --jb-text: #1f2937;
+  --jb-muted: #6b7280;
+  --jb-border: #e5e7eb;
+  --jb-bg-soft: #f8fafc;
+}
+
+body {
+  color: var(--jb-text);
+  line-height: 1.65;
+}
+
+/* Hide Quarto's default title block; we render our own hero in the qmd body. */
+#title-block-header { display: none; }
+
+/* Anchor a comfortable reading measure even on wide screens. */
+main.content {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+  color: #111827;
+}
+
+h1.hero-name {
+  font-size: 2.4rem;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+p.hero-tagline {
+  font-size: 1.15rem;
+  color: var(--jb-muted);
+  margin-top: 0;
+  margin-bottom: 1.75rem;
+}
+
+a, a:visited { color: var(--jb-accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--jb-border);
+  margin: 2.5rem 0;
+}
+
+/* Section heading rhythm */
+h2.section-heading {
+  font-size: 1.4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--jb-border);
+}
+
+/* Project cards — simple stacked blocks, one per row, no grid clutter. */
+.project {
+  margin: 1.25rem 0 1.75rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--jb-border);
+  border-radius: 6px;
+  background: var(--jb-bg-soft);
+}
+.project h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+}
+.project .project-meta {
+  font-size: 0.9rem;
+  color: var(--jb-muted);
+  margin-bottom: 0.6rem;
+}
+.project .project-links a {
+  margin-right: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Skill chips — flat list of short labels, no progress bars (antipattern). */
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.5rem;
+  margin: 0.5rem 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+.skill-chips li {
+  font-size: 0.85rem;
+  padding: 0.2rem 0.6rem;
+  background: #eef2f7;
+  color: #374151;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Publication list — clean prose, no bullet, journal italicized. */
+ol.pub-list {
+  list-style: none;
+  padding: 0;
+  counter-reset: pub;
+}
+ol.pub-list li {
+  counter-increment: pub;
+  position: relative;
+  padding: 0.5rem 0 0.6rem 1.8rem;
+  border-bottom: 1px dashed var(--jb-border);
+  font-size: 0.97rem;
+}
+ol.pub-list li:last-child { border-bottom: 0; }
+ol.pub-list li::before {
+  content: counter(pub) ".";
+  position: absolute;
+  left: 0;
+  color: var(--jb-muted);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+ol.pub-list .pub-venue {
+  font-style: italic;
+  color: #4b5563;
+}
+ol.pub-list .pub-year {
+  color: var(--jb-muted);
+}
+
+/* Contact block */
+.contact {
+  background: var(--jb-bg-soft);
+  border: 1px solid var(--jb-border);
+  padding: 1.1rem 1.25rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+.contact a { font-weight: 500; }
+
+/* Footer */
+footer.site-footer {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--jb-border);
+  font-size: 0.9rem;
+  color: var(--jb-muted);
+  text-align: center;
+}
+footer.site-footer a { color: var(--jb-muted); margin: 0 0.5rem; }
+
+/* Mobile: tighten the hero, drop card padding. */
+@media (max-width: 600px) {
+  h1.hero-name { font-size: 1.9rem; }
+  p.hero-tagline { font-size: 1.05rem; }
+  .project, .contact { padding: 0.9rem 1rem; }
+  main.content { padding-top: 1rem; padding-bottom: 2rem; }
+}

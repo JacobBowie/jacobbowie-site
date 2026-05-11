@@ -1,5 +1,7 @@
 # Quarto build artifacts
-_site/
+# Note: _site/ IS committed for v1 (no-build deploy strategy — Netlify
+# serves the pre-rendered output directly). Re-render locally via
+# `quarto render` before pushing source changes.
 .quarto/
 _freeze/
 
