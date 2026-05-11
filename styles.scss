@@ -262,6 +262,77 @@ footer.site-footer {
 }
 footer.site-footer a { color: var(--jb-muted); margin: 0 0.5rem; }
 
+/* Dark mode — driven by OS preference (no in-page toggle). A toggle would
+   need a navbar; single-page site doesn't have one. CSS variables already
+   carry the palette, so we just override them under the media query. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --jb-accent:      #6c8cc6;     // brighter navy for AA contrast on dark
+    --jb-accent-soft: #4DBBD5;
+    --jb-text:        #e2e8f0;     // slate-200
+    --jb-muted:       #94a3b8;     // slate-400
+    --jb-border:      #334155;     // slate-700
+    --jb-bg-soft:     #1e293b;     // slate-800
+
+    // Bootstrap variable overrides (cosmo respects these)
+    --bs-body-bg:        #0f172a;  // slate-900
+    --bs-body-color:     #e2e8f0;
+    --bs-heading-color:  #f1f5f9;
+    --bs-link-color:     #6c8cc6;
+    --bs-link-hover-color: #93c5fd;
+    --bs-border-color:   #334155;
+  }
+
+  body {
+    background-color: #0f172a;
+    color: var(--jb-text);
+  }
+
+  h1, h2, h3 { color: #f1f5f9; }
+
+  // Cards: dark surface, lifted border
+  .project {
+    background: var(--jb-bg-soft);
+    border-color: var(--jb-border);
+  }
+  // Image thumbnails keep a white background so figures (drawn for light
+  // backgrounds) stay legible. The gradient thumbnails inherit their
+  // dark-on-dark-friendly gradient and don't need adjustment.
+  .project:hover {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  }
+
+  // Skill chips
+  .skill-chips li {
+    background: #334155;
+    color: #cbd5e1;
+  }
+
+  // Contact panel
+  .contact {
+    background: var(--jb-bg-soft);
+    border-color: var(--jb-border);
+  }
+
+  // Hero photo shadow: more dramatic on dark
+  .hero-photo img {
+    box-shadow: 0 2px 18px rgba(0, 0, 0, 0.5);
+  }
+
+  // Publications list dividers
+  ol.pub-list li {
+    border-bottom-color: var(--jb-border);
+  }
+  ol.pub-list .pub-venue { color: #cbd5e1; }
+
+  // Footer
+  footer.site-footer { border-top-color: var(--jb-border); }
+  footer.site-footer a { color: #94a3b8; }
+
+  // hr dividers
+  hr { border-top-color: var(--jb-border); }
+}
+
 /* Tablet: collapse the project grid to a single column earlier than the
    hero stack — two narrow cards side-by-side gets ugly. */
 @media (max-width: 760px) {
