@@ -84,8 +84,8 @@ preference for reproducible, version-controlled, container-portable analysis.
 
 <!-- Project 2: leg-extension EMG fatigue salvage paper, in prep. -->
 
-<div class="project project-thumb-warm">
-<div class="project-thumb"><span>EMG fatigue &middot; sEMG</span></div>
+<div class="project project-thumb-image">
+<div class="project-thumb"><img src="img/emg-fatigue-plane.png" alt="Fatigue plane: median normalized RMS amplitude versus median normalized median frequency by 10% bout-completion bin, 40% versus 70% one-rep-max load" /></div>
 <div class="project-body">
   <h3>Surface EMG amplitude rises faster at low than high load during knee extension to failure</h3>
   <div class="project-meta">Reanalysis of an unpublished 2017 honors thesis &middot; manuscript in preparation</div>
