@@ -109,8 +109,8 @@ preference for reproducible, version-controlled, container-portable analysis.
      hero PNG is shipped with the site; interactive viewer + source repo
      are planned but deferred until the v0.1.0 release lands. -->
 
-<div class="project project-thumb-image">
-<div class="project-thumb"><img src="img/banister-constellation-hero.png" alt="Citation network of 175 papers across 50 years of fitness-fatigue model research, with the founding Banister 1975 paper at center and four downstream branches (classical, variable-dose, statistical critique, and Bayesian hierarchical)" /></div>
+<div class="project project-thumb-dark">
+<div class="project-thumb"><img src="img/banister-constellation-hero.png" alt="Citation network of 175 papers across 50 years of fitness-fatigue model research, with the founding Banister 1975 paper at the top and four downstream branches (classical, variable-dose, statistical critique, and Bayesian hierarchical)" /></div>
 <div class="project-body">
   <h3>The Banister Constellation: a citation graph of the fitness-fatigue model lineage</h3>
   <div class="project-meta">Research tooling &middot; Python + DuckDB + vis-network</div>
