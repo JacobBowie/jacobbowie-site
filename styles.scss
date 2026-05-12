@@ -175,6 +175,16 @@ h2.section-heading {
   background: #ffffff;
   padding: 0.4rem;
 }
+/* Dark-image variant: for thumbnails that are themselves on a dark canvas
+   (e.g. constellation/network plots rendered on a navy background). Lets the
+   image bleed to the card edges instead of floating inside a white letterbox. */
+.project-thumb-dark .project-thumb {
+  background: #0c1426;
+  padding: 0;
+}
+.project-thumb-dark .project-thumb img {
+  object-fit: cover;
+}
 /* NPG-derived gradients — one per card so the grid doesn't feel template. */
 .project-thumb-navy .project-thumb {
   background: linear-gradient(135deg, #3C5488 0%, #4DBBD5 100%);
@@ -212,6 +222,11 @@ h2.section-heading {
   margin-right: 1rem;
   font-size: 0.95rem;
   font-weight: 500;
+}
+.project .project-links .project-note {
+  font-size: 0.95rem;
+  color: var(--jb-muted);
+  font-style: italic;
 }
 
 /* Skill chips — flat list of short labels, no progress bars (antipattern). */
