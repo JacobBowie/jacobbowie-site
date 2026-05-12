@@ -213,6 +213,11 @@ h2.section-heading {
   font-size: 0.95rem;
   font-weight: 500;
 }
+.project .project-links .project-note {
+  font-size: 0.95rem;
+  color: var(--jb-muted);
+  font-style: italic;
+}
 
 /* Skill chips — flat list of short labels, no progress bars (antipattern). */
 .skill-chips {

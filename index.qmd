@@ -99,12 +99,32 @@ preference for reproducible, version-controlled, container-portable analysis.
   <em>International Journal of Exercise Science</em>.
   </p>
 <div class="project-links">
-<a href="https://github.com/JacobBowie/leg-extension-emg-fatigue-2026">Repository</a>
+<span class="project-note">Repository will be released alongside the manuscript.</span>
 </div>
 </div>
 </div>
 
-<!-- Project 3: literature pipeline tool. -->
+<!-- Project 3: citation-network visualization. Public-safe framing: the
+     codename for the parent project is intentionally not referenced. The
+     hero PNG is shipped with the site; interactive viewer + source repo
+     are planned but deferred until the v0.1.0 release lands. -->
+
+<div class="project project-thumb-image">
+<div class="project-thumb"><img src="img/banister-constellation-hero.png" alt="Citation network of 175 papers across 50 years of fitness-fatigue model research, with the founding Banister 1975 paper at center and four downstream branches (classical, variable-dose, statistical critique, and Bayesian hierarchical)" /></div>
+<div class="project-body">
+  <h3>The Banister Constellation: a citation graph of the fitness-fatigue model lineage</h3>
+  <div class="project-meta">Research tooling &middot; Python + DuckDB + vis-network</div>
+  <p>
+  Fifty years of fitness-fatigue model literature in one constellation. A 175-paper,
+  524-edge citation graph anchored on Banister 1975 and Calvert 1976, traced through
+  the classical extensions of the 1980s and 1990s, the variable-dose and statistical
+  critiques of the 2000s, and the modern Bayesian hierarchical reformulations. Built
+  on a private DuckDB literature index; interactive viewer and source release planned.
+  </p>
+</div>
+</div>
+
+<!-- Project 4: literature pipeline tool. -->
 
 <div class="project project-thumb-teal">
 <div class="project-thumb"><span>Literature &middot; citation graph</span></div>
