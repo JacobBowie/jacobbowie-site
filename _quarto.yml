@@ -28,6 +28,146 @@ format:
       text: |
         <meta property="og:url" content="https://jacobbowie.com/">
         <link rel="canonical" href="https://jacobbowie.com/">
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Person",
+              "@id": "https://jacobbowie.com/#person",
+              "name": "Jacob Bowie",
+              "honorificSuffix": "PhD",
+              "jobTitle": "Postdoctoral Researcher",
+              "description": "Statistical analysis and machine learning for human physiology research, with a focus on wearable sensor signal processing, hierarchical Bayesian and mixed-effects modeling, and reproducible analysis pipelines.",
+              "url": "https://jacobbowie.com",
+              "image": "https://jacobbowie.com/profile.jpg",
+              "email": "mailto:jacob.bowie2@gmail.com",
+              "affiliation": [
+                {
+                  "@type": "Organization",
+                  "name": "University of Connecticut Human Performance Laboratory",
+                  "url": "https://hpl.uconn.edu/"
+                },
+                {
+                  "@type": "Organization",
+                  "name": "Korey Stringer Institute",
+                  "url": "https://ksi.uconn.edu/"
+                }
+              ],
+              "knowsAbout": [
+                "Machine Learning",
+                "Statistical Analysis",
+                "Human Physiology",
+                "Exercise Physiology",
+                "Wearable Sensors",
+                "Heat Tolerance",
+                "Thermoregulation",
+                "Hierarchical Bayesian Modeling",
+                "Mixed-Effects Models",
+                "Reproducible Research"
+              ],
+              "sameAs": [
+                "https://orcid.org/0000-0002-6055-8220",
+                "https://github.com/JacobBowie",
+                "https://www.linkedin.com/in/jacobbowie/"
+              ]
+            },
+            {
+              "@type": "ScholarlyArticle",
+              "@id": "https://doi.org/10.14814/phy2.70745",
+              "headline": "Heat tolerance classification criteria require population-specific thresholds for accurate assessment of acclimation state in adults",
+              "author": [
+                {"@type": "Person", "name": "Jacob S Bowie", "sameAs": "https://orcid.org/0000-0002-6055-8220"},
+                {"@type": "Person", "name": "Margaret R Szymanski"},
+                {"@type": "Person", "name": "Justin F Struder"},
+                {"@type": "Person", "name": "Erica M Filep"},
+                {"@type": "Person", "name": "Meghan C Morrissey-Basler"},
+                {"@type": "Person", "name": "Gabrielle J Brewer"},
+                {"@type": "Person", "name": "Sarah N Thornton"},
+                {"@type": "Person", "name": "Kevin J Mahoney"},
+                {"@type": "Person", "name": "Yasuki Sekiguchi"},
+                {"@type": "Person", "name": "Oh Sung Kwon"},
+                {"@type": "Person", "name": "Ki Chon"},
+                {"@type": "Person", "name": "Douglas J Casa"},
+                {"@type": "Person", "name": "Elaine C Lee"}
+              ],
+              "datePublished": "2026",
+              "isPartOf": {
+                "@type": "Periodical",
+                "name": "Physiological Reports",
+                "issn": "2051-817X"
+              },
+              "identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "DOI",
+                "value": "10.14814/phy2.70745"
+              },
+              "url": "https://doi.org/10.14814/phy2.70745"
+            },
+            {
+              "@type": "ScholarlyArticle",
+              "@id": "https://doi.org/10.3390/metabo13090970",
+              "headline": "Plasma proteomics-based discovery of mechanistic biomarkers of hyperbaric stress and pulmonary oxygen toxicity",
+              "author": [
+                {"@type": "Person", "name": "Kevin J Mahoney"},
+                {"@type": "Person", "name": "Jacob S Bowie", "sameAs": "https://orcid.org/0000-0002-6055-8220"},
+                {"@type": "Person", "name": "Aaron E Ford"},
+                {"@type": "Person", "name": "Nathaniel Perera"},
+                {"@type": "Person", "name": "Yasuki Sekiguchi"},
+                {"@type": "Person", "name": "David M Fothergill"},
+                {"@type": "Person", "name": "Elaine C Lee"}
+              ],
+              "datePublished": "2023",
+              "isPartOf": {
+                "@type": "Periodical",
+                "name": "Metabolites",
+                "issn": "2218-1989"
+              },
+              "volumeNumber": "13",
+              "issueNumber": "9",
+              "pageStart": "970",
+              "identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "DOI",
+                "value": "10.3390/metabo13090970"
+              },
+              "url": "https://doi.org/10.3390/metabo13090970"
+            },
+            {
+              "@type": "Chapter",
+              "@id": "https://doi.org/10.1007/978-3-030-27805-2_8",
+              "headline": "Molecular aspects of thermal tolerance and exertional heat illness susceptibility",
+              "author": [
+                {"@type": "Person", "name": "Elaine C Lee"},
+                {"@type": "Person", "name": "Jacob S Bowie", "sameAs": "https://orcid.org/0000-0002-6055-8220"},
+                {"@type": "Person", "name": "Alexa Fiol"},
+                {"@type": "Person", "name": "Robert A Huggins"}
+              ],
+              "datePublished": "2020",
+              "isPartOf": {
+                "@type": "Book",
+                "name": "Exertional Heat Illness: A Clinical and Evidence-Based Guide",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Springer International Publishing"
+                },
+                "editor": [
+                  {"@type": "Person", "name": "William M Adams"},
+                  {"@type": "Person", "name": "John F Jardine"}
+                ]
+              },
+              "pageStart": "149",
+              "pageEnd": "168",
+              "identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "DOI",
+                "value": "10.1007/978-3-030-27805-2_8"
+              },
+              "url": "https://doi.org/10.1007/978-3-030-27805-2_8"
+            }
+          ]
+        }
+        </script>
 
 execute:
   echo: false

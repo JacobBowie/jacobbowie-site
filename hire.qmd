@@ -1,0 +1,58 @@
+---
+title: "Work together"
+description: "How to reach me about postdoctoral and industry roles, collaborations, and reviewer-ready code."
+pagetitle: "Work together | Jacob Bowie, PhD"
+format:
+  html:
+    page-layout: article
+---
+
+## Currently exploring longer-term roles
+
+I am a postdoctoral researcher at the University of Connecticut Human Performance
+Laboratory and the Korey Stringer Institute. My work sits at the intersection of
+applied machine learning, wearable sensor signal processing, and reproducible
+analysis pipelines for exercise and environmental physiology research.
+
+I am open to longer-term opportunities in both directions:
+
+- **Postdoctoral fellowships and research scientist roles** in academic or
+  national-lab settings working on wearables, biosignal analysis, thermoregulation,
+  or applied ML for human physiology. Comfortable contributing to grant writing,
+  manuscript leadership, and trainee mentorship.
+- **Industry research and data science roles** at health-tech, wearables, or
+  sports-science companies where rigorous statistical modeling, signal processing,
+  and reproducible analysis pipelines feed product or evidence-generation work.
+  Most interested in roles with a research arc, not strictly engineering tickets.
+
+## What I bring
+
+Five years of doctoral and postdoctoral work in human physiology with a
+methods-first orientation. Hierarchical Bayesian and mixed-effects modeling of
+within-person variability. Continuous physiological time-series from wearable
+and laboratory instruments (HR, HRV, EMG, core and skin temperature, sweat
+electrolytes). End-to-end pipelines in R and Python with Docker, Quarto, and
+proper provenance. Marine Corps veteran; comfortable with security-cleared
+contexts where they arise. Lead author on peer-reviewed work in
+*Physiological Reports*, *Metabolites*, and *Springer* book chapters.
+
+## How to start a conversation
+
+Email is the best way: **[jacob.bowie2@gmail.com](mailto:jacob.bowie2@gmail.com)**.
+A useful first message usually includes:
+
+- **Who you are** and which role or collaboration you have in mind
+- **A one-paragraph summary** of the question, dataset, or product context
+- **Constraints I should know up front** (timeline, location, security, IP)
+
+I read messages most days and reply within a few business days. For roles
+specifically, the [CV (PDF)](Bowie_CV.pdf) is the up-to-date one-pager. For
+technical examples, the [portfolio homepage](index.html) and the
+[GitHub profile](https://github.com/JacobBowie) are the front doors.
+
+## Open to collaborations
+
+If you are a researcher with a wearables or physiology dataset that needs
+modeling help and a co-author rather than a service contract, please get in
+touch. I have benefited from many of these conversations and try to pay them
+back when I can.

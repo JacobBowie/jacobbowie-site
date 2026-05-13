@@ -1,0 +1,142 @@
+---
+title: "synthesim: an interactive fitness-fatigue model explorer"
+description: "A deterministic forward-simulator for the MEDv4 fitness-fatigue ODE with a seven-test physiological-plausibility validator. R Shiny, marimo WASM, Docker, MIT-licensed."
+pagetitle: "synthesim case study | Jacob Bowie, PhD"
+date: 2026-05-12
+categories: [system dynamics, ODE, R, Python, Shiny, marimo, fitness-fatigue]
+format:
+  html:
+    page-layout: article
+    toc: true
+    toc-depth: 2
+    toc-location: right
+    code-fold: false
+    smooth-scroll: true
+---
+
+::: {.callout-note appearance="simple"}
+**Try it:** [Live Shiny demo](https://get-paid.shinyapps.io/synthesim/) ·
+[Repository](https://github.com/JacobBowie/synthesim) ·
+MIT licensed · `v0.1.0` released 2026-05-12.
+:::
+
+![Reference-mode test RM1: doubled training dose produces roughly twice the rate of fitness gain over 52 weeks. The dose-response gate the simulator must satisfy.](../img/synthesim-rm1-dose-response.png){fig-alt="Two line plots showing fitness gain trajectories for a baseline training dose and a doubled dose over 52 weeks, illustrating that the doubled-dose curve rises at roughly twice the rate."}
+
+## The problem
+
+The Banister fitness-fatigue model and its descendants have been the
+methodological scaffolding for fifty years of resistance-training adaptation
+research. The math is simple enough to fit in a slide and old enough to
+predate modern hardware. What is missing is a working artifact that researchers,
+coaches, and reviewers can pick up and *play with* to develop intuition: how
+does a doubled training dose change the long-run fitness trajectory? At what
+point does additional load produce diminishing returns? How quickly does
+detraining erase a year of accumulated work?
+
+The literature has plenty of papers fitting parameters to data. It has very
+few sandboxes for asking what-if questions about the dynamics.
+
+`synthesim` is the sandbox.
+
+## What it is
+
+A deterministic forward-simulator for the MEDv4 fitness-fatigue ODE, a
+three-stock system-dynamics model that ports cleanly from the Vensim implementations
+in the established literature into R and Python. The same model logic ships
+through three runtimes from one Docker image:
+
+- An **R Shiny application** for click-and-explore use
+- A **marimo notebook** that runs entirely in the browser via Pyodide (no
+  local Python required)
+- A **headless validator script** that runs the seven reference-mode tests on
+  every change to the model
+
+The headline interaction is the dose-response slider: change the weekly
+training load, watch fitness, fatigue, and net performance respond in real
+time over a 52-week simulation horizon. The interaction is fast enough to
+*feel* the dynamic structure of the model, not just read about it.
+
+## The seven-test plausibility validator
+
+The methodological heart of the project is not the simulator. It is the
+validator that runs every time the simulator changes.
+
+A fitness-fatigue model has to satisfy a set of qualitative physiological
+constraints before it deserves to be fit to data. These are not noise-bound
+empirical claims; they are structural commitments. The seven tests in
+`synthesim` encode them:
+
+1. **RM1: dose response.** Doubling training dose roughly doubles the
+   long-run rate of fitness gain.
+2. **RM2: detraining.** Removing all training produces a slow exponential
+   decay back to the activities-of-daily-living floor.
+3. **RM3: saturation.** Holding load constant produces a long-run plateau,
+   not unbounded growth.
+4. **RM4: fatigue dominance.** A sudden spike in load produces a transient
+   net-performance dip before any fitness gain materializes.
+5. **RM5: ADL floor.** Fitness does not fall below the activities-of-daily-living
+   baseline regardless of how long detraining runs.
+6. **RM6: taper.** Reducing load just before a target date produces a
+   net-performance peak above the loaded-state value.
+7. **RM7: overreach.** Sustained high load past a structural threshold
+   pushes fatigue past fitness; net performance goes negative.
+
+Each test is a one-page reference mode with a target trajectory the simulator
+must reproduce to within a configurable tolerance. The validator is the
+structural gate before anything more ambitious (Bayesian fitting against a
+real cohort, hierarchical extensions, individualized priors) gets built on
+top of the model.
+
+## How it is built
+
+The single source of truth is a small R package wrapping the ODE solve and
+the seven validators. The Shiny app, the marimo notebook, and the headless
+test runner all import from that package, so a change to the model logic
+propagates to all three surfaces at once. The Docker image pins R, Python,
+marimo, and Shiny Server in one reproducible environment; a single
+`docker compose up` brings the explorer online locally.
+
+The repository ships with a `CITATION.cff` file so researchers can cite the
+specific version they explored, a pinned dependency manifest for both R and
+Python, and a `Dockerfile` whose layer caching keeps the rebuild loop short.
+
+## Where this fits
+
+`synthesim` is the public face of a larger, currently private Bayesian
+fitness-fatigue project (working name `getpaid`) that aims to fit the same
+MEDv4 model hierarchically against an open resistance-training cohort. The
+public artifact and the private codebase share the deterministic core; the
+private codebase adds Stan, priors derived from a 175-paper citation review,
+and per-subject partial pooling.
+
+The paired companion is **The Banister Constellation**, a 175-paper citation
+graph of fifty years of fitness-fatigue model literature that anchors the
+priors and frames the lineage. The Constellation is previewed on the
+[portfolio homepage](../index.html); interactive viewer and source release in
+progress.
+
+## Try it
+
+The fastest path is the live demo:
+
+::: {.callout-tip appearance="simple"}
+**[Live Shiny demo at get-paid.shinyapps.io/synthesim](https://get-paid.shinyapps.io/synthesim/)**
+
+Open it in a new tab, run the seven validator tests (top tab), then return
+to the dose-response slider and try to break the model. The validator is
+the part to scrutinize.
+:::
+
+For local use, `docker compose up` from the cloned repo brings the same
+explorer online in about thirty seconds.
+
+## Source and citation
+
+- Repository: [github.com/JacobBowie/synthesim](https://github.com/JacobBowie/synthesim)
+- License: MIT
+- Citation: see `CITATION.cff` in the repository for the canonical form
+
+If `synthesim` is useful in your own work, please reach out at
+**[jacob.bowie2@gmail.com](mailto:jacob.bowie2@gmail.com)**. I am especially
+interested in hearing from coaches and applied scientists who have qualitative
+reference modes the validator does not yet capture.
