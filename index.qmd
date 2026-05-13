@@ -169,7 +169,7 @@ preference for reproducible, version-controlled, container-portable analysis.
 
 <!-- Source-of-truth: ORCID public works feed at
      https://pub.orcid.org/v3.0/0000-0002-6055-8220/works
-     Verified 2026-05-10. Static list per the Option A brief — keeps the
+     Verified 2026-05-10. Static list per the Option A brief: keeps the
      Netlify build pure-static (no R/Python on CI). Refresh manually when a
      new work is registered against the ORCID. Preprints / under-review
      work intentionally excluded per the OPSEC + curation rules. -->
