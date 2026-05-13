@@ -21,6 +21,12 @@ Postdoctoral researcher, UConn Human Performance Laboratory & Korey Stringer Ins
 Applying machine learning, wearable sensor signal processing, and reproducible
 analysis pipelines to questions in exercise and environmental physiology.
 </p>
+<p class="hero-status">
+Currently seeking longer-term postdoctoral and industry roles at the intersection
+of applied ML, wearables, and human physiology.
+<a href="Bowie_CV.pdf">CV (PDF)</a> &middot;
+<a href="mailto:jacob.bowie2@gmail.com">jacob.bowie2@gmail.com</a>
+</p>
 </div>
 <div class="hero-photo">
 <img src="profile.jpg" alt="Jacob Bowie" />
@@ -151,15 +157,16 @@ preference for reproducible, version-controlled, container-portable analysis.
 <div class="project-thumb"><span>Literature &middot; citation graph</span></div>
 <div class="project-body">
   <h3>Literature acquisition and citation-graph toolkit</h3>
-  <div class="project-meta">Personal research tooling &middot; Python + DuckDB</div>
+  <div class="project-meta">Open-source &middot; Python + DuckDB</div>
   <p>
   An open-source biomedical paper acquisition and citation-graph snowballing
-  toolkit I use across my own portfolio of research projects. Currently 368
-  papers indexed across six active projects. Includes a small MathML-to-LaTeX
-  rendering layer for JATS XML sidecars (76% pass rate through pdflatex on
-  retrieved full-text articles). Public release planned alongside the
-  publications it supports.
+  toolkit I built and use across a portfolio of research projects. Cascades
+  Unpaywall to PubMed Central to preprint mirrors, indexes everything in
+  DuckDB, walks forward and reverse citation graphs, and includes a small
+  MathML-to-LaTeX rendering layer for JATS XML sidecars (76% pass rate
+  through pdflatex on retrieved full-text articles).
   </p>
+  <p><a href="https://github.com/JacobBowie/literature-pipeline">Repository</a></p>
 </div>
 </div>
 
