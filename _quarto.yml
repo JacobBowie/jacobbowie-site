@@ -5,7 +5,7 @@ project:
 website:
   title: "Jacob Bowie, PhD"
   description: "Statistical analysis and machine learning for human physiology research."
-  favicon: ""
+  favicon: "favicon.svg"
   open-graph: true
   twitter-card: true
   site-url: "https://jacobbowie.com"
