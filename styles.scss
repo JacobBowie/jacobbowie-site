@@ -103,6 +103,24 @@ p.hero-tagline {
   margin-bottom: 0;
 }
 
+/* Status line under hero tagline: lightweight signal of role-seeking
+   posture plus quick contact + CV. One degree quieter than the tagline. */
+p.hero-status {
+  font-size: 0.95rem;
+  color: var(--jb-muted);
+  margin-top: 0.85rem;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+p.hero-status a {
+  color: var(--jb-accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(60, 84, 136, 0.25);
+}
+p.hero-status a:hover {
+  border-bottom-color: var(--jb-accent);
+}
+
 a, a:visited { color: var(--jb-accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
