@@ -22,6 +22,10 @@ format:
     page-layout: article
     grid:
       body-width: 1000px
+    include-in-header:
+      text: |
+        <meta property="og:url" content="https://jacobbowie.com/">
+        <link rel="canonical" href="https://jacobbowie.com/">
 
 execute:
   echo: false
