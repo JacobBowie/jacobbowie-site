@@ -4,6 +4,7 @@ description: "A Python toolkit that acquires, indexes, and snowballs scientific 
 pagetitle: "Literature pipeline case study | Jacob Bowie, PhD"
 date: 2026-05-21
 categories: [tooling, Python, DuckDB, research infrastructure, Semantic Scholar, Unpaywall]
+image: ../img/lit-pipeline-convergence.png
 format:
   html:
     page-layout: article
@@ -19,12 +20,7 @@ format:
 MIT licensed · CI green on Python 3.11-3.13 (Ubuntu + Windows) · 83/83 tests passing.
 :::
 
-<!-- TODO: hero image. Candidates under discussion:
-     (a) DuckDB schema diagram showing cross-project tracking
-     (b) Snowball convergence plot (candidates per iteration)
-     (c) Three-tier fetch cascade flowchart
-     (d) getpaid as the query surface (interactive top_candidates view)
-     Decision deferred. -->
+![Snowball convergence on the Tier 1 systematic-review corpus that backs the [synthesim](synthesim.qmd) and [Banister Constellation](../citation-network/) case studies. Each pass is one `snowball.py` run (forward citations + reverse citations + recommendations + abstracts + reindex); a pass terminates when iteration growth drops below 1%. Adding new seed papers to the queue triggers a fresh expansion in the next pass.](../img/lit-pipeline-convergence.png){fig-alt="Step plot showing the Tier 1 corpus growing from 9,810 candidate DOIs at seed to 17,248 after Pass A iter 1 (+76%) then converged; Pass B on May 13 added 1,484 more (+8.6%) on newly added seeds and reconverged at 18,732 by May 19." width=100%}
 
 ## The problem
 
