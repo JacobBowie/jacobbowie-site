@@ -40,7 +40,7 @@ A central DuckDB index (`portfolio.duckdb`) is the single source of truth for "w
 
 The pipeline registry distinguishes Tier 1 projects (full systematic-review build: discovery, fetch, tables, text dumps, reports) from Tier 2 (library only). Promotion is opt-in, never automatic.
 
-**Current state (as of 2026-05-16):** 17,617 unique DOIs indexed, 368 with full PDFs, 9,834 abstracts enriched, 21,104 citation edges. Six projects active: `getpaid` (Tier 1, sports-science FFM literature), plus `Physiological_Data`, `thermalphys`, `SOC`, `Genova_Diagnostics`, `Yitts` (Tier 2).
+**Current state (as of 2026-05-16):** 17,617 unique DOIs indexed, 368 with full PDFs, 9,834 abstracts enriched, 21,104 citation edges. Six active consumers: one Tier 1 systematic-review project (the `getpaid` corpus that backs [synthesim](synthesim.qmd) and [the Banister Constellation](../citation-network/)) and five Tier 2 library-only projects spanning biomedical data analysis, thermophysiology, applied sport science, and wearable clustering.
 
 ## What's actually novel
 
