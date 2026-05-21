@@ -15,6 +15,29 @@ website:
   twitter-card: true
   site-url: "https://jacobbowie.com"
   page-navigation: false
+  navbar:
+    background: light
+    pinned: false
+    collapse-below: md
+    left:
+      - href: index.html
+        text: Home
+      - href: work/
+        text: Work
+      - href: hire.html
+        text: Work together
+      - href: Bowie_CV.pdf
+        text: CV
+    right:
+      - icon: github
+        href: https://github.com/JacobBowie
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/jacobbowie/
+        aria-label: LinkedIn
+      - text: ORCID
+        href: https://orcid.org/0000-0002-6055-8220
+        aria-label: ORCID
 
 format:
   html:

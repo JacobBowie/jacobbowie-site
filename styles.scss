@@ -247,6 +247,115 @@ h2.section-heading {
   font-style: italic;
 }
 
+/* Code-block contrast: cosmo's default <pre> has black text and a near-
+   transparent bg. In our dark mode the bg falls through to slate-900
+   (reads as dark blue) and the black text disappears. Force an opaque
+   surface in both modes so ASCII art / unfenced code stays legible.
+   Syntax-highlighted code blocks (.sourceCode) keep their highlighter
+   styling untouched. */
+pre {
+  background: var(--jb-bg-soft);
+  color: var(--jb-text);
+  border: 1px solid var(--jb-border);
+  border-radius: 6px;
+  padding: 0.9rem 1rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  overflow-x: auto;
+}
+pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* Quarto listing cards (/work/ index page).
+   Quarto generates .quarto-grid-item cards with Bootstrap defaults that
+   produce poor contrast (light gray text on white). Override to match the
+   homepage .project tile aesthetic: same border, hover lift, readable text. */
+.quarto-grid {
+  gap: 1.5rem;
+}
+.quarto-grid-item.card {
+  border: 1px solid var(--jb-border);
+  border-radius: 8px;
+  background: white;
+  overflow: hidden;
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+.quarto-grid-item.card:hover {
+  box-shadow: 0 4px 18px rgba(31, 41, 55, 0.10);
+  transform: translateY(-1px);
+}
+.quarto-grid-item .card-img-top {
+  margin: 0;
+  padding: 0;
+}
+.quarto-grid-item .card-img-top img {
+  border-radius: 0;
+  display: block;
+}
+.quarto-grid-item .card-body {
+  padding: 1.1rem 1.25rem 1.25rem;
+}
+.quarto-grid-item .listing-title {
+  color: #111827;
+  font-family: $font-family-serif;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.quarto-grid-item .listing-title a {
+  color: inherit;
+}
+.quarto-grid-item .listing-description {
+  color: var(--jb-text);
+  font-size: 0.97rem;
+  line-height: 1.55;
+  margin-bottom: 0.7rem;
+}
+.quarto-grid-item .listing-description p {
+  margin-bottom: 0;
+}
+.quarto-grid-item .listing-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.4rem;
+  margin: 0.5rem 0 0.6rem;
+}
+.quarto-grid-item .listing-category {
+  font-size: 0.78rem;
+  padding: 0.15rem 0.55rem;
+  background: #eef2f7;
+  color: #374151;
+  border-radius: 999px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.quarto-grid-item .listing-date {
+  font-size: 0.85rem;
+  color: var(--jb-muted);
+}
+
+/* Dark-mode parity for listing cards. */
+@media (prefers-color-scheme: dark) {
+  .quarto-grid-item.card {
+    background: var(--jb-bg-soft);
+    border-color: var(--jb-border);
+  }
+  .quarto-grid-item.card:hover {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  }
+  .quarto-grid-item .listing-title { color: #f1f5f9; }
+  .quarto-grid-item .listing-description { color: var(--jb-text); }
+  .quarto-grid-item .listing-category {
+    background: #334155;
+    color: #cbd5e1;
+  }
+}
+
 /* Skill chips — flat list of short labels, no progress bars (antipattern). */
 .skill-chips {
   display: flex;

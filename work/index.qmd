@@ -1,0 +1,29 @@
+---
+title: "Work"
+pagetitle: "Work | Jacob Bowie, PhD"
+description: "Case studies. Methodology-forward writeups of public research artifacts: forward simulators, citation graphs, reproducible pipelines, and the validators that gate them."
+listing:
+  contents:
+    - "*.qmd"
+    - path: ../citation-network/
+      title: "The Banister Constellation"
+      description: "175 papers across 50 years of fitness-fatigue model literature, anchored on Banister 1975. Browser-rendered interactive citation graph via vis-network."
+      image: ../img/banister-constellation-hero.png
+      date: "2026-05-21"
+      categories: [interactive, citation graph, sport science, fitness-fatigue model]
+  sort: "date desc"
+  type: grid
+  fields: [image, title, description, date, categories]
+  image-height: 220px
+  grid-columns: 2
+  max-description-length: 250
+  feed: false
+format:
+  html:
+    page-layout: article
+    toc: false
+---
+
+A curated set of methodology-forward case studies. Most projects sit upstream as private working code; what reaches this page is the writeup-grade subset where the underlying repo is public, the artifact is testable, and the story is far enough along to defend.
+
+Each case study links to the source repository and, where applicable, a live demo. The narrower the deliverable, the more it gets discussed here.
