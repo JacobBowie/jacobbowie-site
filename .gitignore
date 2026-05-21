@@ -25,3 +25,9 @@ node_modules/
 
 # Case-study content drafts not yet ready for the public site
 _drafts/
+
+# Citation-network artifacts pulled at build time from
+# JacobBowie/citation-network releases — not committed.
+citation-network/interactive/
+citation-network/notebook/
+citation-network/assets/

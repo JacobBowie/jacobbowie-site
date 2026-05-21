@@ -3,6 +3,9 @@ project:
   output-dir: _site
   resources:
     - "Bowie_CV.pdf"
+    - "citation-network/interactive/**"
+    - "citation-network/notebook/**"
+    - "citation-network/assets/**"
 
 website:
   title: "Jacob Bowie, PhD"
