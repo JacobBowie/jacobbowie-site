@@ -26,6 +26,15 @@ node_modules/
 # Case-study content drafts not yet ready for the public site
 _drafts/
 
+# Local Claude session orientation files — never committed.
+# Policy: CLAUDE.md and CURRENT_STATE.md are session tooling, not project
+# artifacts. They were initially committed via PR #6 (2026-05-21) but
+# moved to local-only on the same day. README.md is the canonical public
+# orientation surface.
+CLAUDE.md
+CURRENT_STATE.md
+_PORTFOLIO_BRIEF*.md
+
 # Citation-network artifacts pulled at build time from
 # JacobBowie/citation-network releases — not committed.
 citation-network/interactive/
