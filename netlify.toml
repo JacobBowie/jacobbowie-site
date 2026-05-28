@@ -35,6 +35,16 @@
     curl -sSL "https://github.com/JacobBowie/citation-network/releases/download/${CN_TAG}/citation_network_card.png" \
       -o citation-network/assets/og.png
 
+    # Pull the rtSD marimo WASM bundle from the JacobBowie/rtsd release. The
+    # tarball is self-contained (model.py + sd_diagram.py inlined at build
+    # time on the rtsd side) and ships index.html + assets/ at its root, so
+    # /rtsd/notebook/ serves the marimo app natively. -f so a missing/renamed
+    # release fails the build with a clear curl error, not a cryptic tar error.
+    RTSD_TAG="v0.2.0"
+    mkdir -p rtsd/notebook
+    curl -fsSL "https://github.com/JacobBowie/rtsd/releases/download/${RTSD_TAG}/rtsd-wasm.tar.gz" \
+      | tar -xz -C rtsd/notebook
+
     /tmp/quarto/bin/quarto render
   """
 
@@ -57,6 +67,13 @@
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
 
+# /rtsd hosts the marimo WASM explorer under /rtsd/notebook/. Override the
+# site-wide DENY so the explorer can be embedded same-origin if needed.
+[[headers]]
+  for = "/rtsd/notebook/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+
 # The standalone tarball ships standalone.html (not index.html) so the
 # WASM tarball can also ship its own index.html without conflict. Rewrite
 # the bare /citation-network/interactive/ URL to standalone.html.
@@ -71,3 +88,15 @@
   to   = "/citation-network/interactive/standalone.html"
   status = 200
   force = true
+
+# The synthesim -> rtSD rename (2026-05) moved the case study from
+# /work/synthesim to the top-level /rtsd/ route. Preserve inbound links.
+[[redirects]]
+  from = "/work/synthesim.html"
+  to   = "/rtsd/"
+  status = 301
+
+[[redirects]]
+  from = "/work/synthesim"
+  to   = "/rtsd/"
+  status = 301
