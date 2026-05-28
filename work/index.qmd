@@ -5,6 +5,12 @@ description: "Case studies. Methodology-forward writeups of public research arti
 listing:
   contents:
     - "*.qmd"
+    - path: ../rtsd/
+      title: "rtSD Explorer"
+      description: "A deterministic forward-simulator for the MEDv4 fitness-fatigue-signal ODE, with a seven-test physiological-plausibility validator that gates the model. Runs in-browser via marimo + Pyodide."
+      image: ../img/rtsd-rm1-dose-response.png
+      date: "2026-05-28"
+      categories: [interactive, system dynamics, ODE, sport science, fitness-fatigue model]
     - path: ../citation-network/
       title: "The Banister Constellation"
       description: "175 papers across 50 years of fitness-fatigue model literature, anchored on Banister 1975. Browser-rendered interactive citation graph via vis-network."

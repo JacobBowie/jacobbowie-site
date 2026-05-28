@@ -1,0 +1,145 @@
+---
+title: "rtSD Explorer"
+subtitle: "An interactive system-dynamics explorer for resistance-training adaptation"
+image: ../img/rtsd-rm1-dose-response.png
+description: >
+  A deterministic forward-simulator for the MEDv4 fitness-fatigue-signal ODE,
+  the three-stock system-dynamics model behind fifty years of resistance-training
+  adaptation research. Drag the sliders, change the training program, and watch
+  Fitness, Fatigue, Signal, and net Performance respond. Ships with a seven-test
+  physiological-plausibility validator that gates the model. Runs entirely in your
+  browser via marimo + Pyodide.
+date: "2026-05-28"
+categories:
+  - interactive
+  - system dynamics
+  - ODE
+  - sport science
+  - fitness-fatigue model
+format:
+  html:
+    page-layout: full
+---
+
+![Reference-mode test RM1: doubling the weekly training dose produces roughly twice the rate of fitness gain over 52 weeks. The dose-response gate the simulator must satisfy.](../img/rtsd-rm1-dose-response.png){fig-alt="Two line plots showing fitness-gain trajectories for a baseline training dose and a doubled dose over 52 weeks, where the doubled-dose curve rises at roughly twice the rate." width=100%}
+
+## Try it
+
+[**Open the interactive explorer &rarr;**](/rtsd/notebook/){.btn .btn-primary role="button"}
+
+::: {.callout-note}
+The explorer renders in your browser via [marimo](https://marimo.io) + Pyodide.
+No install, no server, no Python on your machine. Drag the training-load sliders,
+switch between standard, high-frequency, detraining, and RP-mesocycle programs,
+and watch the three stocks (Fitness, Fatigue, Signal) and net Performance trace
+out the predicted trajectory. Use the snapshot button to freeze a run and compare
+later configurations against it.
+
+First load takes roughly 30 to 60 seconds while Python downloads into the browser.
+Subsequent visits are local and fast.
+:::
+
+## What this is
+
+In 1975, Eric Banister sketched a two-stock model, Fitness and Fatigue, that
+turned every training session into a pulse of stimulus, every adaptation into an
+exponential decay, and every performance prediction into the difference of two
+convolutions. That lineage, through Calvert, Busso, Morton, and the modern
+Bayesian reformulations, has been the methodological scaffolding for half a
+century of training-adaptation research. The math is old enough to predate modern
+hardware and simple enough to fit on a slide.
+
+What has been missing is a working artifact that researchers, coaches, and
+reviewers can pick up and *play with* to build intuition. How does a doubled
+training dose change the long-run fitness trajectory? At what point does
+additional load produce diminishing returns? How quickly does detraining erase a
+year of accumulated work? The literature has plenty of papers fitting parameters
+to data. It has very few sandboxes for asking what-if questions about the dynamics.
+
+rtSD Explorer is the sandbox. It is the public interface to **rtSD**, a
+system-dynamics implementation of the **MEDv4** three-stock fitness-fatigue-signal
+ODE, originally built in Vensim and ported to a tested R + Python core.
+
+## The three-tier picture
+
+| Tier | Name | What it is |
+|---|---|---|
+| Framework | **GET-PAID** | *Generating Expected Timelines of Predicted Adaptations to Imposed Demands*. The theoretical claim that imposed training demands produce predictable adaptation trajectories. |
+| Model | **rtSD** | The specific system-dynamics implementation of GET-PAID for resistance training: a three-stock (Fitness / Fatigue / Signal) model on the MEDv4 ODE. |
+| Tool | **rtSD Explorer** | This artifact. The Shiny + marimo interface that lets anyone interact with the model. |
+
+## The seven-test plausibility validator
+
+The methodological heart of the project is not the simulator. It is the validator
+that runs every time the simulator changes.
+
+A fitness-fatigue model has to satisfy a set of qualitative physiological
+constraints before it deserves to be fit to data. These are not noise-bound
+empirical claims; they are structural commitments. The seven reference-mode tests
+encode them:
+
+1. **RM1: dose response.** Doubling training dose roughly doubles the long-run rate of fitness gain.
+2. **RM2: detraining.** Removing all training produces a slow exponential decay back to the activities-of-daily-living floor.
+3. **RM3: saturation.** Holding load constant produces a long-run plateau, not unbounded growth.
+4. **RM4: fatigue dominance.** A sudden spike in load produces a transient net-performance dip before any fitness gain materializes.
+5. **RM5: ADL floor.** Fitness does not fall below the activities-of-daily-living baseline regardless of how long detraining runs.
+6. **RM6: taper.** Reducing load just before a target date produces a net-performance peak above the loaded-state value.
+7. **RM7: overreach.** Sustained high load past a structural threshold pushes fatigue past fitness; net performance goes negative.
+
+Each test is a one-page reference mode with a target trajectory the simulator must
+reproduce to within a configurable tolerance. The validator is the structural gate
+before anything more ambitious (Bayesian fitting against a real cohort,
+hierarchical extensions, individualized priors) gets built on top of the model.
+
+## How it is built
+
+The single source of truth is a small R package wrapping the ODE solve and the
+seven validators. A parity-gated Python port (`python/rtsd/model.py`) reproduces
+the validated R model to within roughly 1e-15 relative deviation, which is what
+makes the browser-side Python surface safe to ship. The Shiny app, the marimo
+notebook, and the headless test runner all import from that core, so a change to
+the model logic propagates to every surface at once.
+
+```
+R/med_ode.R + R/simulate.R        ── MEDv4 ODE + deSolve integrator (authority)
+       │
+       ├─ R/reference_mode_tests.R ─── seven-test physiological-plausibility gate
+       ├─ inst/shiny/rtsd/         ─── R Shiny app
+       └─ python/rtsd/model.py     ─── parity-gated Python port
+                  │
+                  └─ python/rtsd/rtsd.py (marimo) ─── WASM bundle ── this explorer
+```
+
+The repository ships a `CITATION.cff` so researchers can cite the specific version
+they explored, pinned dependency manifests for both R and Python, a Python-versus-R
+parity test suite, and a `Dockerfile` whose layer caching keeps the rebuild loop
+short. A single `docker compose up` brings the explorer online locally.
+
+## Where this fits
+
+rtSD Explorer is the public, deterministic face of a larger, currently private
+Bayesian fitness-fatigue project (working name `getpaid`) that fits the same MEDv4
+model hierarchically against an open resistance-training cohort. The public
+artifact and the private codebase share the deterministic core; the private
+codebase adds Stan, priors derived from a 175-paper citation review, and
+per-subject partial pooling.
+
+The paired companion is [**The Banister Constellation**](/citation-network/), a
+175-paper citation graph of fifty years of fitness-fatigue model literature that
+anchors the priors and frames the lineage. The two form a model-view and
+literature-view pair of the same intellectual lineage.
+
+## Source and citation
+
+- Repository: [github.com/JacobBowie/rtsd](https://github.com/JacobBowie/rtsd)
+- License: MIT
+- Citation: see `CITATION.cff` in the repository for the canonical form
+
+> Originally released as `synthesim` in May 2026; renamed to **rtSD** after
+> "SyntheSim" was found to be a registered feature mark of Ventana Systems
+> (Vensim). The model and code are unchanged; only the name moved.
+
+If rtSD is useful in your own work, please reach out at
+**[jacob.bowie2@gmail.com](mailto:jacob.bowie2@gmail.com)**. I am especially
+interested in hearing from coaches and applied scientists who have qualitative
+reference modes the validator does not yet capture.

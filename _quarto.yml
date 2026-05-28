@@ -6,6 +6,7 @@ project:
     - "citation-network/interactive/**"
     - "citation-network/notebook/**"
     - "citation-network/assets/**"
+    - "rtsd/notebook/**"
 
 website:
   title: "Jacob Bowie, PhD"
