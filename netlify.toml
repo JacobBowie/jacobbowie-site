@@ -40,7 +40,7 @@
     # time on the rtsd side) and ships index.html + assets/ at its root, so
     # /rtsd/notebook/ serves the marimo app natively. -f so a missing/renamed
     # release fails the build with a clear curl error, not a cryptic tar error.
-    RTSD_TAG="v0.2.0"
+    RTSD_TAG="v0.2.1"
     mkdir -p rtsd/notebook
     curl -fsSL "https://github.com/JacobBowie/rtsd/releases/download/${RTSD_TAG}/rtsd-wasm.tar.gz" \
       | tar -xz -C rtsd/notebook
