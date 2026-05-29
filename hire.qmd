@@ -1,7 +1,7 @@
 ---
 title: "Work together"
 description: "How to reach me about postdoctoral and industry roles, collaborations, and reviewer-ready code."
-pagetitle: "Work together | Jacob Bowie, PhD"
+pagetitle: "Work together"
 format:
   html:
     page-layout: article

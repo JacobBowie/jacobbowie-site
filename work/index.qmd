@@ -1,6 +1,6 @@
 ---
 title: "Work"
-pagetitle: "Work | Jacob Bowie, PhD"
+pagetitle: "Work"
 description: "Case studies. Methodology-forward writeups of public research artifacts: forward simulators, citation graphs, reproducible pipelines, and the validators that gate them."
 listing:
   contents:
@@ -9,12 +9,14 @@ listing:
       title: "rtSD Explorer"
       description: "A deterministic forward-simulator for the MEDv4 fitness-fatigue-signal ODE, with a seven-test physiological-plausibility validator that gates the model. Runs in-browser via marimo + Pyodide."
       image: ../img/rtsd-rm1-dose-response.png
+      image-alt: "Reference-mode RM1: a doubled training dose produces roughly twice the fitness-gain rate over 52 weeks."
       date: "2026-05-28"
       categories: [interactive, system dynamics, ODE, sport science, fitness-fatigue model]
     - path: ../citation-network/
       title: "The Banister Constellation"
       description: "175 papers across 50 years of fitness-fatigue model literature, anchored on Banister 1975. Browser-rendered interactive citation graph via vis-network."
       image: ../img/banister-constellation-hero.png
+      image-alt: "Citation-network constellation of 175 fitness-fatigue-model papers anchored on Banister 1975."
       date: "2026-05-21"
       categories: [interactive, citation graph, sport science, fitness-fatigue model]
   sort: "date desc"

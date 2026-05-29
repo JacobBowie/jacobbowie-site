@@ -13,6 +13,11 @@ $headings-font-weight:   600 !default;
 $link-color:             #3C5488 !default;
 $link-decoration:        none !default;
 
+// One primary accent (design audit 2026-05-28): collapse the blue CTA button
+// (#2780E3, 3.97:1 white-on-blue, below AA) into the navy link color. White on
+// #3C5488 = 7.46:1 (AAA). Buttons + links now share one AA-passing accent.
+$primary:                #3C5488 !default;
+
 /*-- scss:rules --*/
 
 /* jacobbowie.com — light overrides on top of Quarto's cosmo theme.
@@ -25,7 +30,7 @@ $link-decoration:        none !default;
   --jb-accent: #3C5488;
   --jb-accent-soft: #4DBBD5;
   --jb-text: #1f2937;
-  --jb-muted: #6b7280;
+  --jb-muted: #5a6470;   /* darkened from #6b7280 (4.39:1) -> ~6:1 for AA captions/subtitles (audit A4) */
   --jb-border: #e5e7eb;
   --jb-bg-soft: #f8fafc;
 }
@@ -211,7 +216,10 @@ h2.section-heading {
   background: linear-gradient(135deg, #E64B35 0%, #F39B7F 100%);
 }
 .project-thumb-teal .project-thumb {
-  background: linear-gradient(135deg, #00A087 0%, #91D1C2 100%);
+  /* Darkened from #00A087->#91D1C2: the white card label failed AA badly on the
+     light end (~2.4:1). White-on-#008066 = 4.91:1, white-on-#00735E = 5.81:1, so
+     this range clears AA at the worst-case stop (audit A1). */
+  background: linear-gradient(135deg, #00735E 0%, #008066 100%);
 }
 .project-body {
   padding: 1.1rem 1.25rem 1.25rem;
@@ -269,6 +277,21 @@ pre code {
   padding: 0;
   font-size: inherit;
 }
+
+/* Tables: cosmo binds cell text to Bootstrap's --bs-table-color (near-black),
+   which the dark-mode block never overrides -> dark-on-slate-900, unreadable
+   (the originally-flagged /rtsd contrast bug). Bind the table vars to our theme
+   tokens so cells flip with the rest of the palette in both modes. */
+table, .table {
+  --bs-table-color: var(--jb-text);
+  --bs-table-bg: transparent;
+  --bs-table-border-color: var(--jb-border);
+  --bs-table-striped-color: var(--jb-text);
+  --bs-table-striped-bg: var(--jb-bg-soft);
+  color: var(--jb-text);
+}
+th, td { border-color: var(--jb-border); }
+thead th { color: var(--jb-text); border-bottom: 2px solid var(--jb-border); }
 
 /* Quarto listing cards (/work/ index page).
    Quarto generates .quarto-grid-item cards with Bootstrap defaults that
@@ -337,6 +360,14 @@ pre code {
 .quarto-grid-item .listing-date {
   font-size: 0.85rem;
   color: var(--jb-muted);
+}
+
+/* Page-level category chips (on /rtsd, /citation-network landing) render at
+   Bootstrap's muted gray (~4.17:1, below AA per audit A2). Bind to the theme
+   text token so they clear AA in both light and dark mode. */
+.quarto-title .quarto-categories .quarto-category,
+.quarto-category {
+  color: var(--jb-text);
 }
 
 /* Dark-mode parity for listing cards. */

@@ -35,7 +35,7 @@ the Bayesian hierarchical models I use in my dissertation.
 This visualization is the family tree.
 
 Every node is a paper. Every edge is a citation, drawn from the local
-[`getpaid`](https://github.com/JacobBowie/getpaid) literature pipeline
+`getpaid` literature pipeline
 (Semantic Scholar forward citations + CrossRef references). The **gold halos**
 mark the 14-paper Banister lineage — the direct chain of authorship from the
 1975 systems-model paper through the 2025 Bayesian-hierarchical critiques.

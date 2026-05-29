@@ -135,10 +135,6 @@ literature-view pair of the same intellectual lineage.
 - License: MIT
 - Citation: see `CITATION.cff` in the repository for the canonical form
 
-> Originally released as `synthesim` in May 2026; renamed to **rtSD** after
-> "SyntheSim" was found to be a registered feature mark of Ventana Systems
-> (Vensim). The model and code are unchanged; only the name moved.
-
 If rtSD is useful in your own work, please reach out at
 **[jacob.bowie2@gmail.com](mailto:jacob.bowie2@gmail.com)**. I am especially
 interested in hearing from coaches and applied scientists who have qualitative
