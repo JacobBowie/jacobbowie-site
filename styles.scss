@@ -361,6 +361,10 @@ thead th { color: var(--jb-text); border-bottom: 2px solid var(--jb-border); }
   border-radius: 999px;
   white-space: nowrap;
   cursor: pointer;
+  /* Quarto's default rule (same selector chain) forces text-transform:uppercase.
+     Render the labels as authored instead (preserves "ODE"; capitalize would
+     turn it into "Ode"). */
+  text-transform: none;
 }
 .quarto-grid-item .listing-date {
   font-size: 0.85rem;
