@@ -348,7 +348,12 @@ thead th { color: var(--jb-text); border-bottom: 2px solid var(--jb-border); }
   gap: 0.35rem 0.4rem;
   margin: 0.5rem 0 0.6rem;
 }
-.quarto-grid-item .listing-category {
+/* Quarto sets the chip color at (0,3,0) via
+   `.quarto-grid-item .listing-categories .listing-category {color:#6c757d}`
+   (fails AA). Match that chain + a `div` qualifier => (0,3,1) so our color wins
+   deterministically. Verified against the compiled bundle on deploy-preview-12,
+   2026-05-29. Do NOT lower the specificity or Quarto's default reclaims it. */
+.quarto-grid-item .listing-categories div.listing-category {
   font-size: 0.78rem;
   padding: 0.15rem 0.55rem;
   background: #eef2f7;
@@ -356,6 +361,10 @@ thead th { color: var(--jb-text); border-bottom: 2px solid var(--jb-border); }
   border-radius: 999px;
   white-space: nowrap;
   cursor: pointer;
+  /* Quarto's default rule (same selector chain) forces text-transform:uppercase.
+     Render the labels as authored instead (preserves "ODE"; capitalize would
+     turn it into "Ode"). */
+  text-transform: none;
 }
 .quarto-grid-item .listing-date {
   font-size: 0.85rem;
@@ -381,7 +390,7 @@ thead th { color: var(--jb-text); border-bottom: 2px solid var(--jb-border); }
   }
   .quarto-grid-item .listing-title { color: #f1f5f9; }
   .quarto-grid-item .listing-description { color: var(--jb-text); }
-  .quarto-grid-item .listing-category {
+  .quarto-grid-item .listing-categories div.listing-category {
     background: #334155;
     color: #cbd5e1;
   }

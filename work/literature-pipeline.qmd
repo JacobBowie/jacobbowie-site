@@ -3,7 +3,7 @@ title: "Literature pipeline: a shared discovery layer across six research projec
 description: "A Python toolkit that acquires, indexes, and snowballs scientific literature for any opted-in project from a single shared workspace. 17,617 DOIs and 21,104 citation edges across six projects, MIT-licensed, CI-tested on Linux and Windows."
 pagetitle: "Literature pipeline case study"
 date: 2026-05-21
-categories: [tooling, Python, DuckDB, research infrastructure, Semantic Scholar, Unpaywall]
+categories: [research software, data engineering, bibliometrics, Python, DuckDB]
 image: ../img/lit-pipeline-convergence.png
 image-alt: "Snowball-convergence step plot: candidate DOIs grow across pipeline passes then plateau."
 format:
