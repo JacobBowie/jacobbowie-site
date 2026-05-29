@@ -100,3 +100,11 @@
   from = "/work/synthesim"
   to   = "/rtsd/"
   status = 301
+
+# The standalone citation-interactive bundle and Netlify's default 404 page both
+# request /favicon.ico; the site only ships favicon.svg. Serve the SVG at the
+# .ico path (200 rewrite, not a binary asset) to kill the console 404.
+[[redirects]]
+  from = "/favicon.ico"
+  to   = "/favicon.svg"
+  status = 200
