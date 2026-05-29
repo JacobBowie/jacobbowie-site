@@ -348,7 +348,12 @@ thead th { color: var(--jb-text); border-bottom: 2px solid var(--jb-border); }
   gap: 0.35rem 0.4rem;
   margin: 0.5rem 0 0.6rem;
 }
-.quarto-grid-item .listing-category {
+/* Quarto sets the chip color at (0,3,0) via
+   `.quarto-grid-item .listing-categories .listing-category {color:#6c757d}`
+   (fails AA). Match that chain + a `div` qualifier => (0,3,1) so our color wins
+   deterministically. Verified against the compiled bundle on deploy-preview-12,
+   2026-05-29. Do NOT lower the specificity or Quarto's default reclaims it. */
+.quarto-grid-item .listing-categories div.listing-category {
   font-size: 0.78rem;
   padding: 0.15rem 0.55rem;
   background: #eef2f7;
@@ -370,15 +375,6 @@ thead th { color: var(--jb-text); border-bottom: 2px solid var(--jb-border); }
   color: var(--jb-text);
 }
 
-/* /work/ listing card chips are `.listing-category`, NOT `.quarto-category`.
-   The grid-scoped rule above sets #374151, but on the deployed listing the
-   chips render Quarto's default #6c757d (~4.17:1, fails AA per the 2026-05-29
-   Playwright audit, A2). Bind the bare class so the override actually lands.
-   #374151 = gray-700, ~8:1 on the #eef2f7 chip bg. */
-.listing-category {
-  color: #374151;
-}
-
 /* Dark-mode parity for listing cards. */
 @media (prefers-color-scheme: dark) {
   .quarto-grid-item.card {
@@ -390,13 +386,10 @@ thead th { color: var(--jb-text); border-bottom: 2px solid var(--jb-border); }
   }
   .quarto-grid-item .listing-title { color: #f1f5f9; }
   .quarto-grid-item .listing-description { color: var(--jb-text); }
-  .quarto-grid-item .listing-category {
+  .quarto-grid-item .listing-categories div.listing-category {
     background: #334155;
     color: #cbd5e1;
   }
-  /* Bare-class parity for non-grid listing chips (see light-mode note above) so
-     the A2 fix doesn't render dark-on-dark in dark mode. */
-  .listing-category { color: #cbd5e1; }
 }
 
 /* Skill chips — flat list of short labels, no progress bars (antipattern). */
