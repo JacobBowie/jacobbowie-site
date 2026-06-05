@@ -19,6 +19,13 @@ listing:
       image-alt: "Citation-network constellation of 175 fitness-fatigue-model papers anchored on Banister 1975."
       date: "2026-05-21"
       categories: [sport science, fitness–fatigue model, citation network, scientometrics, interactive]
+    - path: ../unlearning/
+      title: "Who's Harry Potter? Approximate unlearning in LLMs"
+      description: "With one GPU-hour of fine-tuning, Eldan and Russinovich (2023) made Llama-2-7B forget Harry Potter without measurable loss of general competence. An interactive walkthrough of the mechanism: edge surgery on the model's knowledge graph. Runs in-browser via marimo + Pyodide."
+      image: ../img/unlearning-hero.png
+      image-alt: "Force-directed knowledge graph with 'Harry' at the center surrounded by Harry-Potter-specific words in red with fading red edges, and new green edges growing toward generic words like 'British' and 'actor'."
+      date: "2026-06-03"
+      categories: [machine learning, LLM, unlearning, interactive, marimo]
   sort: "date desc"
   type: grid
   fields: [image, title, description, date, categories]
