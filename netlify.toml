@@ -45,6 +45,16 @@
     curl -fsSL "https://github.com/JacobBowie/rtsd/releases/download/${RTSD_TAG}/rtsd-wasm.tar.gz" \
       | tar -xz -C rtsd/notebook
 
+    # Pull the marimo-unlearning WASM bundle from the JacobBowie/marimo-unlearning
+    # release. Self-contained (all notebook data inlined as Python literals), ships
+    # index.html + assets/ at its root, so /unlearning/notebook/ serves the marimo
+    # app natively. -f so a missing/renamed release fails the build with a clear
+    # curl error rather than a cryptic tar error.
+    UNLEARNING_TAG="v0.1.0"
+    mkdir -p unlearning/notebook
+    curl -fsSL "https://github.com/JacobBowie/marimo-unlearning/releases/download/${UNLEARNING_TAG}/unlearning-wasm.tar.gz" \
+      | tar -xz -C unlearning/notebook
+
     /tmp/quarto/bin/quarto render
   """
 
@@ -71,6 +81,14 @@
 # site-wide DENY so the explorer can be embedded same-origin if needed.
 [[headers]]
   for = "/rtsd/notebook/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+
+# /unlearning embeds its marimo WASM notebook via iframe from /unlearning/notebook/.
+# Override the site-wide DENY so the same-origin iframe renders. Without this the
+# embed is silently blank (no console error in some browsers).
+[[headers]]
+  for = "/unlearning/notebook/*"
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
 

@@ -156,6 +156,32 @@ preference for reproducible, version-controlled, container-portable analysis.
 </div>
 </div>
 
+<!-- Project: marimo-unlearning. Browser-side marimo WASM interactive explaining
+     the 2023 "Who's Harry Potter?" approximate-unlearning paper. Placed among the
+     interactive pieces; not part of the fitness-fatigue lineage above. -->
+
+<div class="project project-thumb-image">
+<div class="project-thumb"><img src="img/unlearning-hero.png" alt="Force-directed knowledge graph with 'Harry' at the center surrounded by Harry-Potter-specific words in red with fading red edges, and new green edges growing toward generic words like 'British' and 'actor'" /></div>
+<div class="project-body">
+  <h3>Who's Harry Potter? An interactive walk through approximate unlearning in LLMs</h3>
+  <div class="project-meta">Portfolio piece &middot; browser-side marimo + Pyodide</div>
+  <p>
+  Llama-2-7B took 184,000 GPU-hours to train. In 2023, Eldan and Russinovich at
+  Microsoft Research showed that one GPU-hour of fine-tuning can make it forget
+  Harry Potter, with no retraining from scratch and no measurable loss of general
+  competence. This interactive notebook walks through the mechanism: not deleting
+  the word "Harry" but cutting the edges between "Harry" and "Hogwarts", "magic",
+  "Quidditch". Drag a slider and watch the Harry Potter cluster pull itself apart
+  while the surrounding language graph stays intact. Runs entirely in your browser
+  via marimo + Pyodide.
+  </p>
+<div class="project-links">
+<a href="/unlearning/">Live demo</a>
+<a href="https://github.com/JacobBowie/marimo-unlearning">Repository</a>
+</div>
+</div>
+</div>
+
 <!-- Project 5: literature pipeline tool. -->
 
 <div class="project project-thumb-teal">

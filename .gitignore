@@ -44,3 +44,7 @@ citation-network/assets/
 # rtSD marimo WASM bundle pulled at build time from
 # JacobBowie/rtsd releases — not committed.
 rtsd/notebook/
+
+# marimo-unlearning WASM bundle pulled at build time from
+# JacobBowie/marimo-unlearning releases, not committed.
+unlearning/notebook/
