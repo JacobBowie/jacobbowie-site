@@ -21,11 +21,21 @@ quarto render
 Renders `index.qmd` to `_site/index.html` for local preview. Push to `main`;
 Netlify rebuilds and deploys in ~15 to 30 seconds.
 
+## Pages
+
+- `/` (`index.qmd`): homepage project grid
+- `/work/` (`work/`): case-study listing
+- `/hire/` (`hire.qmd`): "Work together" posture page
+- `/cv` (`cv.qmd`): HTML CV
+- `/rtsd/`, `/citation-network/`, `/unlearning/`: interactive case studies whose
+  marimo WASM bundles are pulled from per-repo GitHub releases at build time
+
 ## Layout
 
-- `index.qmd`: the page
-- `_quarto.yml`: site config (theme, layout, open-graph)
+- `_quarto.yml`: site config (theme, navbar, open-graph, schema.org JSON-LD)
 - `styles.scss`: SCSS overrides on top of the cosmo theme
-- `netlify.toml`: Netlify build configuration (inline Quarto install)
+- `cv-html.scss`: CV-specific styles, layered on `styles.scss`
+- `netlify.toml`: Netlify build configuration (inline Quarto install) plus
+  per-route headers and redirects
 - `favicon.svg`: JB monogram in brand color `#3C5488`
 - `img/`: project thumbnails referenced from `index.qmd`
