@@ -25,6 +25,34 @@ $primary:                #3C5488 !default;
   --jb-bg-soft: #f8fafc;
 }
 
+/* The project _quarto.yml merges the site's styles.scss into this page's
+   theme, and styles.scss carries a prefers-color-scheme: dark block (dark
+   body bg + light text). The CV is a light "paper" document and has no
+   dark-mode treatment of its own, so the half-applied dark block leaves a
+   dark-blue body behind light CV elements (illegible). cv-html.scss loads
+   last, so re-pin the light palette under the dark media query to keep the
+   CV a legible light document in both OS themes. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --jb-accent: #3C5488;
+    --jb-accent-soft: #4DBBD5;
+    --jb-text: #1f2937;
+    --jb-muted: #5a6470;
+    --jb-border: #e5e7eb;
+    --jb-bg-soft: #f8fafc;
+
+    --bs-body-bg: #ffffff;
+    --bs-body-color: #1f2937;
+    --bs-heading-color: #111827;
+    --bs-link-color: #3C5488;
+    --bs-link-hover-color: #3C5488;
+    --bs-border-color: #e5e7eb;
+  }
+  body { background-color: #ffffff; color: var(--jb-text); }
+  h1, h2 { color: var(--jb-accent); }
+  h3 { color: var(--jb-muted); }
+}
+
 body { color: var(--jb-text); line-height: 1.6; }
 a, a:visited { color: var(--jb-accent); text-decoration: none; }
 a:hover { text-decoration: underline; }

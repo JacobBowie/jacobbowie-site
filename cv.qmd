@@ -2,7 +2,7 @@
 pagetitle: "CV | Jacob Bowie, PhD"
 format:
   html:
-    theme: [cosmo, styles.scss, cv-html.scss]
+    theme: [cosmo, cv-html.scss]
     toc: true
     toc-location: left
     toc-title: "Sections"
