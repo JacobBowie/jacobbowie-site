@@ -2,7 +2,6 @@ project:
   type: website
   output-dir: _site
   resources:
-    - "Bowie_CV.pdf"
     - "citation-network/interactive/**"
     - "citation-network/notebook/**"
     - "citation-network/assets/**"
@@ -28,7 +27,7 @@ website:
         text: Work
       - href: hire.html
         text: Work together
-      - href: Bowie_CV.pdf
+      - href: cv.qmd
         text: CV
     right:
       - icon: github

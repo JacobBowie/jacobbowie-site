@@ -126,3 +126,10 @@
   from = "/favicon.ico"
   to   = "/favicon.svg"
   status = 200
+
+# The CV moved from a committed Bowie_CV.pdf download to an HTML page at
+# /cv.html (2026-06-23). Preserve any inbound links to the old PDF.
+[[redirects]]
+  from = "/Bowie_CV.pdf"
+  to   = "/cv.html"
+  status = 301

@@ -1,0 +1,121 @@
+/*-- scss:defaults --*/
+
+// Mirror jacobbowie.com: Inter (body/UI) + Source Serif 4 (display headings),
+// NPG navy #3C5488 accent. Same Google-font import the site uses.
+$web-font-path: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap";
+$web-font-path-import: true;
+
+$font-family-sans-serif: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !default;
+$font-family-serif:      "Source Serif 4", Georgia, "Times New Roman", serif !default;
+$headings-font-family:   $font-family-serif !default;
+$headings-font-weight:   600 !default;
+
+$link-color:             #3C5488 !default;
+$link-decoration:        none !default;
+$primary:                #3C5488 !default;
+
+/*-- scss:rules --*/
+
+:root {
+  --jb-accent: #3C5488;
+  --jb-accent-soft: #4DBBD5;
+  --jb-text: #1f2937;
+  --jb-muted: #5a6470;
+  --jb-border: #e5e7eb;
+  --jb-bg-soft: #f8fafc;
+}
+
+body { color: var(--jb-text); line-height: 1.6; }
+a, a:visited { color: var(--jb-accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+h1, h2, h3 { letter-spacing: -0.01em; color: #111827; }
+
+/* CV header (name + title + contact line) rendered in the body. */
+.cv-name {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+.cv-title {
+  font-size: 1.1rem;
+  color: var(--jb-muted);
+  margin: 0 0 0.5rem;
+}
+.cv-contact {
+  font-size: 0.92rem;
+  color: var(--jb-muted);
+  margin-bottom: 0.5rem;
+}
+.cv-contact a {
+  color: var(--jb-accent);
+  border-bottom: 1px solid rgba(60, 84, 136, 0.25);
+}
+
+/* Section headings: serif, navy text + light rule (matches the PDF). */
+h2 {
+  font-family: $font-family-serif;
+  font-size: 1.3rem;
+  color: var(--jb-accent);
+  margin-top: 2.4rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #cfd6e4;
+}
+
+/* Subsection labels (h3): small muted caps, no rule. */
+h3 {
+  font-family: $font-family-sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  color: var(--jb-muted);
+  margin: 1.1rem 0 0.45rem;
+  padding: 0;
+  border: 0;
+}
+
+/* Right-aligned date column primitive. The entry is one block; the date
+   floats right of its first line. `.cv-entry` establishes the block + clear.
+   Generous gap BETWEEN entries (proximity = grouping). */
+.cv-entry { overflow: hidden; margin-bottom: 1.05rem; }
+/* Bootstrap gives every <p> a ~1rem bottom margin; inside an entry that STACKS
+   on top of .cv-entry's own margin-bottom, doubling the gap between entries
+   (worst on single-line sections). Zero the inner <p> margin so the entry's
+   margin is the single source of inter-entry spacing; stacked lines within one
+   entry get a tight gap instead. */
+.cv-name p, .cv-contact p { margin: 0; }
+.cv-entry p { margin-bottom: 0; }
+.cv-entry p + p { margin-top: 0.2rem; }
+.cv-date {
+  float: right;
+  color: var(--jb-muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.92rem;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+.cv-entry-detail { color: var(--jb-text); font-size: 0.95rem; }
+
+/* Publication list: reuse the site's pub-list aesthetic. */
+ol.pub-list { list-style: none; padding: 0; counter-reset: pub; }
+ol.pub-list li {
+  counter-increment: pub;
+  position: relative;
+  padding: 0.5rem 0 0.6rem 1.9rem;
+  border-bottom: 1px dashed var(--jb-border);
+  font-size: 0.95rem;
+}
+ol.pub-list li:last-child { border-bottom: 0; }
+ol.pub-list li::before {
+  content: counter(pub) ".";
+  position: absolute; left: 0;
+  color: var(--jb-muted);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+.pub-venue { font-style: italic; color: #4b5563; }
+
+/* Skill chips (flat list, matches site). */
+.skill-chips { display: flex; flex-wrap: wrap; gap: 0.4rem 0.5rem; margin: 0.5rem 0 1rem; padding: 0; list-style: none; }
+.skill-chips li { font-size: 0.85rem; padding: 0.2rem 0.6rem; background: #eef2f7; color: #374151; border-radius: 999px; white-space: nowrap; }
