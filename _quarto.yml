@@ -21,8 +21,6 @@ website:
     pinned: false
     collapse-below: md
     left:
-      - href: index.html
-        text: Home
       - href: work/
         text: Work
       - href: hire.html
