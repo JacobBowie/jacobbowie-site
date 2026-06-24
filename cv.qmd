@@ -336,10 +336,10 @@ EXS 321, Biomechanics [· University of North Carolina Wilmington]{.cv-inst} `#h
 ### Test Preparation
 
 ::: {.cv-entry}
-SAT preparation, [Connecticut Collegiate Awareness and Preparation (ConnCAP)](https://caps.center.uconn.edu/programs/college-access-programs/conncap), University of Connecticut `#h(1fr)`{=typst}[2019]{.cv-date}
+SAT preparation, [Connecticut Collegiate Awareness and Preparation (ConnCAP)](https://caps.center.uconn.edu/programs/college-access-programs/conncap) [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2019]{.cv-date}
 :::
 ::: {.cv-entry}
-GRE preparation, [Student Support Services (TRIO)](https://caps.center.uconn.edu/programs/student-support-services/), University of Connecticut `#h(1fr)`{=typst}[2019]{.cv-date}
+GRE preparation, [Student Support Services (TRIO)](https://caps.center.uconn.edu/programs/student-support-services/) [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2019]{.cv-date}
 :::
 
 ## Departmental and University Service
