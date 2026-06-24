@@ -100,6 +100,9 @@ h3 {
 }
 .cv-entry-detail { color: var(--jb-text); font-size: 0.95rem; }
 
+/* Muted institution / affiliation tag (coursework + references). */
+.cv-inst { color: var(--jb-muted); font-size: 0.9rem; font-weight: 400; }
+
 /* Publication list: reuse the site's pub-list aesthetic. */
 ol.pub-list { list-style: none; padding: 0; counter-reset: pub; }
 ol.pub-list li {

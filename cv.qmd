@@ -300,37 +300,37 @@ Interactive citation network of the fitness-fatigue modeling literature (175 pap
 ### Courses
 
 ::: {.cv-entry}
-EXS 240, Statistics for Kinesiology `#h(1fr)`{=typst}[2025]{.cv-date}
+EXS 240, Statistics for Kinesiology [· University of Hartford]{.cv-inst} `#h(1fr)`{=typst}[2025]{.cv-date}
 :::
 ::: {.cv-entry}
-KINS 3545 / 3545W, Strength and Conditioning (incl. writing section) `#h(1fr)`{=typst}[2021]{.cv-date}
+KINS 3545 / 3545W, Strength and Conditioning (incl. writing section) [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2021]{.cv-date}
 :::
 ::: {.cv-entry}
-KINS 3099, Independent Study, Research `#h(1fr)`{=typst}[2019]{.cv-date}
+KINS 3099, Independent Study, Research [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2019]{.cv-date}
 :::
 ::: {.cv-entry}
-KINS 4510 / 4510W, Mechanisms and Adaptations in Sport and Exercise (incl. writing section) `#h(1fr)`{=typst}[2018]{.cv-date}
+KINS 4510 / 4510W, Mechanisms and Adaptations in Sport and Exercise (incl. writing section) [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2018]{.cv-date}
 :::
 ::: {.cv-entry}
-KINS 4500, Physiological Systems of Human Performance `#h(1fr)`{=typst}[2018]{.cv-date}
+KINS 4500, Physiological Systems of Human Performance [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2018]{.cv-date}
 :::
 ::: {.cv-entry}
-UNIV 1810, Freshman Year Experience for Kinesiology Students `#h(1fr)`{=typst}[2018]{.cv-date}
+UNIV 1810, Freshman Year Experience for Kinesiology Students [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2018]{.cv-date}
 :::
 
 ### Guest Lectures
 
 ::: {.cv-entry}
-KINS 4510, Mechanisms and Adaptations in Sport and Exercise `#h(1fr)`{=typst}[2023, 2024]{.cv-date}
+KINS 4510, Mechanisms and Adaptations in Sport and Exercise [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2023, 2024]{.cv-date}
 :::
 ::: {.cv-entry}
-KINS 3545, Strength and Conditioning `#h(1fr)`{=typst}[2022]{.cv-date}
+KINS 3545, Strength and Conditioning [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2022]{.cv-date}
 :::
 ::: {.cv-entry}
-EXS 410, Strength and Conditioning Laboratory Experience `#h(1fr)`{=typst}[2016]{.cv-date}
+EXS 410, Strength and Conditioning Laboratory Experience [· University of North Carolina Wilmington]{.cv-inst} `#h(1fr)`{=typst}[2016]{.cv-date}
 :::
 ::: {.cv-entry}
-EXS 321, Biomechanics `#h(1fr)`{=typst}[2015]{.cv-date}
+EXS 321, Biomechanics [· University of North Carolina Wilmington]{.cv-inst} `#h(1fr)`{=typst}[2015]{.cv-date}
 :::
 
 ### Test Preparation
@@ -452,11 +452,17 @@ Ad hoc reviewer, *European Journal of Applied Physiology* `#h(1fr)`{=typst}[2026
 ## References
 
 ::: {.cv-entry}
-**Elaine C. Lee, Ph.D.**, [UConn profile](https://kins.uconn.edu/person/elaine-choung-hee-lee/) · [elaine.c.lee@uconn.edu](mailto:elaine.c.lee@uconn.edu)
+**[Elaine C. Lee, Ph.D.](https://kins.uconn.edu/person/elaine-choung-hee-lee/)** [· University of Connecticut]{.cv-inst}
 :::
 ::: {.cv-entry}
-**Douglas J. Casa, Ph.D.**, [UConn profile](https://koreystringer.institute.uconn.edu/person/douglas-casa/) · [douglas.casa@uconn.edu](mailto:douglas.casa@uconn.edu)
+**[Douglas J. Casa, Ph.D.](https://koreystringer.institute.uconn.edu/person/douglas-casa/)** [· University of Connecticut]{.cv-inst}
 :::
 ::: {.cv-entry}
-**Robert Huggins, Ph.D.**, [UConn profile](https://koreystringer.institute.uconn.edu/person/robert-huggins-phd-atc) · [robert.huggins@uconn.edu](mailto:robert.huggins@uconn.edu)
+**[Robert Huggins, Ph.D.](https://koreystringer.institute.uconn.edu/person/robert-huggins-phd-atc)** [· University of Connecticut]{.cv-inst}
+:::
+::: {.cv-entry}
+**[Laurie L. Devaney](https://kins.uconn.edu/person/laurie-devaney/)** [· Department Head, Kinesiology, University of Connecticut]{.cv-inst}
+:::
+::: {.cv-entry}
+**[Linda M. Yamamoto](https://www.hartford.edu/directory/enhp/yamamoto-linda.aspx)** [· Exercise Science Program Director, University of Hartford]{.cv-inst}
 :::
