@@ -18,6 +18,10 @@ categories:
   - fitness-fatigue model
 format:
   html:
+    # Light island: the embedded marimo WASM explorer is light-themed and an
+    # iframe doesn't inherit the parent theme, so keep this route light to avoid
+    # a light box on a dark page.
+    respect-user-color-scheme: false
     page-layout: full
 ---
 

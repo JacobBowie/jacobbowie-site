@@ -1,0 +1,7 @@
+/*-- scss:defaults --*/
+
+// Light mode Bootstrap color baseline. cosmo is already light, so these mostly
+// make the light palette explicit and symmetric with theme-dark.scss. Listed
+// after theme-common in the `light:` theme so these win on shared variables.
+$body-bg:    #ffffff !default;
+$body-color: #1f2937 !default;

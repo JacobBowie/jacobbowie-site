@@ -2,7 +2,6 @@ project:
   type: website
   output-dir: _site
   resources:
-    - "Bowie_CV.pdf"
     - "citation-network/interactive/**"
     - "citation-network/notebook/**"
     - "citation-network/assets/**"
@@ -22,13 +21,11 @@ website:
     pinned: false
     collapse-below: md
     left:
-      - href: index.html
-        text: Home
       - href: work/
         text: Work
       - href: hire.html
         text: Work together
-      - href: Bowie_CV.pdf
+      - href: cv.qmd
         text: CV
     right:
       - icon: github
@@ -43,7 +40,16 @@ website:
 
 format:
   html:
-    theme: [cosmo, styles.scss]
+    # Native light/dark. theme-common is mode-agnostic and listed in both;
+    # theme-light/theme-dark carry the per-mode Bootstrap color foundation.
+    # respect-user-color-scheme follows the visitor's OS (no manual toggle; the
+    # toggle is hidden site-wide in theme-common.scss). Light-island pages
+    # (cv, the embed routes) set respect-user-color-scheme: false in their own
+    # front matter to stay light regardless of OS.
+    respect-user-color-scheme: true
+    theme:
+      light: [cosmo, theme-common.scss, theme-light.scss]
+      dark:  [cosmo, theme-common.scss, theme-dark.scss]
     toc: false
     anchor-sections: false
     smooth-scroll: true
