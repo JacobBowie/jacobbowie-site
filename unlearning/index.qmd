@@ -13,6 +13,9 @@ image-alt: |
   edges growing toward generic words like "British" and "actor".
 format:
   html:
+    # Light island: the embedded marimo WASM notebook is light-themed and an
+    # iframe doesn't inherit the parent theme, so keep this route light.
+    respect-user-color-scheme: false
     toc: false
     page-layout: full
     include-in-header:

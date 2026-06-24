@@ -2,7 +2,15 @@
 pagetitle: "CV | Jacob Bowie, PhD"
 format:
   html:
-    theme: [cosmo, cv-html.scss]
+    # Light island: the CV is a light "paper" document. respect-user-color-scheme:
+    # false drops the OS-follow script so this page ignores a dark OS and stays on
+    # the first-listed (light) theme. cv-html.scss is appended to the project's
+    # light/dark theme lists (Quarto concatenates theme arrays) so it layers on top
+    # of theme-common + theme-light. Validated 2026-06-23, see SEED.md.
+    respect-user-color-scheme: false
+    theme:
+      light: [cv-html.scss]
+      dark:  [cv-html.scss]
     toc: true
     toc-location: left
     toc-title: "Sections"

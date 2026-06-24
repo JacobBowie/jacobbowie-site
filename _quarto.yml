@@ -42,7 +42,16 @@ website:
 
 format:
   html:
-    theme: [cosmo, styles.scss]
+    # Native light/dark. theme-common is mode-agnostic and listed in both;
+    # theme-light/theme-dark carry the per-mode Bootstrap color foundation.
+    # respect-user-color-scheme follows the visitor's OS (no manual toggle; the
+    # toggle is hidden site-wide in theme-common.scss). Light-island pages
+    # (cv, the embed routes) set respect-user-color-scheme: false in their own
+    # front matter to stay light regardless of OS.
+    respect-user-color-scheme: true
+    theme:
+      light: [cosmo, theme-common.scss, theme-light.scss]
+      dark:  [cosmo, theme-common.scss, theme-dark.scss]
     toc: false
     anchor-sections: false
     smooth-scroll: true

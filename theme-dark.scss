@@ -1,0 +1,97 @@
+/*-- scss:defaults --*/
+
+// Dark mode: flip the Bootstrap color foundation so EVERY component (tables,
+// sidebar, cards, callouts, navbar) recomputes dark from the framework, not
+// just the hand-picked selectors below. This is the robustness fix: the old
+// hand-rolled @media block in styles.scss only re-styled a few elements and
+// left Bootstrap-derived components (e.g. the left TOC sidebar) desynced.
+// Listed after theme-common in the `dark:` theme so these win on shared vars.
+$body-bg:          #0f172a !default;   // slate-900
+$body-color:       #e2e8f0 !default;   // slate-200
+$link-color:       #6c8cc6 !default;   // brighter navy for AA on dark
+$link-hover-color: #93c5fd !default;
+$headings-color:   #f1f5f9 !default;
+$border-color:     #334155 !default;   // slate-700
+
+/*-- scss:rules --*/
+
+// Re-pin our --jb-* custom-property tokens to the dark palette so every shared
+// rule in theme-common.scss that references var(--jb-*) renders dark. (Relocated
+// verbatim from the old styles.scss @media prefers-color-scheme: dark block.)
+:root {
+  --jb-accent:      #6c8cc6;
+  --jb-accent-soft: #4DBBD5;
+  --jb-text:        #e2e8f0;
+  --jb-muted:       #94a3b8;     // slate-400
+  --jb-border:      #334155;
+  --jb-bg-soft:     #1e293b;     // slate-800
+
+  // Bootstrap custom-property overrides as a RUNTIME backstop. Several of the
+  // Sass $defaults above get shadowed in the theme-list cascade: $border-color
+  // loses to Bootstrap's $gray-300 (#dee2e6) and $link-color loses to
+  // theme-common.scss's $link-color (#3C5488), so the compiled dark bundle would
+  // otherwise ship light-gray borders + light navy links on the slate background.
+  // Setting the --bs-* custom properties in :root reliably wins at runtime, exactly
+  // as the original styles.scss dark block did. (Caught by the review workflow,
+  // verified against the compiled bundle, 2026-06-23.)
+  --bs-body-bg:          #0f172a;
+  --bs-body-color:       #e2e8f0;
+  --bs-heading-color:    #f1f5f9;
+  --bs-link-color:       #6c8cc6;
+  --bs-link-hover-color: #93c5fd;
+  --bs-border-color:     #334155;
+}
+
+h1, h2, h3 { color: #f1f5f9; }
+
+// Cards: dark surface, lifted border
+.project {
+  background: var(--jb-bg-soft);
+  border-color: var(--jb-border);
+}
+.project:hover {
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+}
+
+// Skill chips
+.skill-chips li {
+  background: #334155;
+  color: #cbd5e1;
+}
+
+// Contact panel
+.contact {
+  background: var(--jb-bg-soft);
+  border-color: var(--jb-border);
+}
+
+// Hero photo shadow: more dramatic on dark
+.hero-photo img {
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.5);
+}
+
+// Publications list dividers
+ol.pub-list li {
+  border-bottom-color: var(--jb-border);
+}
+ol.pub-list .pub-venue { color: #cbd5e1; }
+
+// Footer + dividers
+footer.site-footer { border-top-color: var(--jb-border); }
+footer.site-footer a { color: #94a3b8; }
+hr { border-top-color: var(--jb-border); }
+
+// Quarto listing cards (/work/ index)
+.quarto-grid-item.card {
+  background: var(--jb-bg-soft);
+  border-color: var(--jb-border);
+}
+.quarto-grid-item.card:hover {
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+}
+.quarto-grid-item .listing-title { color: #f1f5f9; }
+.quarto-grid-item .listing-description { color: var(--jb-text); }
+.quarto-grid-item .listing-categories div.listing-category {
+  background: #334155;
+  color: #cbd5e1;
+}

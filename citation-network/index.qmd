@@ -16,6 +16,9 @@ categories:
   - fitness-fatigue model
 format:
   html:
+    # Light island: the embedded viz iframe is light-themed and doesn't inherit
+    # the parent theme, so keep this route light.
+    respect-user-color-scheme: false
     page-layout: full
     include-in-header:
       - file: og_metadata.html
