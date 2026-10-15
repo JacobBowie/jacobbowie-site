@@ -136,7 +136,7 @@ preference for reproducible, version-controlled, container-portable analysis.
      explorer hosted natively at /rtsd/; R Shiny + Docker in the repo. -->
 
 <div class="project project-thumb-image">
-<div class="project-thumb"><img src="img/rtsd-rm1-dose-response.png" alt="Reference-mode test RM1: doubled training dose produces roughly twice the rate of fitness gain over 52 weeks, the dose-response gate the simulator must satisfy" /></div>
+<div class="project-thumb"><img src="img/rtsd-tile.png" alt="Simulated year of RP mesocycles in rtSD: Fatigue and Signal cycle with each training block, Performance dips and rebounds after each deload, and Fitness climbs steadily" /></div>
 <div class="project-body">
   <h3><a class="stretched-link" href="/rtsd/">rtSD Explorer: an interactive fitness-fatigue model explorer</a></h3>
   <div class="project-meta">Public release &middot; browser-side marimo + R Shiny + Docker</div>

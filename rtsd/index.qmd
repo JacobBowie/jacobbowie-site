@@ -1,7 +1,8 @@
 ---
 title: "rtSD Explorer"
 subtitle: "An interactive system-dynamics explorer for resistance-training adaptation"
-image: ../img/rtsd-rm1-dose-response.png
+image: ../img/rtsd-card.png
+image-alt: "rtSD Explorer: stock-and-flow diagram of the model beside a simulated year of RP mesocycles"
 description: >
   A browser-based explorer for the MEDv4 fitness-fatigue-signal model, the
   three-stock system-dynamics ODE behind fifty years of resistance-training
@@ -25,7 +26,7 @@ format:
     page-layout: full
 ---
 
-![Reference-mode test RM1: doubling the weekly training dose produces roughly twice the rate of fitness gain over 52 weeks. The dose-response gate the simulator must satisfy.](../img/rtsd-rm1-dose-response.png){fig-alt="Two line plots showing fitness-gain trajectories for a baseline training dose and a doubled dose over 52 weeks, where the doubled-dose curve rises at roughly twice the rate." width=100%}
+![The model and what it does. Left, structure: training load drives Fatigue and Signal, Signal adapts into Fitness, and Performance is Fitness net of Fatigue. Right, behavior: a simulated year of RP mesocycles (7-day averages, each scaled 0 to 1).](../img/rtsd-hero.png){fig-alt="Left: stock-and-flow diagram of the rtSD model, in which training load drives Fatigue and Signal, Signal adapts into Fitness, and Performance is Fitness minus a share of Fatigue. Right: simulated 52 weeks of RP mesocycles, where Fatigue and Signal rise and fall with each block, Performance dips and rebounds after each deload, and Fitness climbs in steps." width=100%}
 
 ## Try it
 
@@ -75,6 +76,8 @@ A fitness-fatigue model has to satisfy a set of qualitative physiological constr
 5. **RM5: ADL floor.** Fitness does not fall below the activities-of-daily-living baseline regardless of how long detraining runs.
 6. **RM6: taper.** Reducing load just before a target date produces a net-performance peak above the loaded-state value.
 7. **RM7: overreach.** Sustained high load past a structural threshold pushes fatigue past fitness; net performance goes negative.
+
+![Reference mode RM1: doubling the weekly training dose produces roughly twice the rate of fitness gain over 52 weeks, the dose-response gate the simulator must satisfy.](../img/rtsd-rm1-dose-response.png){fig-alt="Two fitness trajectories over 52 weeks: the 2x-dose curve rises to about 160 kg while the 1x-dose curve reaches about 120 kg, roughly twice the rate of gain." width=100%}
 
 Each test is a one-page reference mode with a target trajectory the model must reproduce. This validator is the structural gate before anything more ambitious (Bayesian fitting against a real cohort, hierarchical extensions, individualized priors) gets built on top.
 
