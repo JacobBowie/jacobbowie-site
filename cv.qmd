@@ -1,5 +1,7 @@
 ---
-pagetitle: "CV | Jacob Bowie, PhD"
+pagetitle: "CV"
+description: "Curriculum vitae of Jacob Bowie, PhD, Visiting Assistant Professor of Exercise Science at the University of Connecticut: publications, research, grants, teaching, and service."
+image: profile.jpg
 format:
   html:
     # Light island: the CV is a light "paper" document. respect-user-color-scheme:
@@ -19,6 +21,8 @@ format:
 
 <!-- ============================ HEADER ============================ -->
 
+<h1 class="visually-hidden">Curriculum vitae: Jacob Bowie, PhD</h1>
+
 ::: {.cv-name}
 Jacob Bowie, PhD
 :::
@@ -29,7 +33,7 @@ Jacob Bowie, PhD
 ## Current Position
 
 ::: {.cv-entry}
-**Visiting Assistant Professor**, Exercise Science `#h(1fr)`{=typst}[2026–2027]{.cv-date}
+**Visiting Assistant Professor**, Exercise Science `#h(1fr)`{=typst}[2026–2027]{.cv-date}
 
 [Department of Kinesiology, University of Connecticut, Storrs, CT]{style="color:#5a6470;font-style:italic"}
 :::
@@ -82,41 +86,41 @@ Linda S. Pescatello Scholarship, University of Connecticut `#h(1fr)`{=typst}[201
 
 ## Publications
 
-4\. **Bowie JS**, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Mahoney KJ, Sekiguchi Y, Kwon OS, Chon K, Casa DJ, Lee EC. (2026). Heat tolerance classification criteria require population-specific thresholds for accurate assessment of acclimation state in adults. *Physiological Reports*, 14(4), e70745. [doi:10.14814/phy2.70745](https://doi.org/10.14814/phy2.70745)
+4\. **Bowie JS**, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Mahoney KJ, Sekiguchi Y, Kwon OS, Chon K, Casa DJ, Lee EC. (2026). Heat tolerance classification criteria require population-specific thresholds for accurate assessment of acclimation state in adults. *Physiological Reports*, 14(4), e70745. [doi:10.14814/phy2.70745](https://doi.org/10.14814/phy2.70745)
 
-3\. **Bowie JS**, Sterczala AJ, Kraemer WJ, Maresh CM, Comstock BA, Muñoz CX, McKenzie AL, Volek JS, Lee EC. (2026). Acute heavy resistance exercise protocol increases extracellular heat shock protein without changes in associated cytokines. *Journal of Strength and Conditioning Research*, 40(5), 528–535. [doi:10.1519/JSC.0000000000005373](https://doi.org/10.1519/JSC.0000000000005373)
+3\. **Bowie JS**, Sterczala AJ, Kraemer WJ, Maresh CM, Comstock BA, Muñoz CX, McKenzie AL, Volek JS, Lee EC. (2026). Acute heavy resistance exercise protocol increases extracellular heat shock protein without changes in associated cytokines. *Journal of Strength and Conditioning Research*, 40(5), 528–535. [doi:10.1519/JSC.0000000000005373](https://doi.org/10.1519/JSC.0000000000005373)
 
-2\. Mahoney KJ, **Bowie JS**, Ford AE, Perera N, Sekiguchi Y, Fothergill DM, Lee EC. (2023). Plasma proteomics-based discovery of mechanistic biomarkers of hyperbaric stress and pulmonary oxygen toxicity. *Metabolites*, 13(9), 970. [doi:10.3390/metabo13090970](https://doi.org/10.3390/metabo13090970)
+2\. Mahoney KJ, **Bowie JS**, Ford AE, Perera N, Sekiguchi Y, Fothergill DM, Lee EC. (2023). Plasma proteomics-based discovery of mechanistic biomarkers of hyperbaric stress and pulmonary oxygen toxicity. *Metabolites*, 13(9), 970. [doi:10.3390/metabo13090970](https://doi.org/10.3390/metabo13090970)
 
-1\. Lee EC, **Bowie JS**, Fiol AP, Huggins RA. (2020). Molecular aspects of thermal tolerance and exertional heat illness susceptibility. In Adams WM, Jardine JF, eds. *Exertional Heat Illness: A Clinical and Evidence-Based Guide*. Cham: Springer International Publishing; 149–168. [doi:10.1007/978-3-030-27805-2_8](https://doi.org/10.1007/978-3-030-27805-2_8)
+1\. Lee EC, **Bowie JS**, Fiol AP, Huggins RA. (2020). Molecular aspects of thermal tolerance and exertional heat illness susceptibility. In Adams WM, Jardine JF, eds. *Exertional Heat Illness: A Clinical and Evidence-Based Guide*. Cham: Springer International Publishing; 149–168. [doi:10.1007/978-3-030-27805-2_8](https://doi.org/10.1007/978-3-030-27805-2_8)
 
 ## Manuscripts in Preparation
 
-13\. **Bowie JS**, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Sekiguchi Y, Kwon OS, Chon K, Casa DJ, Lee EC. Similar heat acclimation outcomes despite sex-specific response patterns: evidence for equivalent adaptation potential in males and females during uncompensable heat stress.
+13\. **Bowie JS**, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Sekiguchi Y, Kwon OS, Chon K, Casa DJ, Lee EC. Similar heat acclimation outcomes despite sex-specific response patterns: evidence for equivalent adaptation potential in males and females during uncompensable heat stress.
 
-12\. **Bowie JS**, Oh S, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Thornton SN, Sekiguchi Y, Casa DJ, Lee EC. Sex-specific transcriptome responses in circulating immune cells during exercise-heat stress and acclimation.
+12\. **Bowie JS**, Oh S, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Thornton SN, Sekiguchi Y, Casa DJ, Lee EC. Sex-specific transcriptome responses in circulating immune cells during exercise-heat stress and acclimation.
 
-11\. **Bowie JS**, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Sekiguchi Y, Kwon OS, Chon K, Casa DJ, Lee EC. Beyond group-level comparisons: machine learning-based clustering identifies sex-specific heat acclimation phenotypes and response patterns.
+11\. **Bowie JS**, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Sekiguchi Y, Kwon OS, Chon K, Casa DJ, Lee EC. Beyond group-level comparisons: machine learning-based clustering identifies sex-specific heat acclimation phenotypes and response patterns.
 
-10\. **Bowie JS**, Casa DJ, Lee EC. Measurement of heat acclimation.
+10\. **Bowie JS**, Casa DJ, Lee EC. Measurement of heat acclimation.
 
-9\. **Bowie JS**, Lee EC. One-hour weekly exercise protocol improves strength and aerobic fitness.
+9\. **Bowie JS**, Lee EC. One-hour weekly exercise protocol improves strength and aerobic fitness.
 
-8\. **Bowie JS**, Barreira T, Heinjen M, Ballard T, Tseh W. Assessing muscular fatigue via surface electromyography during dynamic knee extensions.
+8\. **Bowie JS**, Barreira T, Heinjen M, Ballard T, Tseh W. Assessing muscular fatigue via surface electromyography during dynamic knee extensions.
 
-7\. **Bowie JS**, Ford AE, Lee EC. Genome-wide RNAi screen of kinase pathways regulating *rrt-1* constitutive cytoprotective gene expression.
+7\. **Bowie JS**, Ford AE, Lee EC. Genome-wide RNAi screen of kinase pathways regulating *rrt-1* constitutive cytoprotective gene expression.
 
-6\. Brewer GJ, Chun OK, Szymanski MR, Struder JF, Morrissey-Basler MC, Filep EM, Thornton SN, **Bowie JS**, Martin DG, Dierickx E, Hirsch KR, Huggins RA, Lee EC, Casa DJ. The impact of blackcurrant supplementation on thermoregulatory and metabolic responses to exercise-heat exposure surrounding heat acclimation.
+6\. Brewer GJ, Chun OK, Szymanski MR, Struder JF, Morrissey-Basler MC, Filep EM, Thornton SN, **Bowie JS**, Martin DG, Dierickx E, Hirsch KR, Huggins RA, Lee EC, Casa DJ. The impact of blackcurrant supplementation on thermoregulatory and metabolic responses to exercise-heat exposure surrounding heat acclimation.
 
-5\. Snell A, Pescatello LM, Chun OK, Brewer GJ, Edwards KM, Earp J, **Bowie JS**, Lee EC. Oral contraceptive use and grip strength in females: an NHANES cross-sectional analysis.
+5\. Snell A, Pescatello LM, Chun OK, Brewer GJ, Edwards KM, Earp J, **Bowie JS**, Lee EC. Oral contraceptive use and grip strength in females: an NHANES cross-sectional analysis.
 
-4\. Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Mahoney KJ, Sekiguchi Y, **Bowie JS**, Casa DJ, Lee EC. Seasonal acclimatization effects may persist and impact adaptations to heat acclimation in winter months.
+4\. Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Mahoney KJ, Sekiguchi Y, **Bowie JS**, Casa DJ, Lee EC. Seasonal acclimatization effects may persist and impact adaptations to heat acclimation in winter months.
 
-3\. Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Mahoney KJ, Sekiguchi Y, **Bowie JS**, Casa DJ, Lee EC. Responder / non-responder classifications in heat acclimation research.
+3\. Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Mahoney KJ, Sekiguchi Y, **Bowie JS**, Casa DJ, Lee EC. Responder / non-responder classifications in heat acclimation research.
 
-2\. Oh S, Szymanski MR, Kwon OS, Casa DJ, Morrissey-Basler MC, Filep EM, Struder JF, Brewer GJ, Thornton SN, Ky AT, Mahoney KJ, **Bowie JS**, Lee EC. Heart rate variability and sleep architecture response to repeated bouts of heat exposure.
+2\. Oh S, Szymanski MR, Kwon OS, Casa DJ, Morrissey-Basler MC, Filep EM, Struder JF, Brewer GJ, Thornton SN, Ky AT, Mahoney KJ, **Bowie JS**, Lee EC. Heart rate variability and sleep architecture response to repeated bouts of heat exposure.
 
-1\. Mahoney KJ, **Bowie JS**, Sekiguchi Y, Struder JF, MacDonald Z, O'Brien B, Lee EC. Nutritional recommendations for blood biomarkers in exercise and sport.
+1\. Mahoney KJ, **Bowie JS**, Sekiguchi Y, Struder JF, MacDonald Z, O'Brien B, Lee EC. Nutritional recommendations for blood biomarkers in exercise and sport.
 
 ## Research Experience
 
@@ -268,21 +272,21 @@ I assisted with the planning of study recruitment efforts and initial pilot test
 
 ## Selected Abstracts
 
-8\. Edwards KE, Lee EC, **Bowie JS**, Szymanski MR, Addario A, Ky A, Webb C, Mahoney KM, Sopena B, Wimmer M, Murray D, Ertel C, Sumner J. Can shoe foam impact biomarkers of damage and inflammation? Annual Brooks Run Symposium (corporate internal), October 29, 2025, Seattle, WA, Brooks Running.
+8\. Edwards KE, Lee EC, **Bowie JS**, Szymanski MR, Addario A, Ky A, Webb C, Mahoney KM, Sopena B, Wimmer M, Murray D, Ertel C, Sumner J. Can shoe foam impact biomarkers of damage and inflammation? Annual Brooks Run Symposium (corporate internal), October 29, 2025, Seattle, WA, Brooks Running.
 
-7\. **Bowie JS**, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Mahoney KJ, Sekiguchi Y, Kwon OS, Chon K, Casa DJ, Lee EC. Similar heat acclimation outcomes despite sex-specific response patterns: evidence for equivalent adaptation potential in males and females during uncompensable heat stress. Military Health System Research Symposium, 2025; American Physiological Society Summit, April 2025 (invited speaker, "Thriving in the elements: emerging concepts in environmental physiology" session, and Free Communication).
+7\. **Bowie JS**, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Mahoney KJ, Sekiguchi Y, Kwon OS, Chon K, Casa DJ, Lee EC. Similar heat acclimation outcomes despite sex-specific response patterns: evidence for equivalent adaptation potential in males and females during uncompensable heat stress. Military Health System Research Symposium, 2025; American Physiological Society Summit, April 2025 (invited speaker, "Thriving in the elements: emerging concepts in environmental physiology" session, and Free Communication).
 
-6\. **Bowie JS**, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Mahoney KJ, Sekiguchi Y, Kwon OS, Chon K, Casa DJ, Lee EC. Sex-specific heat tolerance criteria are necessary for accurate return-to-activity assessments. Military Health System Research Symposium, 2025; Free Communication, American Physiological Society Summit, April 2025.
+6\. **Bowie JS**, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Mahoney KJ, Sekiguchi Y, Kwon OS, Chon K, Casa DJ, Lee EC. Sex-specific heat tolerance criteria are necessary for accurate return-to-activity assessments. Military Health System Research Symposium, 2025; Free Communication, American Physiological Society Summit, April 2025.
 
-5\. **Bowie JS**, Struder JF. A minimal training protocol improves strength and aerobic fitness in trained and untrained populations. Free Communication, American College of Sports Medicine National Conference, May 2024; American College of Sports Medicine New England Chapter Annual Meeting, November 2023.
+5\. **Bowie JS**, Struder JF. A minimal training protocol improves strength and aerobic fitness in trained and untrained populations. Free Communication, American College of Sports Medicine National Conference, May 2024; American College of Sports Medicine New England Chapter Annual Meeting, November 2023.
 
-4\. **Bowie JS**, Oh S, Szymanski M, Struder JF, Filep EM, Morrissey-Basler M, Thornton SN, Mahoney KJ, Sekiguchi Y, Casa DJ, Lee EC. Sex-specific transcriptome responses in circulating immune cells during exercise-heat stress and acclimation. Free Communication, American Physiological Society Summit, April 2024.
+4\. **Bowie JS**, Oh S, Szymanski M, Struder JF, Filep EM, Morrissey-Basler M, Thornton SN, Mahoney KJ, Sekiguchi Y, Casa DJ, Lee EC. Sex-specific transcriptome responses in circulating immune cells during exercise-heat stress and acclimation. Free Communication, American Physiological Society Summit, April 2024.
 
-3\. Gordon TJ, Reynoso ST, Gonzalez D, **Bowie JS**, Ford A, Lee EC. Transcriptomic differences between mutants and wild-type *C. elegans* that differ in osmotic stress resiliency. McNair Scholar Symposium, University of Connecticut, Storrs, CT, July 2019.
+3\. Gordon TJ, Reynoso ST, Gonzalez D, **Bowie JS**, Ford A, Lee EC. Transcriptomic differences between mutants and wild-type *C. elegans* that differ in osmotic stress resiliency. McNair Scholar Symposium, University of Connecticut, Storrs, CT, July 2019.
 
-2\. **Bowie JS**, Sterczala AJ, Kraemer WJ, Maresh CM, Comstock BA, Flanagan SD, Szivak TK, Hooper DR, Lee EC. Acute heavy resistance exercise protocol induces significant physiological stress elevating extracellular heat shock protein. Free Communication, American College of Sports Medicine Annual Meeting, May 2019; American College of Sports Medicine New England Chapter Annual Meeting, November 2018; College of Agriculture, Natural Resources, and Health Graduate Student Research Symposium, University of Connecticut.
+2\. **Bowie JS**, Sterczala AJ, Kraemer WJ, Maresh CM, Comstock BA, Flanagan SD, Szivak TK, Hooper DR, Lee EC. Acute heavy resistance exercise protocol induces significant physiological stress elevating extracellular heat shock protein. Free Communication, American College of Sports Medicine Annual Meeting, May 2019; American College of Sports Medicine New England Chapter Annual Meeting, November 2018; College of Agriculture, Natural Resources, and Health Graduate Student Research Symposium, University of Connecticut.
 
-1\. **Bowie JS**, Barreira T, Heinjen M, Ballard T, Tseh W. Assessing muscular fatigue via surface electromyography during dynamic knee extensions. American College of Sports Medicine Annual Meeting; State of North Carolina Undergraduate Research Symposium; 5th Annual University of North Carolina Wilmington Fall Student Research and Creativity Showcase.
+1\. **Bowie JS**, Barreira T, Heinjen M, Ballard T, Tseh W. Assessing muscular fatigue via surface electromyography during dynamic knee extensions. American College of Sports Medicine Annual Meeting; State of North Carolina Undergraduate Research Symposium; 5th Annual University of North Carolina Wilmington Fall Student Research and Creativity Showcase.
 
 ## Selected Software and Projects
 
