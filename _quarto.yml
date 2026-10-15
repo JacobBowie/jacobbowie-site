@@ -71,7 +71,7 @@ format:
               "@id": "https://jacobbowie.com/#person",
               "name": "Jacob Bowie",
               "honorificSuffix": "PhD",
-              "jobTitle": "Visiting Assistant Professor",
+              "jobTitle": "Visiting Assistant Professor of Exercise Science",
               "description": "Statistical analysis and machine learning for human physiology research, with a focus on wearable sensor signal processing, hierarchical Bayesian and mixed-effects modeling, and reproducible analysis pipelines.",
               "url": "https://jacobbowie.com",
               "image": "https://jacobbowie.com/profile.jpg",
