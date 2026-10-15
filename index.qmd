@@ -161,7 +161,7 @@ preference for reproducible, version-controlled, container-portable analysis.
      interactive and source repo are live (v0.1.0, 2026-05-13). -->
 
 <div class="project project-thumb-dark">
-<div class="project-thumb"><img src="img/banister-constellation-hero.png" alt="Citation network of 175 papers across 50 years of fitness-fatigue model research, with the founding Banister 1975 paper at the top and four downstream branches (classical, variable-dose, statistical critique, and Bayesian hierarchical)" /></div>
+<div class="project-thumb"><img src="citation-network/assets/tile.png" alt="The Banister Constellation: 175 fitness-fatigue model papers from 1975 to 2025, each marked by methodological family with color and shape, and white lines tracing the Banister lineage down from Banister 1975" /></div>
 <div class="project-body">
   <h3><a class="stretched-link" href="/citation-network/">The Banister Constellation: a citation graph of the fitness-fatigue model lineage</a></h3>
   <div class="project-meta">Research tooling &middot; Python + DuckDB + vis-network</div>

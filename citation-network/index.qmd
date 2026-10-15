@@ -1,7 +1,8 @@
 ---
 title: "The Banister Constellation"
 subtitle: "A citation network of the fitness-fatigue model lineage"
-image: assets/hero.png
+image: assets/og.png
+image-alt: "The Banister Constellation: 175 fitness-fatigue model papers from Banister 1975 to the 2025 Bayesian critiques, grouped by methodological family, with the Banister lineage highlighted."
 description: >
   Fifty years of fitness-fatigue model (FFM) literature in one constellation.
   Anchored on Banister 1975 + Calvert 1976; 175 papers across classical,

@@ -27,7 +27,7 @@
     # -f on every curl (matching rtsd/unlearning below): without it a missing
     # PNG asset is silently saved as a 9-byte "Not Found" body and the deploy
     # still goes green with a broken hero and social card (audit 2026-10-15).
-    CN_TAG="v0.1.0"
+    CN_TAG="v0.1.1"
     mkdir -p citation-network/interactive citation-network/notebook citation-network/assets
     curl -fsSL "https://github.com/JacobBowie/citation-network/releases/download/${CN_TAG}/citation-network-standalone.tar.gz" \
       | tar -xz -C citation-network/interactive
@@ -37,6 +37,7 @@
       -o citation-network/assets/hero.png
     curl -fsSL "https://github.com/JacobBowie/citation-network/releases/download/${CN_TAG}/citation_network_card.png" \
       -o citation-network/assets/og.png
+    curl -fsSL "https://github.com/JacobBowie/citation-network/releases/download/${CN_TAG}/citation_network_tile.png" \n      -o citation-network/assets/tile.png
 
     # Pull the rtSD marimo WASM bundle from the JacobBowie/rtsd release. The
     # tarball is self-contained (model.py + sd_diagram.py inlined at build
