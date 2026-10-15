@@ -32,7 +32,7 @@ format:
 <figure class="figure">
 <picture>
 <source media="(max-width: 576px)" srcset="../img/rtsd-tile.png">
-<img src="../img/rtsd-hero.png" class="img-fluid figure-img" style="width:100%" alt="Left: stock-and-flow diagram of the rtSD model, in which training load drives Fatigue and Signal, Signal adapts into Fitness, and Performance is Fitness minus a share of Fatigue. Right: simulated 52 weeks of RP mesocycles, where Fatigue and Signal rise and fall with each block, Performance dips and rebounds after each deload, and Fitness climbs in steps.">
+<img src="../img/rtsd-hero.png" class="img-fluid figure-img" style="width:100%" alt="rtSD model and its behavior over a simulated year of RP mesocycles: Fatigue and Signal rise and fall with each training block, Performance dips and rebounds after each deload, and Fitness climbs in steps.">
 </picture>
 <figcaption>The model and what it does: training load drives Fatigue and Signal, Signal adapts into Fitness, and Performance is Fitness net of Fatigue; simulated over a year of RP mesocycles (7-day averages, each scaled 0 to 1).</figcaption>
 </figure>
