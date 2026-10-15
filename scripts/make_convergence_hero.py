@@ -58,10 +58,14 @@ def getpaid_trajectory(df: pd.DataFrame) -> pd.DataFrame:
              "n": int(kept.iloc[0]["n_before"]), "growth_pct": 0.0,
              "label": "Seed set\n(pre-snowball)"}]
     pass_letters = ["A", "A", "B", "B"]
+    # Label each point by its role, not the log's raw `iter`: the 05-19 row is
+    # a fresh run's iter 1 that found 0% growth, so raw labels printed
+    # "Pass B iter 1" twice (fixed 2026-10-15).
+    roles = ["expansion", "convergence", "expansion", "convergence"]
     for i, r in kept.iterrows():
         rows.append({"step": i + 1, "date": r["date"], "iter": int(r["iter"]),
                      "n": int(r["n_after"]), "growth_pct": float(r["growth_pct"]),
-                     "label": f"Pass {pass_letters[i]}\niter {int(r['iter'])}\n{r['date'].strftime('%b %d')}"})
+                     "label": f"Pass {pass_letters[i]}\n{roles[i]}\n{r['date'].strftime('%b %d')}"})
     return pd.DataFrame(rows)
 
 
@@ -123,12 +127,9 @@ def render(traj: pd.DataFrame, out_path: Path):
     ax.set_ylim(0, max(y) * 1.22)
     ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda v, _: f"{int(v):,}"))
 
-    # Footer caption
-    fig.text(0.99, 0.02,
-             "Each pass is one snowball-orchestrator run: forward + reverse citations + abstracts + reindex.\n"
-             "A pass terminates when iteration growth drops below 1%. New seed papers added to the queue\n"
-             "produce a fresh expansion in the next pass.",
-             ha="right", va="bottom", fontsize=8, color=MUTED, style="italic")
+    # No in-figure footer: it was pinned at fig (0.99, 0.02), right on top of the
+    # three-line x tick labels, and the case-study figure caption already
+    # carries the same sentence (removed 2026-10-15).
 
     fig.tight_layout()
     out_path.parent.mkdir(parents=True, exist_ok=True)
