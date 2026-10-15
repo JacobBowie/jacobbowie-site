@@ -58,6 +58,12 @@
     curl -fsSL "https://github.com/JacobBowie/marimo-unlearning/releases/download/${UNLEARNING_TAG}/unlearning-wasm.tar.gz" \
       | tar -xz -C unlearning/notebook
 
+    # marimo WASM exports can ship marimo's own assistant prompt (CLAUDE.md);
+    # it was publicly served at /citation-network/notebook/CLAUDE.md. Strip any
+    # such file from all three notebook bundles before render (2026-10-15).
+    find citation-network/notebook rtsd/notebook unlearning/notebook -maxdepth 2 \
+      \( -name 'CLAUDE.md' -o -name 'AGENTS.md' \) -delete
+
     /tmp/quarto/bin/quarto render
   """
 
