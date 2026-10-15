@@ -392,7 +392,7 @@ Skype a Scientist `#h(1fr)`{=typst}[2018–present]{.cv-date}
 ### Coaching, Fitness, and Instruction
 
 - **Master Trainer**, International Sports Sciences Association, with specializations in Strength and Conditioning, Senior Fitness, Exercise Therapy, Fitness Nutrition, and Youth Fitness
-- **USMC Black Belt, Instructor Trainer**, Marine Corps Martial Arts Program
+- **USMC Black Belt, Instructor Trainer**, Marine Corps Martial Arts Program (MCMAP)
 
 ## Additional Appointments
 
@@ -410,7 +410,7 @@ Skype a Scientist `#h(1fr)`{=typst}[2018–present]{.cv-date}
 [Camp Pendleton, CA / Camp Lejeune, NC]{style="color:#5a6470;font-style:italic"}
 :::
 
-Developed deep applied strength-and-conditioning expertise as a Martial Arts Instructor-Trainer, with a combat deployment to Afghanistan. Served as the unit's senior subject-matter expert for physical readiness, designed pre-deployment conditioning for 120 personnel, and delivered 70+ instructional and train-the-trainer sessions.
+Developed deep applied strength-and-conditioning expertise as a Martial Arts Instructor Trainer, with a combat deployment to Afghanistan. Served as the unit's senior subject-matter expert for physical readiness, designed pre-deployment conditioning for 120 personnel, and delivered 70+ instructional and train-the-trainer sessions.
 
 **Military Occupational Specialties:** 1391 Bulk Fuel Specialist (US Military Apprenticeship Program: Fuel Systems Maintenance Worker, Department of the Navy); 1392 Petroleum Laboratory Specialist; 0916 Martial Arts Instructor; 0917 Martial Arts Instructor Trainer; 8012 Ground Safety Officer; 8056 Hazardous Material / Hazardous Waste Officer.
 
