@@ -61,8 +61,53 @@ body::before {
   pointer-events: none;
 }
 
-/* Hide Quarto's default title block; we render our own hero in the qmd body. */
-#title-block-header { display: none; }
+/* Title blocks: only the homepage hides Quarto's title block (index.qmd sets
+   title-block-style: none and renders its own hero). This used to be a
+   site-wide #title-block-header {display:none}, a single-page-v1 leftover that
+   left every subpage with no visible title and no h1 (audit 2026-10-15). */
+
+/* ---- Site audit 2026-10-15: shared accessibility + polish rules ---- */
+
+/* Visible keyboard focus. Bootstrap's 25%-alpha halo measured ~1.5-2:1;
+   WCAG 1.4.11 wants 3:1 for focus indicators. */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.nav-link:focus-visible,
+.navbar-brand:focus-visible {
+  outline: 2px solid var(--jb-accent);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+/* Skip link, injected by include-before-body in _quarto.yml. Bootstrap's
+   .visually-hidden-focusable keeps it off-screen until it receives focus. */
+.skip-link:focus {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 10000;
+  padding: 0.5rem 0.9rem;
+  background: var(--jb-accent);
+  color: #ffffff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Muted helper copy. Replaces inline color:#4b5563 / #6b7280 on the
+   homepage, which ignored dark mode (1.9:1 on the dark contact box). */
+.muted-note { font-size: 0.92rem; color: var(--jb-muted); }
+
+/* Keep DOIs and ORCID iDs whole on narrow screens instead of breaking at a
+   hyphen ("27805- / 2_8", "0000-0002- / 6055-8220"). */
+a[href^="https://doi.org/"],
+a[href*="orcid.org/0000"] { white-space: nowrap; }
+
+/* Code-copy button: hover-revealed and ~12x2 px on touch, so make it
+   always visible and tappable where there is no hover. */
+@media (hover: none) {
+  .code-copy-button { opacity: 1; padding: 0.35rem 0.5rem; min-width: 2rem; min-height: 2rem; }
+}
 
 /* Anchor a comfortable reading measure even on wide screens. */
 main.content {
@@ -187,6 +232,10 @@ h2.section-heading {
   outline-offset: 3px;
 }
 .project .project-links { position: relative; z-index: 2; }
+/* Secondary links need their own 24px tap height (WCAG 2.5.8): the
+   whole-card overlay now surrounds them, so the spacing exception no longer
+   applies, and a near-miss on "Live demo" would open the case study instead. */
+.project .project-links a { display: inline-block; padding-block: 0.3rem; }
 .project-static:hover { box-shadow: none; transform: none; }
 .project-thumb {
   aspect-ratio: 16 / 9;
@@ -338,6 +387,10 @@ thead th { color: var(--jb-text); border-bottom: 2px solid var(--jb-border); }
 .quarto-grid-item .card-img-top img {
   border-radius: 0;
   display: block;
+  /* contain, not Quarto's default cover: cover cropped the rtSD legend to
+     "Do" and cut the literature-pipeline chart title (audit 2026-10-15). */
+  object-fit: contain;
+  background: #ffffff;
 }
 .quarto-grid-item .card-body {
   padding: 1.1rem 1.25rem 1.25rem;
@@ -459,14 +512,23 @@ ol.pub-list .pub-year {
 
 /* Footer */
 footer.site-footer {
-  margin-top: 3rem;
-  padding-top: 1.25rem;
+  /* Injected after <body> content on every page (include-after-body), so it
+     sits outside the article grid: constrain and center it ourselves. */
+  max-width: 1000px;
+  margin: 3rem auto 2rem;
+  padding: 1.25rem 1rem 0;
   border-top: 1px solid var(--jb-border);
   font-size: 0.9rem;
   color: var(--jb-muted);
   text-align: center;
 }
-footer.site-footer a { color: var(--jb-muted); margin: 0 0.5rem; }
+footer.site-footer a {
+  color: var(--jb-muted);
+  margin: 0 0.5rem;
+  display: inline-block;
+  padding-block: 0.3rem;   /* 24px+ tap target */
+}
+footer.site-footer .site-footer-legal { font-size: 0.8rem; margin: 0.4rem 0 0; }
 
 /* Dark mode lives in theme-dark.scss (the dark Bootstrap bundle), not here.
    This file is mode-agnostic and is listed in BOTH the light and dark themes.

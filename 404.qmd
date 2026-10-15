@@ -1,0 +1,23 @@
+---
+title: "Page not found"
+pagetitle: "Page not found"
+description: "That page does not exist on jacobbowie.com."
+format:
+  html:
+    page-layout: article
+---
+
+<!-- Quarto renders this to /404.html with site-absolute links; Netlify serves
+     /404.html for any missing path. Replaces Netlify's generic 404 card, which
+     had no navbar and told visitors "If this is your site..." (audit 2026-10-15). -->
+
+The page you were looking for is not here. It may have moved when the site was reorganized.
+
+Try one of these:
+
+- [Home](/)
+- [Work and case studies](/work/)
+- [CV](/cv.html)
+- [Work together](/hire.html)
+
+If you followed a link from somewhere else, I would appreciate a note at [jacob.bowie2@gmail.com](mailto:jacob.bowie2@gmail.com) so I can fix it.

@@ -43,7 +43,7 @@ Inside, you can:
 - **Save a run** to freeze a configuration, then change the parameters and overlay the new trajectory against it.
 - Read the result three ways: **live trajectory charts** (Fitness, Fatigue, Signal, Performance), the **MEDv4 stock-and-flow diagram**, and a **summary table**.
 
-First load takes roughly 30 to 60 seconds while Python downloads into the browser. After that it is local and fast.
+First load takes roughly 30 to 60 seconds while Python downloads into the browser. After that it is local and fast. Best on a laptop or desktop: on a phone the charts are cramped.
 :::
 
 ## What you're looking at
@@ -54,11 +54,13 @@ rtSD Explorer makes the dynamics tangible. How does a doubled training dose chan
 
 Underneath, **rtSD** is a system-dynamics implementation of the **MEDv4** three-stock fitness-fatigue-signal ODE, originally built in Vensim and ported to a parity-tested R + Python core. It sits inside a three-tier framework:
 
-| Tier | Name | What it is |
-|---|---|---|
-| Framework | **GET-PAID** | *Generating Expected Timelines of Predicted Adaptations to Imposed Demands*. The theoretical claim that imposed training demands produce predictable adaptation trajectories. |
-| Model | **rtSD** | The system-dynamics implementation of GET-PAID for resistance training: a three-stock (Fitness / Fatigue / Signal) model on the MEDv4 ODE. |
-| Tool | **rtSD Explorer** | This page. The browser-based marimo explorer above, backed by the same model that powers the repo's R Shiny app and Docker image. |
+<!-- Was a 3-column table; at 390 px it collapsed to one word per line and split
+     "GET- / PAID" (audit 2026-10-15). A list reads at every width; U+2011 keeps
+     GET‑PAID whole. -->
+
+- **Framework: GET&#8209;PAID.** *Generating Expected Timelines of Predicted Adaptations to Imposed Demands*. The theoretical claim that imposed training demands produce predictable adaptation trajectories.
+- **Model: rtSD.** The system-dynamics implementation of GET&#8209;PAID for resistance training: a three-stock (Fitness / Fatigue / Signal) model on the MEDv4 ODE.
+- **Tool: rtSD Explorer.** This page. The browser-based marimo explorer above, backed by the same model that powers the repo's R Shiny app and Docker image.
 
 ## The seven-test plausibility validator
 

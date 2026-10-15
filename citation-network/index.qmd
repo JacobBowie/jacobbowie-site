@@ -62,6 +62,7 @@ forward is hierarchical partial pooling.
 The interactive renders in your browser via [vis-network](https://visjs.github.io/vis-network/docs/network/).
 Drag to pan, scroll to zoom, hover any node for the paper title, authors, venue, and citation count.
 Toggle the **Lineage only** button to isolate the 14-paper Banister chain.
+Best on a laptop or desktop: hover and scroll-to-zoom have no touch equivalent.
 :::
 
 For visitors who want to fork the source-editing experience, the marimo

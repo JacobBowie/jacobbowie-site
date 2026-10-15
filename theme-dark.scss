@@ -95,3 +95,39 @@ hr { border-top-color: var(--jb-border); }
   background: #334155;
   color: #cbd5e1;
 }
+
+// ---- Site audit 2026-10-15 ----
+
+// Navbar: _quarto.yml sets `background: light`, so the bar stayed #f8fafc over
+// the dark page. Scoped under #quarto-header so it outranks Quarto's navbar
+// rules; Bootstrap 5.3 navbar custom properties carry the link and toggler colors.
+#quarto-header .navbar {
+  background-color: #0b1220;
+  border-bottom: 1px solid var(--jb-border);
+  --bs-navbar-color: #cbd5e1;
+  --bs-navbar-hover-color: #ffffff;
+  --bs-navbar-active-color: #ffffff;
+  --bs-navbar-brand-color: #f1f5f9;
+  --bs-navbar-brand-hover-color: #ffffff;
+  --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.15);
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28226, 232, 240, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+#quarto-header .navbar .navbar-title,
+#quarto-header .navbar .navbar-brand { color: #f1f5f9; }
+#quarto-header .navbar .nav-link,
+#quarto-header .navbar .nav-link .bi,
+#quarto-header .navbar .menu-text { color: #cbd5e1; }
+#quarto-header .navbar .nav-link:hover,
+#quarto-header .navbar .nav-link.active,
+#quarto-header .navbar .nav-link:hover .bi { color: #ffffff; }
+
+// White figure thumbnails glare on the dark cards; take the edge off.
+.project-thumb-image .project-thumb img,
+.quarto-grid-item .card-img-top img { filter: brightness(0.92); }
+
+// Inline code inside figure captions rendered as a white light-mode chip.
+figcaption code,
+.figure-caption code {
+  background: #1e293b;
+  color: #e2e8f0;
+}
