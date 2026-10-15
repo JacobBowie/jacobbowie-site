@@ -26,7 +26,16 @@ format:
     page-layout: full
 ---
 
-![The model and what it does. Left, structure: training load drives Fatigue and Signal, Signal adapts into Fitness, and Performance is Fitness net of Fatigue. Right, behavior: a simulated year of RP mesocycles (7-day averages, each scaled 0 to 1).](../img/rtsd-hero.png){fig-alt="Left: stock-and-flow diagram of the rtSD model, in which training load drives Fatigue and Signal, Signal adapts into Fitness, and Performance is Fitness minus a share of Fatigue. Right: simulated 52 weeks of RP mesocycles, where Fatigue and Signal rise and fall with each block, Performance dips and rebounds after each deload, and Fitness climbs in steps." width=100%}
+<!-- On phones (<= 576 px) the two-panel hero shrinks to ~340 px and its labels
+     become unreadable (QA 2026-10-15), so narrow screens get the single-panel
+     trajectory tile instead; desktop keeps the structure + behavior pair. -->
+<figure class="figure">
+<picture>
+<source media="(max-width: 576px)" srcset="../img/rtsd-tile.png">
+<img src="../img/rtsd-hero.png" class="img-fluid figure-img" style="width:100%" alt="Left: stock-and-flow diagram of the rtSD model, in which training load drives Fatigue and Signal, Signal adapts into Fitness, and Performance is Fitness minus a share of Fatigue. Right: simulated 52 weeks of RP mesocycles, where Fatigue and Signal rise and fall with each block, Performance dips and rebounds after each deload, and Fitness climbs in steps.">
+</picture>
+<figcaption>The model and what it does: training load drives Fatigue and Signal, Signal adapts into Fitness, and Performance is Fitness net of Fatigue; simulated over a year of RP mesocycles (7-day averages, each scaled 0 to 1).</figcaption>
+</figure>
 
 ## Try it
 

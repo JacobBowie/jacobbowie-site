@@ -127,6 +127,14 @@ hr { border-top-color: var(--jb-border); }
 #quarto-header .navbar .navbar-toggler-icon {
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23cbd5e1' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
+// The site uses Quarto's OVERLAY search: the visible glyph is svg.aa-SubmitIcon,
+// colored by `.navbar #quarto-search.type-overlay .aa-Autocomplete svg.aa-SubmitIcon`
+// (light fg baked into the dark bundle). Two IDs here outrank it; the detached
+// selectors cover the phone layout. (QA 2026-10-15: was 2.5:1.)
+#quarto-header .navbar #quarto-search.type-overlay .aa-Autocomplete svg.aa-SubmitIcon,
+#quarto-header .navbar #quarto-search .aa-Form .aa-Label svg,
+#quarto-header .navbar #quarto-search .aa-DetachedSearchButtonIcon,
+#quarto-header .navbar #quarto-search .aa-DetachedSearchButtonIcon svg,
 #quarto-header .navbar .aa-DetachedSearchButton .aa-DetachedSearchButtonIcon { color: #cbd5e1; }
 
 // White figure thumbnails glare on the dark cards; take the edge off.
