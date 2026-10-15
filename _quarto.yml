@@ -71,12 +71,17 @@ format:
               "@id": "https://jacobbowie.com/#person",
               "name": "Jacob Bowie",
               "honorificSuffix": "PhD",
-              "jobTitle": "Postdoctoral Researcher",
+              "jobTitle": "Visiting Assistant Professor of Exercise Science",
               "description": "Statistical analysis and machine learning for human physiology research, with a focus on wearable sensor signal processing, hierarchical Bayesian and mixed-effects modeling, and reproducible analysis pipelines.",
               "url": "https://jacobbowie.com",
               "image": "https://jacobbowie.com/profile.jpg",
-              "email": "mailto:jacob.bowie2@gmail.com",
+              "email": ["mailto:jacob.bowie@uconn.edu", "mailto:jacob.bowie2@gmail.com"],
               "affiliation": [
+                {
+                  "@type": "Organization",
+                  "name": "Department of Kinesiology, University of Connecticut",
+                  "url": "https://kins.uconn.edu/"
+                },
                 {
                   "@type": "Organization",
                   "name": "University of Connecticut Human Performance Laboratory",

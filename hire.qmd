@@ -1,22 +1,23 @@
 ---
 title: "Work together"
-description: "How to reach me about postdoctoral and industry roles, collaborations, and reviewer-ready code."
+description: "How to reach me about research partnerships, longer-term research and industry roles, and reviewer-ready code."
 pagetitle: "Work together"
 format:
   html:
     page-layout: article
 ---
 
-## Currently exploring longer-term roles
+## Open to what comes next
 
-I am a postdoctoral researcher at the University of Connecticut Human Performance
-Laboratory and the Korey Stringer Institute. My work sits at the intersection of
+I am a Visiting Assistant Professor of Exercise Science in the Department of Kinesiology at the
+University of Connecticut, with research in the Human Performance Laboratory and
+the Korey Stringer Institute. My work sits at the intersection of
 applied machine learning, wearable sensor signal processing, and reproducible
 analysis pipelines for exercise and environmental physiology research.
 
 I am open to longer-term opportunities in both directions:
 
-- **Postdoctoral fellowships and research scientist roles** in academic or
+- **Faculty and research scientist roles** in academic or
   national-lab settings working on wearables, biosignal analysis, thermoregulation,
   or applied ML for human physiology. Comfortable contributing to grant writing,
   manuscript leadership, and trainee mentorship.

@@ -8,8 +8,12 @@ format:
     page-layout: article
 ---
 
-<!-- Hero. Blended voice per the 2026-05-10 decision: open with PhD + KSI postdoc
-     framing, close with the ML / wearables / signal-processing pivot framing.
+<!-- Hero. Blended voice per the 2026-05-10 decision: open with the PhD + UConn
+     faculty framing, close with the ML / wearables / signal-processing pivot
+     framing. Title updated 2026-09-06 for the Visiting Assistant Professor
+     appointment that began 2026-08-23; aligned 2026-10-15 to the offer-letter
+     wording ("Visiting Assistant Professor - Exercise Science", Dept. of
+     Kinesiology). Keep cv.qmd, hire.qmd and _quarto.yml jobTitle in step.
      Bridges academic and industry audiences. Side-by-side photo + text layout
      per aesthetics audit 2026-05-11 (Schmitt/Husain pattern). -->
 
@@ -17,13 +21,15 @@ format:
 <div class="hero-text">
 <h1 class="hero-name">Jacob Bowie, PhD</h1>
 <p class="hero-tagline">
-Postdoctoral researcher, UConn Human Performance Laboratory & Korey Stringer Institute.
+Visiting Assistant Professor of Exercise Science, Department of Kinesiology,
+University of Connecticut. Research in the Human Performance Laboratory and the
+Korey Stringer Institute.
 Applying machine learning, wearable sensor signal processing, and reproducible
 analysis pipelines to questions in exercise and environmental physiology.
 </p>
 <p class="hero-status">
-Currently seeking longer-term postdoctoral and industry roles at the intersection
-of applied ML, wearables, and human physiology.
+Open to research partnerships, and to longer-term research and industry roles at
+the intersection of applied ML, wearables, and human physiology.
 <a href="mailto:jacob.bowie2@gmail.com">jacob.bowie2@gmail.com</a>
 </p>
 <p class="hero-cta">
