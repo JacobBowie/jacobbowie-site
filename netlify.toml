@@ -61,8 +61,11 @@
     # marimo WASM exports can ship marimo's own assistant prompt (CLAUDE.md);
     # it was publicly served at /citation-network/notebook/CLAUDE.md. Strip any
     # such file from all three notebook bundles before render (2026-10-15).
-    find citation-network/notebook rtsd/notebook unlearning/notebook -maxdepth 2 \
-      \( -name 'CLAUDE.md' -o -name 'AGENTS.md' \) -delete
+    # (Plain rm -f on purpose: this command is a TOML basic string, so a
+    # backslash anywhere except at the very end of a line is an invalid
+    # escape and breaks config parsing. That includes inside these comments.)
+    rm -f citation-network/notebook/CLAUDE.md rtsd/notebook/CLAUDE.md unlearning/notebook/CLAUDE.md
+    rm -f citation-network/notebook/AGENTS.md rtsd/notebook/AGENTS.md unlearning/notebook/AGENTS.md
 
     /tmp/quarto/bin/quarto render
   """
