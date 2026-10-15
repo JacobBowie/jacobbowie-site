@@ -179,6 +179,12 @@ p.hero-status a:hover {
 
 a, a:visited { color: var(--jb-accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
+/* `a:visited` (0,1,1) outranks Bootstrap's `.btn` (0,1,0) color, so once a
+   button's target was visited its label turned navy on the navy button: a blank
+   blue rectangle until hover (since 2026-05-11; fixed 2026-10-15). Restore the
+   button's own text color for visited buttons. */
+.btn:visited { color: var(--bs-btn-color); }
+.btn:hover { text-decoration: none; }
 
 hr {
   border: 0;
