@@ -33,6 +33,10 @@ $primary:                #3C5488 !default;
   --jb-muted: #5a6470;   /* darkened from #6b7280 (4.39:1) -> ~6:1 for AA captions/subtitles (audit A4) */
   --jb-border: #e5e7eb;
   --jb-bg-soft: #f8fafc;
+  /* Figure panel: the faint off-white every light figure thumbnail sits on.
+     White-background figures take this color via mix-blend-mode: multiply
+     (white x panel = panel), so figure and panel always match (2026-10-15). */
+  --jb-figure-bg: #fafbfc;
 }
 
 body {
@@ -266,9 +270,11 @@ h2.section-heading {
 /* Image cards: white background (so contained image floats cleanly).
    The card class needs to be `project-thumb-image` (no gradient override). */
 .project-thumb-image .project-thumb {
-  background: #ffffff;
+  background: var(--jb-figure-bg);
   padding: 0.4rem;
+  isolation: isolate;   /* confine the multiply blend to the panel */
 }
+.project-thumb-image .project-thumb img { mix-blend-mode: multiply; }
 /* Dark-image variant: for thumbnails that are themselves on a dark canvas
    (e.g. constellation/network plots rendered on a navy background). Lets the
    image bleed to the card edges instead of floating inside a white letterbox. */
@@ -399,6 +405,8 @@ thead th { color: var(--jb-text); border-bottom: 2px solid var(--jb-border); }
 .quarto-grid-item .card-img-top {
   margin: 0;
   padding: 0;
+  background: var(--jb-figure-bg);   /* same figure panel as the homepage */
+  isolation: isolate;
 }
 .quarto-grid-item .card-img-top img {
   border-radius: 0;
@@ -406,8 +414,13 @@ thead th { color: var(--jb-text); border-bottom: 2px solid var(--jb-border); }
   /* contain, not Quarto's default cover: cover cropped the rtSD legend to
      "Do" and cut the literature-pipeline chart title (audit 2026-10-15). */
   object-fit: contain;
-  background: #ffffff;
+  background: transparent;
+  mix-blend-mode: multiply;
 }
+/* The constellation tile is a dark figure (#0e1117 canvas): give its card a
+   matching dark panel and no blend, so its letterbox doesn't show light bars. */
+.quarto-grid-item .card-img-top:has(img[src*="citation-network/assets/tile"]) { background: #0e1117; }
+.quarto-grid-item .card-img-top img[src*="citation-network/assets/tile"] { mix-blend-mode: normal; }
 .quarto-grid-item .card-body {
   padding: 1.1rem 1.25rem 1.25rem;
 }
