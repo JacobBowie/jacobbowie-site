@@ -2,7 +2,7 @@
 title: "rtSD Explorer"
 subtitle: "An interactive system-dynamics explorer for resistance-training adaptation"
 image: ../img/rtsd-card.png
-image-alt: "rtSD Explorer: stock-and-flow diagram of the model beside a simulated year of RP mesocycles"
+image-alt: "rtSD Explorer: a simulated year of RP mesocycles in which Fatigue and Signal cycle with each training block, Performance dips and rebounds after each deload, and Fitness climbs in steps"
 description: >
   A browser-based explorer for the MEDv4 fitness-fatigue-signal model, the
   three-stock system-dynamics ODE behind fifty years of resistance-training
