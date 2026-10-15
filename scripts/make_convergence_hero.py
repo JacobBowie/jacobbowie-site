@@ -133,7 +133,9 @@ def render(traj: pd.DataFrame, out_path: Path):
 
     fig.tight_layout()
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(out_path, dpi=150, facecolor=LIGHT_BG, bbox_inches="tight")
+    # pad_inches: bbox "tight" put the title flush with the top edge, and the
+    # /work/ card thumbnail clipped its glyphs (2026-10-15).
+    fig.savefig(out_path, dpi=150, facecolor=LIGHT_BG, bbox_inches="tight", pad_inches=0.3)
     plt.close(fig)
 
 
