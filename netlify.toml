@@ -24,23 +24,28 @@
 
     # Pull the citation-network release artifacts before Quarto renders so
     # they get copied through to _site/ via the project's resources: glob.
-    CN_TAG="v0.1.0"
+    # -f on every curl (matching rtsd/unlearning below): without it a missing
+    # PNG asset is silently saved as a 9-byte "Not Found" body and the deploy
+    # still goes green with a broken hero and social card (audit 2026-10-15).
+    CN_TAG="v0.1.1"
     mkdir -p citation-network/interactive citation-network/notebook citation-network/assets
-    curl -sSL "https://github.com/JacobBowie/citation-network/releases/download/${CN_TAG}/citation-network-standalone.tar.gz" \
+    curl -fsSL "https://github.com/JacobBowie/citation-network/releases/download/${CN_TAG}/citation-network-standalone.tar.gz" \
       | tar -xz -C citation-network/interactive
-    curl -sSL "https://github.com/JacobBowie/citation-network/releases/download/${CN_TAG}/citation-network-wasm.tar.gz" \
+    curl -fsSL "https://github.com/JacobBowie/citation-network/releases/download/${CN_TAG}/citation-network-wasm.tar.gz" \
       | tar -xz -C citation-network/notebook
-    curl -sSL "https://github.com/JacobBowie/citation-network/releases/download/${CN_TAG}/citation_network.png" \
+    curl -fsSL "https://github.com/JacobBowie/citation-network/releases/download/${CN_TAG}/citation_network.png" \
       -o citation-network/assets/hero.png
-    curl -sSL "https://github.com/JacobBowie/citation-network/releases/download/${CN_TAG}/citation_network_card.png" \
+    curl -fsSL "https://github.com/JacobBowie/citation-network/releases/download/${CN_TAG}/citation_network_card.png" \
       -o citation-network/assets/og.png
+    curl -fsSL "https://github.com/JacobBowie/citation-network/releases/download/${CN_TAG}/citation_network_tile.png" \
+      -o citation-network/assets/tile.png
 
     # Pull the rtSD marimo WASM bundle from the JacobBowie/rtsd release. The
     # tarball is self-contained (model.py + sd_diagram.py inlined at build
     # time on the rtsd side) and ships index.html + assets/ at its root, so
     # /rtsd/notebook/ serves the marimo app natively. -f so a missing/renamed
     # release fails the build with a clear curl error, not a cryptic tar error.
-    RTSD_TAG="v0.2.2"
+    RTSD_TAG="v0.2.3"
     mkdir -p rtsd/notebook
     curl -fsSL "https://github.com/JacobBowie/rtsd/releases/download/${RTSD_TAG}/rtsd-wasm.tar.gz" \
       | tar -xz -C rtsd/notebook
@@ -50,10 +55,19 @@
     # index.html + assets/ at its root, so /unlearning/notebook/ serves the marimo
     # app natively. -f so a missing/renamed release fails the build with a clear
     # curl error rather than a cryptic tar error.
-    UNLEARNING_TAG="v0.1.0"
+    UNLEARNING_TAG="v0.1.1"
     mkdir -p unlearning/notebook
     curl -fsSL "https://github.com/JacobBowie/marimo-unlearning/releases/download/${UNLEARNING_TAG}/unlearning-wasm.tar.gz" \
       | tar -xz -C unlearning/notebook
+
+    # marimo WASM exports can ship marimo's own assistant prompt (CLAUDE.md);
+    # it was publicly served at /citation-network/notebook/CLAUDE.md. Strip any
+    # such file from all three notebook bundles before render (2026-10-15).
+    # (Plain rm -f on purpose: this command is a TOML basic string, so a
+    # backslash anywhere except at the very end of a line is an invalid
+    # escape and breaks config parsing. That includes inside these comments.)
+    rm -f citation-network/notebook/CLAUDE.md rtsd/notebook/CLAUDE.md unlearning/notebook/CLAUDE.md
+    rm -f citation-network/notebook/AGENTS.md rtsd/notebook/AGENTS.md unlearning/notebook/AGENTS.md
 
     /tmp/quarto/bin/quarto render
   """
@@ -64,6 +78,9 @@
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    # Deny powerful features the site never uses (audit 2026-10-15). The marimo
+    # / Pyodide embeds need none of these. CSP is a separate, report-only-first job.
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()"
 
 # /citation-network embeds its own viz via iframe — override the site-wide
 # DENY so same-origin iframes work.

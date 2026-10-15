@@ -1,11 +1,23 @@
 ---
-title: "Jacob Bowie"
 description: "Statistical analysis and machine learning for human physiology research."
 pagetitle: "Jacob Bowie, PhD: Physiology, ML, Wearables"
 title-prefix: ""
+# No `title:` on purpose: the homepage renders its own hero h1, and any title
+# makes Quarto emit a second visible h1 (even with title-block-style: none,
+# tested 2026-10-15). pagetitle drives <title>/og:title. Until 2026-10-15 a
+# site-wide CSS rule hid the title block on EVERY page, a single-page-v1
+# leftover that left every subpage with no visible title.
 format:
   html:
     page-layout: article
+    # Homepage-only og:url (Quarto's open-graph does not emit one). Every other
+    # page gets its canonical from canonical-url: true in _quarto.yml.
+    # MUST stay a YAML list: a list concatenates with the project-level
+    # include-in-header (schema.org JSON-LD); a bare `text:` mapping REPLACES it
+    # and silently drops the JSON-LD from this page (tested 2026-10-15).
+    include-in-header:
+      - text: |
+          <meta property="og:url" content="https://jacobbowie.com/">
 ---
 
 <!-- Hero. Blended voice per the 2026-05-10 decision: open with the PhD + UConn
@@ -21,7 +33,7 @@ format:
 <div class="hero-text">
 <h1 class="hero-name">Jacob Bowie, PhD</h1>
 <p class="hero-tagline">
-Visiting Assistant Professor of Exercise Science, Department of Kinesiology,
+Visiting Assistant Professor of Exercise&nbsp;Science, Department of Kinesiology,
 University of Connecticut. Research in the Human Performance Laboratory and the
 Korey Stringer Institute.
 Applying machine learning, wearable sensor signal processing, and reproducible
@@ -81,7 +93,7 @@ preference for reproducible, version-controlled, container-portable analysis.
 <div class="project project-thumb-image">
 <div class="project-thumb"><img src="img/bowie-2026-heat-tolerance.png" alt="Graphical abstract: methods, outcomes, and population-specific threshold criteria for heat tolerance classification" /></div>
 <div class="project-body">
-  <h3>Heat tolerance classification criteria require population-specific thresholds</h3>
+  <h3><a class="stretched-link" href="https://doi.org/10.14814/phy2.70745">Heat tolerance classification criteria require population-specific thresholds</a></h3>
   <div class="project-meta">Bowie et al., 2026 &middot; <em>Physiological Reports</em> &middot; published</div>
   <p>
   Re-examined the standard heat tolerance test classification criteria in a young
@@ -96,9 +108,11 @@ preference for reproducible, version-controlled, container-portable analysis.
 </div>
 </div>
 
-<!-- Project 2: leg-extension EMG fatigue salvage paper, in prep. -->
+<!-- Project 2: leg-extension EMG fatigue salvage paper, in prep. No destination
+     yet (no page, repo unreleased), so the card is deliberately NOT a link and
+     carries .project-static to drop the hover lift that implies one. -->
 
-<div class="project project-thumb-image">
+<div class="project project-thumb-image project-static">
 <div class="project-thumb"><img src="img/emg-model-effects.png" alt="Mixed-model marginal effects: predicted EMG features (RMS, MDF, MNF, sample entropy) as a function of bout completion at 40% versus 70% one-rep-max load" /></div>
 <div class="project-body">
   <h3>Surface EMG amplitude rises faster at low than high load during knee extension to failure</h3>
@@ -122,9 +136,9 @@ preference for reproducible, version-controlled, container-portable analysis.
      explorer hosted natively at /rtsd/; R Shiny + Docker in the repo. -->
 
 <div class="project project-thumb-image">
-<div class="project-thumb"><img src="img/rtsd-rm1-dose-response.png" alt="Reference-mode test RM1: doubled training dose produces roughly twice the rate of fitness gain over 52 weeks, the dose-response gate the simulator must satisfy" /></div>
+<div class="project-thumb"><img src="img/rtsd-tile.png" alt="Simulated year of RP mesocycles in rtSD: Fatigue and Signal cycle with each training block, Performance dips and rebounds after each deload, and Fitness climbs steadily" /></div>
 <div class="project-body">
-  <h3>rtSD Explorer: an interactive fitness-fatigue model explorer</h3>
+  <h3><a class="stretched-link" href="/rtsd/">rtSD Explorer: an interactive fitness-fatigue model explorer</a></h3>
   <div class="project-meta">Public release &middot; browser-side marimo + R Shiny + Docker</div>
   <p>
   A deterministic forward-simulator for the MEDv4 fitness-fatigue-signal ODE,
@@ -143,21 +157,26 @@ preference for reproducible, version-controlled, container-portable analysis.
 </div>
 
 <!-- Project 4: citation-network visualization. The literature-graph companion
-     to rtSD above. Hero PNG is shipped with the site; interactive viewer
-     and source repo are planned but deferred until the v0.1.0 release lands. -->
+     to rtSD above. Card links to the /citation-network/ case study; the
+     interactive and source repo are live (v0.1.0, 2026-05-13). -->
 
 <div class="project project-thumb-dark">
-<div class="project-thumb"><img src="img/banister-constellation-hero.png" alt="Citation network of 175 papers across 50 years of fitness-fatigue model research, with the founding Banister 1975 paper at the top and four downstream branches (classical, variable-dose, statistical critique, and Bayesian hierarchical)" /></div>
+<div class="project-thumb"><img src="citation-network/assets/tile.png" alt="The Banister Constellation: 175 fitness-fatigue model papers from 1975 to 2025, each marked by methodological family with color and shape, and white lines tracing the Banister lineage down from Banister 1975" /></div>
 <div class="project-body">
-  <h3>The Banister Constellation: a citation graph of the fitness-fatigue model lineage</h3>
+  <h3><a class="stretched-link" href="/citation-network/">The Banister Constellation: a citation graph of the fitness-fatigue model lineage</a></h3>
   <div class="project-meta">Research tooling &middot; Python + DuckDB + vis-network</div>
   <p>
-  Fifty years of fitness-fatigue model literature in one constellation. A 175-paper,
+  Fifty years of fitness-fatigue model literature in one constellation. A 175&#8209;paper,
   524-edge citation graph anchored on Banister 1975 and Calvert 1976, traced through
   the classical extensions of the 1980s and 1990s, the variable-dose and statistical
   critiques of the 2000s, and the modern Bayesian hierarchical reformulations. Built
-  on a private DuckDB literature index; interactive viewer and source release planned.
+  from a DuckDB literature index and explorable in the browser: pan, zoom, and
+  isolate the 14-paper Banister lineage.
   </p>
+<div class="project-links">
+<a href="/citation-network/interactive/">Live viewer</a>
+<a href="https://github.com/JacobBowie/citation-network">Repository</a>
+</div>
 </div>
 </div>
 
@@ -168,7 +187,7 @@ preference for reproducible, version-controlled, container-portable analysis.
 <div class="project project-thumb-image">
 <div class="project-thumb"><img src="img/unlearning-hero.png" alt="Force-directed knowledge graph with 'Harry' at the center surrounded by Harry-Potter-specific words in red with fading red edges, and new green edges growing toward generic words like 'British' and 'actor'" /></div>
 <div class="project-body">
-  <h3>Who's Harry Potter? An interactive walk through approximate unlearning in LLMs</h3>
+  <h3><a class="stretched-link" href="/unlearning/">Who's Harry Potter? An interactive walk through approximate unlearning in LLMs</a></h3>
   <div class="project-meta">Portfolio piece &middot; browser-side marimo + Pyodide</div>
   <p>
   Llama-2-7B took 184,000 GPU-hours to train. In 2023, Eldan and Russinovich at
@@ -181,7 +200,7 @@ preference for reproducible, version-controlled, container-portable analysis.
   via marimo + Pyodide.
   </p>
 <div class="project-links">
-<a href="/unlearning/">Live demo</a>
+<a href="/unlearning/notebook/">Live demo</a>
 <a href="https://github.com/JacobBowie/marimo-unlearning">Repository</a>
 </div>
 </div>
@@ -189,10 +208,10 @@ preference for reproducible, version-controlled, container-portable analysis.
 
 <!-- Project 5: literature pipeline tool. -->
 
-<div class="project project-thumb-teal">
-<div class="project-thumb"><span>Literature &middot; citation graph</span></div>
+<div class="project project-thumb-image">
+<div class="project-thumb"><img src="img/lit-pipeline-convergence.png" alt="Citation snowball convergence on a systematic-review corpus: candidate DOIs climb from under 10,000 in the seed set to 18,732 across two snowball passes, each pass flattening once iteration growth drops below one percent" /></div>
 <div class="project-body">
-  <h3>Literature acquisition and citation-graph toolkit</h3>
+  <h3><a class="stretched-link" href="/work/literature-pipeline.html">Literature acquisition and citation-graph toolkit</a></h3>
   <div class="project-meta">Open-source &middot; Python + DuckDB</div>
   <p>
   An open-source biomedical paper acquisition and citation-graph snowballing
@@ -202,7 +221,9 @@ preference for reproducible, version-controlled, container-portable analysis.
   MathML-to-LaTeX rendering layer for JATS XML sidecars (76% pass rate
   through pdflatex on retrieved full-text articles).
   </p>
-  <p><a href="https://github.com/JacobBowie/literature-pipeline">Repository</a></p>
+<div class="project-links">
+<a href="https://github.com/JacobBowie/literature-pipeline">Repository</a>
+</div>
 </div>
 </div>
 
@@ -219,9 +240,9 @@ preference for reproducible, version-controlled, container-portable analysis.
 
 <ol class="pub-list">
   <li>
-    <strong>Bowie JS</strong>, Szymanski MR, Struder JF, Filep EM,
-    Morrissey-Basler MC, Brewer GJ, Thornton SN, Mahoney KJ, Sekiguchi Y,
-    Kwon OS, Chon K, Casa DJ, Lee EC.
+    <strong>Bowie&nbsp;JS</strong>, Szymanski&nbsp;MR, Struder&nbsp;JF, Filep&nbsp;EM,
+    Morrissey-Basler&nbsp;MC, Brewer&nbsp;GJ, Thornton&nbsp;SN, Mahoney&nbsp;KJ, Sekiguchi&nbsp;Y,
+    Kwon&nbsp;OS, Chon&nbsp;K, Casa&nbsp;DJ, Lee&nbsp;EC.
     Heat tolerance classification criteria require population-specific
     thresholds for accurate assessment of acclimation state in adults.
     <span class="pub-venue">Physiological Reports</span>,
@@ -229,8 +250,17 @@ preference for reproducible, version-controlled, container-portable analysis.
     <a href="https://doi.org/10.14814/phy2.70745">doi:10.14814/phy2.70745</a>
   </li>
   <li>
-    Mahoney KJ, <strong>Bowie JS</strong>, Ford AE, Perera N, Sekiguchi Y,
-    Fothergill DM, Lee EC.
+    <strong>Bowie&nbsp;JS</strong>, Sterczala&nbsp;AJ, Kraemer&nbsp;WJ, Maresh&nbsp;CM, Comstock&nbsp;BA,
+    Muñoz&nbsp;CX, McKenzie&nbsp;AL, Volek&nbsp;JS, Lee&nbsp;EC.
+    Acute heavy resistance exercise protocol increases extracellular heat shock
+    protein without changes in associated cytokines.
+    <span class="pub-venue">Journal of Strength and Conditioning Research</span>,
+    <span class="pub-year">2026</span>; 40(5): 528&ndash;535.
+    <a href="https://doi.org/10.1519/JSC.0000000000005373">doi:10.1519/JSC.0000000000005373</a>
+  </li>
+  <li>
+    Mahoney&nbsp;KJ, <strong>Bowie&nbsp;JS</strong>, Ford&nbsp;AE, Perera&nbsp;N, Sekiguchi&nbsp;Y,
+    Fothergill&nbsp;DM, Lee&nbsp;EC.
     Plasma proteomics-based discovery of mechanistic biomarkers of hyperbaric
     stress and pulmonary oxygen toxicity.
     <span class="pub-venue">Metabolites</span>,
@@ -238,7 +268,7 @@ preference for reproducible, version-controlled, container-portable analysis.
     <a href="https://doi.org/10.3390/metabo13090970">doi:10.3390/metabo13090970</a>
   </li>
   <li>
-    Lee EC, <strong>Bowie JS</strong>, Fiol A, Huggins RA.
+    Lee&nbsp;EC, <strong>Bowie&nbsp;JS</strong>, Fiol&nbsp;AP, Huggins&nbsp;RA.
     Molecular aspects of thermal tolerance and exertional heat illness
     susceptibility. In: Adams WM, Jardine JF, eds.
     <span class="pub-venue">Exertional Heat Illness: A Clinical and Evidence-Based Guide</span>.
@@ -248,7 +278,7 @@ preference for reproducible, version-controlled, container-portable analysis.
   </li>
 </ol>
 
-<p style="font-size: 0.9rem; color: #6b7280;">
+<p class="muted-note">
 Full publication list, including works in preparation and conference
 abstracts, is in my <a href="cv.html">CV</a> and
 <a href="https://orcid.org/0000-0002-6055-8220">on ORCID</a>.
@@ -261,18 +291,12 @@ abstracts, is in my <a href="cv.html">CV</a> and
 The best way to reach me is by email:
 <a href="mailto:jacob.bowie2@gmail.com">jacob.bowie2@gmail.com</a>.
 </p>
-<p style="margin-bottom: 0; font-size: 0.95rem; color: #4b5563;">
+<p class="muted-note mb-0">
 I read messages most days and reply within a few business days. For
 collaboration inquiries please include a one-paragraph summary of the
 question and any data or design constraints I should know about up front.
 </p>
 </div>
 
-<footer class="site-footer">
-  <a href="https://orcid.org/0000-0002-6055-8220">ORCID</a> &middot;
-  <a href="https://github.com/JacobBowie">GitHub</a> &middot;
-  <a href="https://www.linkedin.com/in/jacobbowie/">LinkedIn</a> &middot;
-  <a href="mailto:jacob.bowie2@gmail.com">Email</a>
-  <br/>
-  <span style="font-size: 0.8rem;">&copy; 2026 Jacob Bowie. Built with <a href="https://quarto.org">Quarto</a>.</span>
-</footer>
+<!-- Site footer moved to _includes/footer.html (include-after-body in
+     _quarto.yml) on 2026-10-15 so every page carries it, not just this one. -->

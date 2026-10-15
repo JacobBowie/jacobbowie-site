@@ -61,8 +61,55 @@ body::before {
   pointer-events: none;
 }
 
-/* Hide Quarto's default title block; we render our own hero in the qmd body. */
-#title-block-header { display: none; }
+/* Title blocks: only the homepage hides Quarto's title block (index.qmd sets
+   title-block-style: none and renders its own hero). This used to be a
+   site-wide #title-block-header {display:none}, a single-page-v1 leftover that
+   left every subpage with no visible title and no h1 (audit 2026-10-15). */
+
+/* ---- Site audit 2026-10-15: shared accessibility + polish rules ---- */
+
+/* Visible keyboard focus. Bootstrap's 25%-alpha halo measured ~1.5-2:1;
+   WCAG 1.4.11 wants 3:1 for focus indicators. */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.nav-link:focus-visible,
+.navbar-brand:focus-visible {
+  outline: 2px solid var(--jb-accent);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+/* Skip link, injected by include-before-body in _quarto.yml. Bootstrap's
+   .visually-hidden-focusable keeps it off-screen until it receives focus. */
+.skip-link:focus {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 10000;
+  padding: 0.5rem 0.9rem;
+  /* Fixed navy in both themes: the dark --jb-accent (#6c8cc6) gave white
+     text only 3.4:1; #3C5488 is 7.5:1. */
+  background: #3C5488;
+  color: #ffffff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Muted helper copy. Replaces inline color:#4b5563 / #6b7280 on the
+   homepage, which ignored dark mode (1.9:1 on the dark contact box). */
+.muted-note { font-size: 0.92rem; color: var(--jb-muted); }
+
+/* Keep DOIs and ORCID iDs whole on narrow screens instead of breaking at a
+   hyphen ("27805- / 2_8", "0000-0002- / 6055-8220"). */
+a[href^="https://doi.org/"],
+a[href*="orcid.org/0000"] { white-space: nowrap; }
+
+/* Code-copy button: hover-revealed and ~12x2 px on touch, so make it
+   always visible and tappable where there is no hover. */
+@media (hover: none) {
+  .code-copy-button { opacity: 1; padding: 0.35rem 0.5rem; min-width: 2rem; min-height: 2rem; }
+}
 
 /* Anchor a comfortable reading measure even on wide screens. */
 main.content {
@@ -162,12 +209,36 @@ h2.section-heading {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  position: relative;
   transition: box-shadow 0.18s ease, transform 0.18s ease;
 }
 .project:hover {
   box-shadow: 0 4px 18px rgba(31, 41, 55, 0.10);
   transform: translateY(-1px);
 }
+/* Whole-card click (2026-10-15). Each card's h3 link carries Bootstrap's
+   .stretched-link, whose ::after overlay covers the card (.project is the
+   positioned containing block). Secondary links (Live demo, Repository, DOI)
+   sit above the overlay so they stay separately clickable. A card with no
+   destination yet uses .project-static and drops the hover lift, so it never
+   promises a click it cannot deliver. */
+.project h3 a.stretched-link { color: inherit; text-decoration: none; }
+.project:hover h3 a.stretched-link,
+.project h3 a.stretched-link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.project h3 a.stretched-link:focus-visible { outline: none; }
+.project:has(a.stretched-link:focus-visible) {
+  outline: 2px solid var(--jb-accent);
+  outline-offset: 3px;
+}
+.project .project-links { position: relative; z-index: 2; }
+/* Secondary links need their own 24px tap height (WCAG 2.5.8): the
+   whole-card overlay now surrounds them, so the spacing exception no longer
+   applies, and a near-miss on "Live demo" would open the case study instead. */
+.project .project-links a { display: inline-block; padding-block: 0.3rem; }
+.project-static:hover { box-shadow: none; transform: none; }
 .project-thumb {
   aspect-ratio: 16 / 9;
   display: flex;
@@ -277,6 +348,20 @@ pre code {
   padding: 0;
   font-size: inherit;
 }
+/* Scroll cue for plain code blocks and ASCII trees (audit 2026-10-15): on a
+   phone they scroll sideways with no hint, so lines read as cut off. Pure-CSS
+   "scroll shadows": the two "local" cover gradients scroll with the content
+   and hide the two "scroll" shadows at whichever edge has nothing more to
+   reveal, so a shadow shows only where there is more to scroll. */
+pre:not(.sourceCode) {
+  background:
+    linear-gradient(to right, var(--jb-bg-soft) 35%, transparent) left center / 2.5rem 100% no-repeat local,
+    linear-gradient(to left, var(--jb-bg-soft) 35%, transparent) right center / 2.5rem 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%, var(--jb-scroll-shadow), transparent) left center / 0.9rem 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%, var(--jb-scroll-shadow), transparent) right center / 0.9rem 100% no-repeat scroll,
+    var(--jb-bg-soft);
+}
+:root { --jb-scroll-shadow: rgba(15, 23, 42, 0.18); }
 
 /* Tables: cosmo binds cell text to Bootstrap's --bs-table-color (near-black),
    which the dark-mode block never overrides -> dark-on-slate-900, unreadable
@@ -318,6 +403,10 @@ thead th { color: var(--jb-text); border-bottom: 2px solid var(--jb-border); }
 .quarto-grid-item .card-img-top img {
   border-radius: 0;
   display: block;
+  /* contain, not Quarto's default cover: cover cropped the rtSD legend to
+     "Do" and cut the literature-pipeline chart title (audit 2026-10-15). */
+  object-fit: contain;
+  background: #ffffff;
 }
 .quarto-grid-item .card-body {
   padding: 1.1rem 1.25rem 1.25rem;
@@ -439,14 +528,26 @@ ol.pub-list .pub-year {
 
 /* Footer */
 footer.site-footer {
-  margin-top: 3rem;
-  padding-top: 1.25rem;
+  /* Injected after <body> content on every page (include-after-body), so it
+     sits outside the article grid: constrain and center it ourselves. */
+  max-width: 1000px;
+  margin: 3rem auto 2rem;
+  padding: 1.25rem 1rem 0;
   border-top: 1px solid var(--jb-border);
   font-size: 0.9rem;
   color: var(--jb-muted);
   text-align: center;
 }
-footer.site-footer a { color: var(--jb-muted); margin: 0 0.5rem; }
+footer.site-footer a {
+  color: var(--jb-muted);
+  margin: 0 0.5rem;
+  display: inline-block;
+  padding-block: 0.3rem;   /* 24px+ tap target */
+}
+footer.site-footer .site-footer-legal { font-size: 0.8rem; margin: 0.4rem 0 0; }
+/* The inline Quarto link must not inherit the nav links' side margins, or it
+   renders as "Built with  Quarto ." (QA 2026-10-15). */
+footer.site-footer .site-footer-legal a { margin: 0; padding: 0; display: inline; }
 
 /* Dark mode lives in theme-dark.scss (the dark Bootstrap bundle), not here.
    This file is mode-agnostic and is listed in BOTH the light and dark themes.

@@ -24,7 +24,7 @@ format:
 
 ::: {.callout-note}
 This page embeds a marimo reactive notebook running entirely in your browser
-via WebAssembly. **First load takes ~30 seconds** while Python downloads;
+via WebAssembly. **First load takes 30 to 60 seconds** while Python downloads;
 subsequent visits are local and fast.
 :::
 

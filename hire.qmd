@@ -2,6 +2,7 @@
 title: "Work together"
 description: "How to reach me about research partnerships, longer-term research and industry roles, and reviewer-ready code."
 pagetitle: "Work together"
+image: profile.jpg
 format:
   html:
     page-layout: article
@@ -9,7 +10,7 @@ format:
 
 ## Open to what comes next
 
-I am a Visiting Assistant Professor of Exercise Science in the Department of Kinesiology at the
+I am a visiting assistant professor of exercise science in the Department of Kinesiology at the
 University of Connecticut, with research in the Human Performance Laboratory and
 the Korey Stringer Institute. My work sits at the intersection of
 applied machine learning, wearable sensor signal processing, and reproducible
@@ -34,8 +35,9 @@ within-person variability. Continuous physiological time-series from wearable
 and laboratory instruments (HR, HRV, EMG, core and skin temperature, sweat
 electrolytes). End-to-end pipelines in R and Python with Docker, Quarto, and
 proper provenance. Marine Corps veteran; comfortable with security-cleared
-contexts where they arise. Lead author on peer-reviewed work in
-*Physiological Reports*, *Metabolites*, and *Springer* book chapters.
+contexts where they arise. First author in *Physiological Reports* and the
+*Journal of Strength and Conditioning Research*, with co-authored work in
+*Metabolites* and a Springer book chapter.
 
 ## How to start a conversation
 

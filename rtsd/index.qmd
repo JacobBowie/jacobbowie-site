@@ -1,7 +1,8 @@
 ---
 title: "rtSD Explorer"
 subtitle: "An interactive system-dynamics explorer for resistance-training adaptation"
-image: ../img/rtsd-rm1-dose-response.png
+image: ../img/rtsd-card.png
+image-alt: "rtSD Explorer: a simulated year of RP mesocycles in which Fatigue and Signal cycle with each training block, Performance dips and rebounds after each deload, and Fitness climbs in steps"
 description: >
   A browser-based explorer for the MEDv4 fitness-fatigue-signal model, the
   three-stock system-dynamics ODE behind fifty years of resistance-training
@@ -25,7 +26,16 @@ format:
     page-layout: full
 ---
 
-![Reference-mode test RM1: doubling the weekly training dose produces roughly twice the rate of fitness gain over 52 weeks. The dose-response gate the simulator must satisfy.](../img/rtsd-rm1-dose-response.png){fig-alt="Two line plots showing fitness-gain trajectories for a baseline training dose and a doubled dose over 52 weeks, where the doubled-dose curve rises at roughly twice the rate." width=100%}
+<!-- On phones (<= 576 px) the two-panel hero shrinks to ~340 px and its labels
+     become unreadable (QA 2026-10-15), so narrow screens get the single-panel
+     trajectory tile instead; desktop keeps the structure + behavior pair. -->
+<figure class="figure">
+<picture>
+<source media="(max-width: 576px)" srcset="../img/rtsd-tile.png">
+<img src="../img/rtsd-hero.png" class="img-fluid figure-img" style="width:100%" alt="rtSD model and its behavior over a simulated year of RP mesocycles: Fatigue and Signal rise and fall with each training block, Performance dips and rebounds after each deload, and Fitness climbs in steps.">
+</picture>
+<figcaption>The model and what it does: training load drives Fatigue and Signal, Signal adapts into Fitness, and Performance is Fitness net of Fatigue; simulated over a year of RP mesocycles (7-day averages, each scaled 0 to 1).</figcaption>
+</figure>
 
 ## Try it
 
@@ -43,7 +53,7 @@ Inside, you can:
 - **Save a run** to freeze a configuration, then change the parameters and overlay the new trajectory against it.
 - Read the result three ways: **live trajectory charts** (Fitness, Fatigue, Signal, Performance), the **MEDv4 stock-and-flow diagram**, and a **summary table**.
 
-First load takes roughly 30 to 60 seconds while Python downloads into the browser. After that it is local and fast.
+First load takes roughly 30 to 60 seconds while Python downloads into the browser. After that it is local and fast. Best on a laptop or desktop: on a phone the charts are cramped.
 :::
 
 ## What you're looking at
@@ -54,27 +64,23 @@ rtSD Explorer makes the dynamics tangible. How does a doubled training dose chan
 
 Underneath, **rtSD** is a system-dynamics implementation of the **MEDv4** three-stock fitness-fatigue-signal ODE, originally built in Vensim and ported to a parity-tested R + Python core. It sits inside a three-tier framework:
 
-| Tier | Name | What it is |
-|---|---|---|
-| Framework | **GET-PAID** | *Generating Expected Timelines of Predicted Adaptations to Imposed Demands*. The theoretical claim that imposed training demands produce predictable adaptation trajectories. |
-| Model | **rtSD** | The system-dynamics implementation of GET-PAID for resistance training: a three-stock (Fitness / Fatigue / Signal) model on the MEDv4 ODE. |
-| Tool | **rtSD Explorer** | This page. The browser-based marimo explorer above, backed by the same model that powers the repo's R Shiny app and Docker image. |
+<!-- Was a 3-column table; at 390 px it collapsed to one word per line and split
+     "GET- / PAID" (audit 2026-10-15). A list reads at every width; U+2011 keeps
+     GET‑PAID whole. -->
+
+- **Framework: GET&#8209;PAID.** *Generating Expected Timelines of Predicted Adaptations to Imposed Demands*. The theoretical claim that imposed training demands produce predictable adaptation trajectories.
+- **Model: rtSD.** The system-dynamics implementation of GET&#8209;PAID for resistance training: a three-stock (Fitness / Fatigue / Signal) model on the MEDv4 ODE.
+- **Tool: rtSD Explorer.** This page. The browser-based marimo explorer above, backed by the same model that powers the repo's R Shiny app and Docker image.
 
 ## The seven-test plausibility validator
 
 The methodological heart of the project is not the simulator. It is the validator that gates it.
 
-A fitness-fatigue model has to satisfy a set of qualitative physiological constraints before it deserves to be fit to data. These are not noise-bound empirical claims; they are structural commitments. The seven reference-mode tests encode them, and the model has to reproduce each one within tolerance before any change ships:
+A fitness-fatigue model has to satisfy a set of qualitative physiological constraints before it deserves to be fit to data. These are not noise-bound empirical claims; they are structural commitments. Seven reference-mode tests encode them, and the model has to reproduce each one within tolerance before any change ships. The tests, their targets, and their literature citations live in the repository's validator ([`R/reference_mode_tests.R`](https://github.com/JacobBowie/rtsd/blob/main/R/reference_mode_tests.R)).
 
-1. **RM1: dose response.** Doubling training dose roughly doubles the long-run rate of fitness gain.
-2. **RM2: detraining.** Removing all training produces a slow exponential decay back to the activities-of-daily-living floor.
-3. **RM3: saturation.** Holding load constant produces a long-run plateau, not unbounded growth.
-4. **RM4: fatigue dominance.** A sudden spike in load produces a transient net-performance dip before any fitness gain materializes.
-5. **RM5: ADL floor.** Fitness does not fall below the activities-of-daily-living baseline regardless of how long detraining runs.
-6. **RM6: taper.** Reducing load just before a target date produces a net-performance peak above the loaded-state value.
-7. **RM7: overreach.** Sustained high load past a structural threshold pushes fatigue past fitness; net performance goes negative.
+![Reference mode RM1: doubling the weekly training dose produces roughly twice the rate of fitness gain over 52 weeks, the dose-response gate the simulator must satisfy.](../img/rtsd-rm1-dose-response.png){fig-alt="Two fitness trajectories over 52 weeks: the 2x-dose curve rises to about 160 kg while the 1x-dose curve reaches about 120 kg, roughly twice the rate of gain." width=100%}
 
-Each test is a one-page reference mode with a target trajectory the model must reproduce. This validator is the structural gate before anything more ambitious (Bayesian fitting against a real cohort, hierarchical extensions, individualized priors) gets built on top.
+Each test is a one-page reference mode with a target trajectory the model must reproduce. This validator is the structural gate before anything more ambitious (fitting against real data) gets built on top.
 
 ## How it is built
 
@@ -94,9 +100,9 @@ The repository ships a `CITATION.cff` so researchers can cite the specific versi
 
 ## Where this fits
 
-rtSD Explorer is the public, deterministic face of a larger, currently private Bayesian fitness-fatigue project (working name `getpaid`) that fits the same MEDv4 model hierarchically against an open resistance-training cohort. The public artifact and the private codebase share the deterministic core; the private codebase adds Stan, priors derived from a 175-paper citation review, and per-subject partial pooling.
+rtSD Explorer is the public, deterministic face of a larger, currently private research project (working name `getpaid`). The two share the deterministic model.
 
-The paired companion is [**The Banister Constellation**](/citation-network/), a 175-paper citation graph of fifty years of fitness-fatigue model literature that anchors the priors and frames the lineage. The two form a model-view and literature-view pair of the same intellectual lineage.
+The paired companion is [**The Banister Constellation**](/citation-network/), a 175-paper citation graph of fifty years of fitness-fatigue model literature that frames the lineage. The two form a model-view and literature-view pair of the same intellectual lineage.
 
 ## Source and citation
 
