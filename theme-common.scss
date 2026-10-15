@@ -186,6 +186,29 @@ a:hover { text-decoration: underline; }
 .btn:visited { color: var(--bs-btn-color); }
 .btn:hover { text-decoration: none; }
 
+/* /citation-network/ hero: the constellation is a dark (#0e1117) figure. Show it
+   as a deliberate dark band with its caption inside, so it reads as a designed
+   banner on a light page and blends on a dark one (Jacob, 2026-10-15). */
+.cn-hero-band {
+  background: #0e1117;
+  border-radius: 12px;
+  padding: 1.25rem 1.25rem 0.9rem;
+  margin: 0.5rem 0 2rem;
+}
+.cn-hero-band figure,
+.cn-hero-band .quarto-figure { margin: 0; }
+.cn-hero-band img { display: block; border-radius: 6px; }
+.cn-hero-band figcaption,
+.cn-hero-band .figure-caption {
+  color: #cbd5e1;
+  margin-top: 0.6rem;
+  text-align: center;
+  font-size: 0.92rem;
+}
+@media (max-width: 576px) {
+  .cn-hero-band { padding: 0.6rem 0.6rem 0.5rem; border-radius: 8px; }
+}
+
 hr {
   border: 0;
   border-top: 1px solid var(--jb-border);
