@@ -56,12 +56,15 @@ format:
     fontsize: "1.05rem"
     linkcolor: "#3C5488"
     page-layout: article
+    # Per-page <link rel="canonical"> built from site-url. Replaces a hardcoded
+    # homepage canonical + og:url that sat in include-in-header below and told
+    # search engines every page was the homepage (audit 2026-10-15). og:url for
+    # the homepage now lives in index.qmd's own front matter.
+    canonical-url: true
     grid:
       body-width: 1000px
     include-in-header:
       text: |
-        <meta property="og:url" content="https://jacobbowie.com/">
-        <link rel="canonical" href="https://jacobbowie.com/">
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -142,6 +145,38 @@ format:
                 "value": "10.14814/phy2.70745"
               },
               "url": "https://doi.org/10.14814/phy2.70745"
+            },
+            {
+              "@type": "ScholarlyArticle",
+              "@id": "https://doi.org/10.1519/JSC.0000000000005373",
+              "headline": "Acute heavy resistance exercise protocol increases extracellular heat shock protein without changes in associated cytokines",
+              "author": [
+                {"@type": "Person", "name": "Jacob S Bowie", "sameAs": "https://orcid.org/0000-0002-6055-8220"},
+                {"@type": "Person", "name": "Adam J Sterczala"},
+                {"@type": "Person", "name": "William J Kraemer"},
+                {"@type": "Person", "name": "Carl M Maresh"},
+                {"@type": "Person", "name": "Brett Comstock"},
+                {"@type": "Person", "name": "Colleen X Muñoz"},
+                {"@type": "Person", "name": "Amy L McKenzie"},
+                {"@type": "Person", "name": "Jeff S Volek"},
+                {"@type": "Person", "name": "Elaine C Lee"}
+              ],
+              "datePublished": "2026",
+              "isPartOf": {
+                "@type": "Periodical",
+                "name": "Journal of Strength and Conditioning Research",
+                "issn": "1064-8011"
+              },
+              "volumeNumber": "40",
+              "issueNumber": "5",
+              "pageStart": "528",
+              "pageEnd": "535",
+              "identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "DOI",
+                "value": "10.1519/JSC.0000000000005373"
+              },
+              "url": "https://doi.org/10.1519/JSC.0000000000005373"
             },
             {
               "@type": "ScholarlyArticle",

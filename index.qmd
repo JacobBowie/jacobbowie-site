@@ -6,6 +6,14 @@ title-prefix: ""
 format:
   html:
     page-layout: article
+    # Homepage-only og:url (Quarto's open-graph does not emit one). Every other
+    # page gets its canonical from canonical-url: true in _quarto.yml.
+    # MUST stay a YAML list: a list concatenates with the project-level
+    # include-in-header (schema.org JSON-LD); a bare `text:` mapping REPLACES it
+    # and silently drops the JSON-LD from this page (tested 2026-10-15).
+    include-in-header:
+      - text: |
+          <meta property="og:url" content="https://jacobbowie.com/">
 ---
 
 <!-- Hero. Blended voice per the 2026-05-10 decision: open with the PhD + UConn
@@ -21,7 +29,7 @@ format:
 <div class="hero-text">
 <h1 class="hero-name">Jacob Bowie, PhD</h1>
 <p class="hero-tagline">
-Visiting Assistant Professor of Exercise Science, Department of Kinesiology,
+Visiting Assistant Professor of Exercise&nbsp;Science, Department of Kinesiology,
 University of Connecticut. Research in the Human Performance Laboratory and the
 Korey Stringer Institute.
 Applying machine learning, wearable sensor signal processing, and reproducible
@@ -156,8 +164,13 @@ preference for reproducible, version-controlled, container-portable analysis.
   524-edge citation graph anchored on Banister 1975 and Calvert 1976, traced through
   the classical extensions of the 1980s and 1990s, the variable-dose and statistical
   critiques of the 2000s, and the modern Bayesian hierarchical reformulations. Built
-  on a private DuckDB literature index; interactive viewer and source release planned.
+  from a DuckDB literature index and explorable in the browser: pan, zoom, and
+  isolate the 14-paper Banister lineage.
   </p>
+<div class="project-links">
+<a href="/citation-network/">Live viewer</a>
+<a href="https://github.com/JacobBowie/citation-network">Repository</a>
+</div>
 </div>
 </div>
 
@@ -229,6 +242,15 @@ preference for reproducible, version-controlled, container-portable analysis.
     <a href="https://doi.org/10.14814/phy2.70745">doi:10.14814/phy2.70745</a>
   </li>
   <li>
+    <strong>Bowie JS</strong>, Sterczala AJ, Kraemer WJ, Maresh CM, Comstock BA,
+    Muñoz CX, McKenzie AL, Volek JS, Lee EC.
+    Acute heavy resistance exercise protocol increases extracellular heat shock
+    protein without changes in associated cytokines.
+    <span class="pub-venue">Journal of Strength and Conditioning Research</span>,
+    <span class="pub-year">2026</span>; 40(5): 528&ndash;535.
+    <a href="https://doi.org/10.1519/JSC.0000000000005373">doi:10.1519/JSC.0000000000005373</a>
+  </li>
+  <li>
     Mahoney KJ, <strong>Bowie JS</strong>, Ford AE, Perera N, Sekiguchi Y,
     Fothergill DM, Lee EC.
     Plasma proteomics-based discovery of mechanistic biomarkers of hyperbaric
@@ -238,7 +260,7 @@ preference for reproducible, version-controlled, container-portable analysis.
     <a href="https://doi.org/10.3390/metabo13090970">doi:10.3390/metabo13090970</a>
   </li>
   <li>
-    Lee EC, <strong>Bowie JS</strong>, Fiol A, Huggins RA.
+    Lee EC, <strong>Bowie JS</strong>, Fiol AP, Huggins RA.
     Molecular aspects of thermal tolerance and exertional heat illness
     susceptibility. In: Adams WM, Jardine JF, eds.
     <span class="pub-venue">Exertional Heat Illness: A Clinical and Evidence-Based Guide</span>.
