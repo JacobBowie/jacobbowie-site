@@ -320,7 +320,7 @@ KINS 4500, Exercise Physiology [· University of Connecticut]{.cv-inst} `#h(1fr)
 KINS 4501, Fundamentals of Exercise Testing (2 sections) [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2026]{.cv-date}
 :::
 ::: {.cv-entry}
-KINS 2227, Exercise Prescription (Section 2 of 3, online) [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2026]{.cv-date}
+KINS 2227, Exercise Prescription [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2026]{.cv-date}
 :::
 ::: {.cv-entry}
 EX 240, Statistics for Exercise Science [· University of Hartford]{.cv-inst} `#h(1fr)`{=typst}[2025]{.cv-date}
