@@ -120,6 +120,14 @@ hr { border-top-color: var(--jb-border); }
 #quarto-header .navbar .nav-link:hover,
 #quarto-header .navbar .nav-link.active,
 #quarto-header .navbar .nav-link:hover .bi { color: #ffffff; }
+// Bootstrap sets --bs-navbar-toggler-icon-bg ON the icon element (and the dark
+// bundle still compiled the light navbar fg into it), so the .navbar-level
+// variable above never reached it: hamburger and search measured 2.5:1 on
+// #0b1220 (QA 2026-10-15). Set it on the elements themselves.
+#quarto-header .navbar .navbar-toggler-icon {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23cbd5e1' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+#quarto-header .navbar .aa-DetachedSearchButton .aa-DetachedSearchButtonIcon { color: #cbd5e1; }
 
 // White figure thumbnails glare on the dark cards; take the edge off.
 .project-thumb-image .project-thumb img,

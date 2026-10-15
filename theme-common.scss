@@ -88,7 +88,9 @@ button:focus-visible,
   left: 0.5rem;
   z-index: 10000;
   padding: 0.5rem 0.9rem;
-  background: var(--jb-accent);
+  /* Fixed navy in both themes: the dark --jb-accent (#6c8cc6) gave white
+     text only 3.4:1; #3C5488 is 7.5:1. */
+  background: #3C5488;
   color: #ffffff;
   border-radius: 4px;
   text-decoration: none;
@@ -529,6 +531,9 @@ footer.site-footer a {
   padding-block: 0.3rem;   /* 24px+ tap target */
 }
 footer.site-footer .site-footer-legal { font-size: 0.8rem; margin: 0.4rem 0 0; }
+/* The inline Quarto link must not inherit the nav links' side margins, or it
+   renders as "Built with  Quarto ." (QA 2026-10-15). */
+footer.site-footer .site-footer-legal a { margin: 0; padding: 0; display: inline; }
 
 /* Dark mode lives in theme-dark.scss (the dark Bootstrap bundle), not here.
    This file is mode-agnostic and is listed in BOTH the light and dark themes.

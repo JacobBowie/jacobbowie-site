@@ -10,7 +10,7 @@ format:
 
 ## Open to what comes next
 
-I am a Visiting Assistant Professor of Exercise Science in the Department of Kinesiology at the
+I am a visiting assistant professor of exercise science in the Department of Kinesiology at the
 University of Connecticut, with research in the Human Performance Laboratory and
 the Korey Stringer Institute. My work sits at the intersection of
 applied machine learning, wearable sensor signal processing, and reproducible
