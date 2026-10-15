@@ -33,6 +33,8 @@ listing:
   grid-columns: 2
   max-description-length: 250
   feed: false
+filters:
+  - ../_filters/listing-titles-h2.lua
 format:
   html:
     page-layout: article
