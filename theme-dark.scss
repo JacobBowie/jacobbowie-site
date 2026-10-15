@@ -138,9 +138,11 @@ hr { border-top-color: var(--jb-border); }
 #quarto-header .navbar #quarto-search .aa-DetachedSearchButtonIcon svg,
 #quarto-header .navbar .aa-DetachedSearchButton .aa-DetachedSearchButtonIcon { color: #cbd5e1; }
 
-// White figure thumbnails glare on the dark cards; take the edge off.
-.project-thumb-image .project-thumb img,
-.quarto-grid-item .card-img-top img { filter: brightness(0.92); }
+// White figure thumbnails glare on the dark cards; take the edge off. Dim the
+// whole figure PANEL, not the img: dimming only the img left the panel's
+// padding brighter than the figure, a visible frame (fixed 2026-10-15).
+.project-thumb-image .project-thumb,
+.quarto-grid-item .card-img-top { filter: brightness(0.92); }
 
 // Inline code inside figure captions rendered as a white light-mode chip.
 figcaption code,
