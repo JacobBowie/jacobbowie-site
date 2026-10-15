@@ -191,7 +191,7 @@ I assisted with assembling the training environment, anthropometric testing, and
 ::: {.cv-entry}
 **Marine Raider (MARSOC) human performance and injury-risk profiling** `#h(1fr)`{=typst}[2017]{.cv-date}
 
-[[Sports Medicine Research Institute](https://www.uky.edu/chs/sports-medicine-research-institute), University of Kentucky. PI: Dr. Joshua Winters. Marine Forces Special Operations Command, Camp Lejeune, NC.]{style="color:#5a6470;font-style:italic"}
+[[Sports Medicine Research Institute](https://chs.uky.edu/sports-medicine-research-institute), University of Kentucky. PI: Dr. Joshua Winters. Marine Forces Special Operations Command, Camp Lejeune, NC.]{style="color:#5a6470;font-style:italic"}
 
 I administered comprehensive strength testing (Biodex isokinetic dynamometer) in a high-throughput (eight participants per day) testing environment. I assisted with the collection of body composition data (BODPOD), VO~2max~ testing, Wingate anaerobic power testing, motion capture biomechanical analyses, functional flexibility assessments, and injury history questionnaires.
 :::
@@ -363,7 +363,7 @@ EXS 321, Biomechanics [· University of North Carolina Wilmington]{.cv-inst} `#h
 ### Test Preparation
 
 ::: {.cv-entry}
-SAT preparation, [Connecticut Collegiate Awareness and Preparation (ConnCAP)](https://caps.center.uconn.edu/programs/college-access-programs/conncap) [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2019]{.cv-date}
+SAT preparation, [Connecticut Collegiate Awareness and Preparation (ConnCAP)](https://caps.center.uconn.edu/programs/college-access-programs/conncap/) [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2019]{.cv-date}
 :::
 ::: {.cv-entry}
 GRE preparation, [Student Support Services (TRIO)](https://caps.center.uconn.edu/programs/student-support-services/) [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2019]{.cv-date}
@@ -494,7 +494,7 @@ Ad hoc reviewer, *Immunity & Ageing* `#h(1fr)`{=typst}[2026–present]{.cv-date}
 **[Douglas J. Casa, Ph.D.](https://koreystringer.institute.uconn.edu/person/douglas-casa/)** [· CEO, Korey Stringer Institute, University of Connecticut]{.cv-inst}
 :::
 ::: {.cv-entry}
-**[Robert Huggins, Ph.D.](https://koreystringer.institute.uconn.edu/person/robert-huggins-phd-atc)** [· Chief Research Officer, Korey Stringer Institute, University of Connecticut]{.cv-inst}
+**[Robert Huggins, Ph.D.](https://koreystringer.institute.uconn.edu/person/robert-huggins/)** [· Chief Research Officer, Korey Stringer Institute, University of Connecticut]{.cv-inst}
 :::
 ::: {.cv-entry}
 **[Laurie L. Devaney, PT, ATC, Ph.D.](https://kins.uconn.edu/person/laurie-devaney/)** [· Department Head, Kinesiology, University of Connecticut]{.cv-inst}
