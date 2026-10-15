@@ -25,6 +25,7 @@ $border-color:     #334155 !default;   // slate-700
   --jb-muted:       #94a3b8;     // slate-400
   --jb-border:      #334155;
   --jb-bg-soft:     #1e293b;     // slate-800
+  --jb-scroll-shadow: rgba(0, 0, 0, 0.5);   // code-block scroll cue, visible on dark
 
   // Bootstrap custom-property overrides as a RUNTIME backstop. Several of the
   // Sass $defaults above get shadowed in the theme-list cascade: $border-color

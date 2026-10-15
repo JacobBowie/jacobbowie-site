@@ -348,6 +348,20 @@ pre code {
   padding: 0;
   font-size: inherit;
 }
+/* Scroll cue for plain code blocks and ASCII trees (audit 2026-10-15): on a
+   phone they scroll sideways with no hint, so lines read as cut off. Pure-CSS
+   "scroll shadows": the two "local" cover gradients scroll with the content
+   and hide the two "scroll" shadows at whichever edge has nothing more to
+   reveal, so a shadow shows only where there is more to scroll. */
+pre:not(.sourceCode) {
+  background:
+    linear-gradient(to right, var(--jb-bg-soft) 35%, transparent) left center / 2.5rem 100% no-repeat local,
+    linear-gradient(to left, var(--jb-bg-soft) 35%, transparent) right center / 2.5rem 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%, var(--jb-scroll-shadow), transparent) left center / 0.9rem 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%, var(--jb-scroll-shadow), transparent) right center / 0.9rem 100% no-repeat scroll,
+    var(--jb-bg-soft);
+}
+:root { --jb-scroll-shadow: rgba(15, 23, 42, 0.18); }
 
 /* Tables: cosmo binds cell text to Bootstrap's --bs-table-color (near-black),
    which the dark-mode block never overrides -> dark-on-slate-900, unreadable
