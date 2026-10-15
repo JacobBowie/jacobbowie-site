@@ -477,6 +477,9 @@ Ad hoc reviewer, *Brain Communications* `#h(1fr)`{=typst}[2026–current]{.cv-da
 ::: {.cv-entry}
 Ad hoc reviewer, *Temperature* `#h(1fr)`{=typst}[2026–current]{.cv-date}
 :::
+::: {.cv-entry}
+Ad hoc reviewer, *Immunity & Ageing* `#h(1fr)`{=typst}[2026–current]{.cv-date}
+:::
 
 ## References
 
