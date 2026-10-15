@@ -53,7 +53,7 @@
     # index.html + assets/ at its root, so /unlearning/notebook/ serves the marimo
     # app natively. -f so a missing/renamed release fails the build with a clear
     # curl error rather than a cryptic tar error.
-    UNLEARNING_TAG="v0.1.0"
+    UNLEARNING_TAG="v0.1.1"
     mkdir -p unlearning/notebook
     curl -fsSL "https://github.com/JacobBowie/marimo-unlearning/releases/download/${UNLEARNING_TAG}/unlearning-wasm.tar.gz" \
       | tar -xz -C unlearning/notebook
