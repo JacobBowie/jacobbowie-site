@@ -35,7 +35,7 @@ Jacob Bowie, PhD
 ::: {.cv-entry}
 **Visiting Assistant Professor**, Exercise Science `#h(1fr)`{=typst}[2026–2027]{.cv-date}
 
-[Department of Kinesiology, University of Connecticut, Storrs, CT]{style="color:#5a6470;font-style:italic"}
+[Department of Kinesiology, College of Agriculture, Health and Natural Resources, University of Connecticut, Storrs, CT]{style="color:#5a6470;font-style:italic"}
 :::
 
 ## Education and Training
@@ -372,7 +372,7 @@ GRE preparation, [Student Support Services (TRIO)](https://caps.center.uconn.edu
 ## Departmental and University Service
 
 ::: {.cv-entry}
-Departmental Representative, Graduate Research Council, College of Agriculture, Health, and Natural Resources `#h(1fr)`{=typst}[2018–2024]{.cv-date}
+Departmental Representative, Graduate Research Council, College of Agriculture, Health and Natural Resources `#h(1fr)`{=typst}[2018–2024]{.cv-date}
 
 [University of Connecticut, Storrs, CT]{style="color:#5a6470;font-style:italic"}
 :::
@@ -464,25 +464,25 @@ American Physiological Society `#h(1fr)`{=typst}[2021–present]{.cv-date}
 ## Service to Profession
 
 ::: {.cv-entry}
-Ad hoc reviewer, *Physiological Genomics* `#h(1fr)`{=typst}[2024–current]{.cv-date}
+Ad hoc reviewer, *Physiological Genomics* `#h(1fr)`{=typst}[2024–present]{.cv-date}
 :::
 ::: {.cv-entry}
-Ad hoc reviewer, *Journal of Strength and Conditioning Research* `#h(1fr)`{=typst}[2025–current]{.cv-date}
+Ad hoc reviewer, *Journal of Strength and Conditioning Research* `#h(1fr)`{=typst}[2025–present]{.cv-date}
 :::
 ::: {.cv-entry}
-Ad hoc reviewer, *Frontiers in Immunology* `#h(1fr)`{=typst}[2026–current]{.cv-date}
+Ad hoc reviewer, *Frontiers in Immunology* `#h(1fr)`{=typst}[2026–present]{.cv-date}
 :::
 ::: {.cv-entry}
-Ad hoc reviewer, *European Journal of Applied Physiology* `#h(1fr)`{=typst}[2026–current]{.cv-date}
+Ad hoc reviewer, *European Journal of Applied Physiology* `#h(1fr)`{=typst}[2026–present]{.cv-date}
 :::
 ::: {.cv-entry}
-Ad hoc reviewer, *Brain Communications* `#h(1fr)`{=typst}[2026–current]{.cv-date}
+Ad hoc reviewer, *Brain Communications* `#h(1fr)`{=typst}[2026–present]{.cv-date}
 :::
 ::: {.cv-entry}
-Ad hoc reviewer, *Temperature* `#h(1fr)`{=typst}[2026–current]{.cv-date}
+Ad hoc reviewer, *Temperature* `#h(1fr)`{=typst}[2026–present]{.cv-date}
 :::
 ::: {.cv-entry}
-Ad hoc reviewer, *Immunity & Ageing* `#h(1fr)`{=typst}[2026–current]{.cv-date}
+Ad hoc reviewer, *Immunity & Ageing* `#h(1fr)`{=typst}[2026–present]{.cv-date}
 :::
 
 ## References
