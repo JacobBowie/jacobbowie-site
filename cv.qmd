@@ -76,7 +76,7 @@ NEACSM President's Cup Competition, Doctoral Student Investigator, Finalist `#h(
 NEACSM Student Investigator Competition, Doctoral, Winner `#h(1fr)`{=typst}[2023]{.cv-date}
 :::
 ::: {.cv-entry}
-Linda S. Pescatello Scholarship, University of Connecticut `#h(1fr)`{=typst}[2019]{.cv-date}
+Linda S. Pescatello Scholarship, University of Connecticut `#h(1fr)`{=typst}[2019]{.cv-date}
 :::
 ::: {.cv-entry}
 *Magna Cum Laude*, University of North Carolina Wilmington `#h(1fr)`{=typst}[2017]{.cv-date}
@@ -92,7 +92,7 @@ Linda S. Pescatello Scholarship, University of Connecticut `#h(1fr)`{=typst}[201
 
 2\. Mahoney KJ, **Bowie JS**, Ford AE, Perera N, Sekiguchi Y, Fothergill DM, Lee EC. (2023). Plasma proteomics-based discovery of mechanistic biomarkers of hyperbaric stress and pulmonary oxygen toxicity. *Metabolites*, 13(9), 970. [doi:10.3390/metabo13090970](https://doi.org/10.3390/metabo13090970)
 
-1\. Lee EC, **Bowie JS**, Fiol AP, Huggins RA. (2020). Molecular aspects of thermal tolerance and exertional heat illness susceptibility. In Adams WM, Jardine JF, eds. *Exertional Heat Illness: A Clinical and Evidence-Based Guide*. Cham: Springer International Publishing; 149–168. [doi:10.1007/978-3-030-27805-2_8](https://doi.org/10.1007/978-3-030-27805-2_8)
+1\. Lee EC, **Bowie JS**, Fiol AP, Huggins RA. (2020). Molecular aspects of thermal tolerance and exertional heat illness susceptibility. In Adams WM, Jardine JF, eds. *Exertional Heat Illness: A Clinical and Evidence-Based Guide*. Cham: Springer International Publishing; 149–168. [doi:10.1007/978-3-030-27805-2_8](https://doi.org/10.1007/978-3-030-27805-2_8)
 
 ## Manuscripts in Preparation
 
@@ -106,7 +106,7 @@ Linda S. Pescatello Scholarship, University of Connecticut `#h(1fr)`{=typst}[201
 
 9\. **Bowie JS**, Lee EC. One-hour weekly exercise protocol improves strength and aerobic fitness.
 
-8\. **Bowie JS**, Barreira T, Heinjen M, Ballard T, Tseh W. Assessing muscular fatigue via surface electromyography during dynamic knee extensions.
+8\. **Bowie JS**, Barreira T, Heinjen M, Ballard T, Tseh W. Assessing muscular fatigue via surface electromyography during dynamic knee extensions.
 
 7\. **Bowie JS**, Ford AE, Lee EC. Genome-wide RNAi screen of kinase pathways regulating *rrt-1* constitutive cytoprotective gene expression.
 
@@ -127,15 +127,15 @@ Linda S. Pescatello Scholarship, University of Connecticut `#h(1fr)`{=typst}[201
 ::: {.cv-entry}
 **Effects of electrolyte beverage formulation on hydration, thermoregulation, and recovery during exercise-heat stress** `#h(1fr)`{=typst}[2025–2026]{.cv-date}
 
-[Industry-sponsored. PI: Douglas J. Casa; Study Director: Rebecca L. Stearns. Korey Stringer Institute and E.C. Lee Laboratory, University of Connecticut, Storrs, CT. Role: Lead data analyst.]{style="color:#5a6470;font-style:italic"}
+[Industry-sponsored. PI: Douglas J. Casa; Study Director: Rebecca L. Stearns. Korey Stringer Institute and E.C. Lee Laboratory, University of Connecticut, Storrs, CT. Role: Lead data analyst.]{style="color:#5a6470;font-style:italic"}
 
-I served as lead analyst for a four-condition randomized crossover trial (24 participants, 12 female and 12 male) comparing commercial hydration beverages under exercise-heat stress. I contributed to biological sample collection and ELISA-based biomarker analysis (blood and sweat markers of hydration, gut-barrier integrity, and fluid regulation) and built a fully reproducible mixed R and Python analysis pipeline: a Dockerized environment, a DuckDB analytic database, and Quarto sponsor-facing reports. I led the statistical analysis, including linear mixed-effects models, plasma-volume and bioimpedance analyses, and perceptual and wearable-recovery outcomes, and validated a heart-rate-only core-temperature estimation model against rectal thermometry (median MAE 0.42 °C) for wearable-based thermal-strain monitoring.
+I served as lead analyst for a four-condition randomized crossover trial (24 participants, 12 female and 12 male) comparing commercial hydration beverages under exercise-heat stress. I contributed to biological sample collection and ELISA-based biomarker analysis (blood and sweat markers of hydration, gut-barrier integrity, and fluid regulation) and built a fully reproducible mixed R and Python analysis pipeline: a Dockerized environment, a DuckDB analytic database, and Quarto sponsor-facing reports. I led the statistical analysis, including linear mixed-effects models, plasma-volume and bioimpedance analyses, and perceptual and wearable-recovery outcomes, and validated a heart-rate-only core-temperature estimation model against rectal thermometry (median MAE 0.42 °C) for wearable-based thermal-strain monitoring.
 :::
 
 ::: {.cv-entry}
 **Optimizing customized, precision heat acclimation protocols to enhance performance and readiness of female warfighters** `#h(1fr)`{=typst}[2022–2026]{.cv-date}
 
-[DoD. PI: Douglas Casa; co-PI: Elaine C. Lee. University of Connecticut, Storrs, CT. Role: Key Personnel.]{style="color:#5a6470;font-style:italic"}
+[DoD. PI: Douglas Casa; co-PI: Elaine C. Lee. University of Connecticut, Storrs, CT. Role: Key Personnel.]{style="color:#5a6470;font-style:italic"}
 
 I led efforts to characterize and analyze sex differences in heat tolerance before and after heat acclimation through data science and machine learning techniques.
 :::
@@ -143,7 +143,7 @@ I led efforts to characterize and analyze sex differences in heat tolerance befo
 ::: {.cv-entry}
 **Enhancing lethality by targeting cognitive and physiological mechanisms of female warfighter resiliency to consecutive days of intense exercise in the heat** `#h(1fr)`{=typst}[2021–2024]{.cv-date}
 
-[DoD. PI: Douglas Casa; co-PI: Elaine C. Lee. University of Connecticut, Storrs, CT. Role: Key Personnel.]{style="color:#5a6470;font-style:italic"}
+[DoD. PI: Douglas Casa; co-PI: Elaine C. Lee. University of Connecticut, Storrs, CT. Role: Key Personnel.]{style="color:#5a6470;font-style:italic"}
 
 As part of a multi-year study with various protocols, we conducted comprehensive sample collection, including blood, saliva, sweat, and fecal matter. Multi-omic analyses were conducted, including transcriptome profiling of PBMCs, microbiome analysis of fecal samples, and metabolomic and proteomic analyses of sweat and saliva samples. Biological samples were analyzed with ELISA and flow cytometry as well. I led efforts to comprehensively analyze the data through data science and machine learning techniques.
 :::
@@ -151,7 +151,7 @@ As part of a multi-year study with various protocols, we conducted comprehensive
 ::: {.cv-entry}
 **Blackcurrant modifies gut microbiota and reduces the risk of postmenopausal osteoporosis: a pilot randomized clinical trial** `#h(1fr)`{=typst}[2021–2023]{.cv-date}
 
-[USDA. PI: Ock Chun; co-PI: Elaine C. Lee. University of Connecticut, Storrs, CT. Role: Key Personnel.]{style="color:#5a6470;font-style:italic"}
+[USDA. PI: Ock Chun; co-PI: Elaine C. Lee. University of Connecticut, Storrs, CT. Role: Key Personnel.]{style="color:#5a6470;font-style:italic"}
 
 I conducted human subjects testing visits, including the collection of biological samples. I isolated PBMCs and assisted with flow cytometry and ELISA analysis of candidate biomarkers. PBMC transcriptomes were sequenced and analyzed to provide a comprehensive analysis of biological pathway activation.
 :::
@@ -159,7 +159,7 @@ I conducted human subjects testing visits, including the collection of biologica
 ::: {.cv-entry}
 **Proteomic and transcriptomic-based discovery of mechanistic biomarkers in hyperbaric oxidative stress and pulmonary oxygen toxicity susceptibility** `#h(1fr)`{=typst}[2019–2021]{.cv-date}
 
-[Department of Defense. PI: Elaine C. Lee; co-PI: David Fothergill. University of Connecticut, Storrs, CT; Naval Submarine Medical Research Laboratory, Groton, CT. Role: Data analysis.]{style="color:#5a6470;font-style:italic"}
+[Department of Defense. PI: Elaine C. Lee; co-PI: David Fothergill. University of Connecticut, Storrs, CT; Naval Submarine Medical Research Laboratory, Groton, CT. Role: Data analysis.]{style="color:#5a6470;font-style:italic"}
 
 Conducted preliminary data analysis with Scaffold before interpretation of mechanistic pathways with the STRING platform.
 :::
@@ -243,13 +243,13 @@ I assisted with the planning of study recruitment efforts and initial pilot test
 ::: {.cv-entry}
 **Minimal exercise training program for athlete detraining as a model for countermeasures to microgravity effects on skeletal muscle** `#h(1fr)`{=typst}[2021–2022]{.cv-date}
 
-[2020 Graduate Fellowship, NASA Connecticut Space Grant Consortium · $8,000 · Funded · Student Investigator]{style="color:#5a6470;font-style:italic"}
+[2020 Graduate Fellowship, NASA Connecticut Space Grant Consortium · $8,000 · Funded · Student Investigator]{style="color:#5a6470;font-style:italic"}
 :::
 
 ::: {.cv-entry}
 **Resistance-training-based minimal training to improve cognitive function and physical health in sedentary desk-workers** `#h(1fr)`{=typst}[2020]{.cv-date}
 
-[Harvard T. H. Chan School of Public Health ERC Grant, NIOSH · $5,000 · Not funded · Graduate assistant]{style="color:#5a6470;font-style:italic"}
+[Harvard T. H. Chan School of Public Health ERC Grant, NIOSH · $5,000 · Not funded · Graduate assistant]{style="color:#5a6470;font-style:italic"}
 :::
 
 ::: {.cv-entry}
@@ -272,7 +272,7 @@ I assisted with the planning of study recruitment efforts and initial pilot test
 
 ## Selected Abstracts
 
-8\. Edwards KE, Lee EC, **Bowie JS**, Szymanski MR, Addario A, Ky A, Webb C, Mahoney KM, Sopena B, Wimmer M, Murray D, Ertel C, Sumner J. Can shoe foam impact biomarkers of damage and inflammation? Annual Brooks Run Symposium (corporate internal), October 29, 2025, Seattle, WA, Brooks Running.
+8\. Edwards KE, Lee EC, **Bowie JS**, Szymanski MR, Addario A, Ky A, Webb C, Mahoney KM, Sopena B, Wimmer M, Murray D, Ertel C, Sumner J. Can shoe foam impact biomarkers of damage and inflammation? Annual Brooks Run Symposium (corporate internal), October 29, 2025, Seattle, WA, Brooks Running.
 
 7\. **Bowie JS**, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Mahoney KJ, Sekiguchi Y, Kwon OS, Chon K, Casa DJ, Lee EC. Similar heat acclimation outcomes despite sex-specific response patterns: evidence for equivalent adaptation potential in males and females during uncompensable heat stress. Military Health System Research Symposium, 2025; American Physiological Society Summit, April 2025 (invited speaker, "Thriving in the elements: emerging concepts in environmental physiology" session, and Free Communication).
 
@@ -286,14 +286,14 @@ I assisted with the planning of study recruitment efforts and initial pilot test
 
 2\. **Bowie JS**, Sterczala AJ, Kraemer WJ, Maresh CM, Comstock BA, Flanagan SD, Szivak TK, Hooper DR, Lee EC. Acute heavy resistance exercise protocol induces significant physiological stress elevating extracellular heat shock protein. Free Communication, American College of Sports Medicine Annual Meeting, May 2019; American College of Sports Medicine New England Chapter Annual Meeting, November 2018; College of Agriculture, Natural Resources, and Health Graduate Student Research Symposium, University of Connecticut.
 
-1\. **Bowie JS**, Barreira T, Heinjen M, Ballard T, Tseh W. Assessing muscular fatigue via surface electromyography during dynamic knee extensions. American College of Sports Medicine Annual Meeting; State of North Carolina Undergraduate Research Symposium; 5th Annual University of North Carolina Wilmington Fall Student Research and Creativity Showcase.
+1\. **Bowie JS**, Barreira T, Heinjen M, Ballard T, Tseh W. Assessing muscular fatigue via surface electromyography during dynamic knee extensions. American College of Sports Medicine Annual Meeting; State of North Carolina Undergraduate Research Symposium; 5th Annual University of North Carolina Wilmington Fall Student Research and Creativity Showcase.
 
 ## Selected Software and Projects
 
 ::: {.cv-entry}
 **rtSD Explorer** `#h(1fr)`{=typst}[2025–2026]{.cv-date}
 
-Interactive system-dynamics (ODE) model of resistance-training adaptation (GET-PAID / MEDv4 framework); R, Shiny, and marimo (WASM) with a physiological-plausibility test suite. [github.com/JacobBowie/rtsd](https://github.com/JacobBowie/rtsd)
+Interactive system-dynamics (ODE) model of resistance-training adaptation (GET‑PAID / MEDv4 framework); R, Shiny, and marimo (WASM) with a physiological-plausibility test suite. [github.com/JacobBowie/rtsd](https://github.com/JacobBowie/rtsd)
 :::
 ::: {.cv-entry}
 **literature-pipeline** `#h(1fr)`{=typst}[2026]{.cv-date}
@@ -308,7 +308,7 @@ Interactive walkthrough of approximate unlearning in large language models (Elda
 ::: {.cv-entry}
 **citation-network** `#h(1fr)`{=typst}[2025–2026]{.cv-date}
 
-Interactive citation network of the fitness-fatigue modeling literature (175 papers, 524 edges); Python, marimo, and vis-network. [github.com/JacobBowie/citation-network](https://github.com/JacobBowie/citation-network)
+Interactive citation network of the fitness-fatigue modeling literature (175 papers, 524 edges); Python, marimo, and vis‑network. [github.com/JacobBowie/citation-network](https://github.com/JacobBowie/citation-network)
 :::
 
 ## Teaching
@@ -321,7 +321,7 @@ Interactive citation network of the fitness-fatigue modeling literature (175 pap
 KINS 4500, Exercise Physiology [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2026]{.cv-date}
 :::
 ::: {.cv-entry}
-KINS 4501, Fundamentals of Exercise Testing (2 sections) [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2026]{.cv-date}
+KINS 4501, Fundamentals of Exercise Testing (2 sections) [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2026]{.cv-date}
 :::
 ::: {.cv-entry}
 KINS 2227, Exercise Prescription [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2026]{.cv-date}
@@ -385,7 +385,7 @@ Undergraduate Capstone Student Mentor (5), Department of Kinesiology `#h(1fr)`{=
 ## Community Involvement and Outreach
 
 ::: {.cv-entry}
-Participant, Science Straight Up, "Gene Pool" `#h(1fr)`{=typst}[October 26, 2018]{.cv-date}
+Participant, Science Straight Up, "Gene Pool" `#h(1fr)`{=typst}[October 26, 2018]{.cv-date}
 
 [Connecticut Science Convention Center, Hartford, CT]{style="color:#5a6470;font-style:italic"}
 :::
@@ -423,15 +423,15 @@ Skype a Scientist `#h(1fr)`{=typst}[2018–present]{.cv-date}
 [Camp Pendleton, CA / Camp Lejeune, NC]{style="color:#5a6470;font-style:italic"}
 :::
 
-Developed deep applied strength-and-conditioning expertise as a Martial Arts Instructor Trainer, with a combat deployment to Afghanistan. Served as the unit's senior subject-matter expert for physical readiness, designed pre-deployment conditioning for 120 personnel, and delivered 70+ instructional and train-the-trainer sessions.
+Developed deep applied strength-and-conditioning expertise as a Martial Arts Instructor Trainer, with a combat deployment to Afghanistan. Served as the unit's senior subject-matter expert for physical readiness, designed pre-deployment conditioning for 120 personnel, and delivered 70+ instructional and train-the-trainer sessions.
 
-**Military Occupational Specialties:** 1391 Bulk Fuel Specialist (US Military Apprenticeship Program: Fuel Systems Maintenance Worker, Department of the Navy); 1392 Petroleum Laboratory Specialist; 0916 Martial Arts Instructor; 0917 Martial Arts Instructor Trainer; 8012 Ground Safety Officer; 8056 Hazardous Material / Hazardous Waste Officer.
+**Military Occupational Specialties:** 1391 Bulk Fuel Specialist (US Military Apprenticeship Program: Fuel Systems Maintenance Worker, Department of the Navy); 1392 Petroleum Laboratory Specialist; 0916 Martial Arts Instructor; 0917 Martial Arts Instructor Trainer; 8012 Ground Safety Officer; 8056 Hazardous Material / Hazardous Waste Officer.
 
 **Deployments:** Operation Moshtarak; Enduring Freedom II/III, Afghanistan; Operation West 1-2, USS Makin Island.
 
 **Awards:** Navy and Marine Corps Achievement Medal (2012); Certificate of Commendation (2012); Letter of Appreciation, twice (2010, 2012); Good Conduct Medal, twice (2011, 2014); National Defense Service Medal (2012); Afghanistan Campaign Medal with star (2010); Global War on Terrorism Service Medal (2010); Global War on Terrorism Expeditionary Medal, USS Makin Island (2012); Sea Service Deployment Ribbon, twice (2010, 2014); NATO Medal, International Security Assistance Force Afghanistan (2010); Presidential Unit Citation (2012); Navy Meritorious Unit Commendation (2012).
 
-**Military Education:** Corporal's Course: small unit leadership and team management (120 h, squad leader); Sergeant's Course: advanced leadership and personnel management (160 h, with distinction and director's list); Mental Health Crisis Intervention and Peer Support Training, train-the-trainer (40 h); SERE: survival psychology and applied leadership under stress (120 h); Martial Arts Instructor Trainer Course: leadership, mentoring, character development, ethics (7 weeks, 370 h); Martial Arts Instructor Course: leadership, public speaking, classroom instruction (3 weeks, 128 h); Agility and Strength Trainer Course (16 h); Physical Training Coordinator's Course (40 h); High-Intensity Tactical Training Trainers' Course (40 h).
+**Military Education:** Corporal's Course: small unit leadership and team management (120 h, squad leader); Sergeant's Course: advanced leadership and personnel management (160 h, with distinction and director's list); Mental Health Crisis Intervention and Peer Support Training, train-the-trainer (40 h); SERE: survival psychology and applied leadership under stress (120 h); Martial Arts Instructor Trainer Course: leadership, mentoring, character development, ethics (7 weeks, 370 h); Martial Arts Instructor Course: leadership, public speaking, classroom instruction (3 weeks, 128 h); Agility and Strength Trainer Course (16 h); Physical Training Coordinator's Course (40 h); High-Intensity Tactical Training Trainers' Course (40 h).
 
 ## Skills
 
@@ -488,17 +488,17 @@ Ad hoc reviewer, *Immunity & Ageing* `#h(1fr)`{=typst}[2026–present]{.cv-date}
 ## References
 
 ::: {.cv-entry}
-**[Elaine C. Lee, Ph.D.](https://kins.uconn.edu/person/elaine-choung-hee-lee/)** [· Professor of Kinesiology, University of Connecticut]{.cv-inst}
+**[Elaine C. Lee, Ph.D.](https://kins.uconn.edu/person/elaine-choung-hee-lee/)** [· Professor of Kinesiology, University of Connecticut]{.cv-inst}
 :::
 ::: {.cv-entry}
-**[Douglas J. Casa, Ph.D.](https://koreystringer.institute.uconn.edu/person/douglas-casa/)** [· CEO, Korey Stringer Institute, University of Connecticut]{.cv-inst}
+**[Douglas J. Casa, Ph.D.](https://koreystringer.institute.uconn.edu/person/douglas-casa/)** [· CEO, Korey Stringer Institute, University of Connecticut]{.cv-inst}
 :::
 ::: {.cv-entry}
 **[Robert Huggins, Ph.D.](https://koreystringer.institute.uconn.edu/person/robert-huggins/)** [· Chief Research Officer, Korey Stringer Institute, University of Connecticut]{.cv-inst}
 :::
 ::: {.cv-entry}
-**[Laurie L. Devaney, PT, ATC, Ph.D.](https://kins.uconn.edu/person/laurie-devaney/)** [· Department Head, Kinesiology, University of Connecticut]{.cv-inst}
+**[Laurie L. Devaney, PT, ATC, Ph.D.](https://kins.uconn.edu/person/laurie-devaney/)** [· Department Head, Kinesiology, University of Connecticut]{.cv-inst}
 :::
 ::: {.cv-entry}
-**[Linda M. Yamamoto, Ph.D.](https://www.hartford.edu/directory/enhp/yamamoto-linda.aspx)** [· Program Director, Exercise Science, University of Hartford]{.cv-inst}
+**[Linda M. Yamamoto, Ph.D.](https://www.hartford.edu/directory/enhp/yamamoto-linda.aspx)** [· Program Director, Exercise Science, University of Hartford]{.cv-inst}
 :::
