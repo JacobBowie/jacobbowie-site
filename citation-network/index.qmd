@@ -24,29 +24,29 @@ format:
       - file: og_metadata.html
 ---
 
-![The Banister Constellation — 50 years of fitness-fatigue model literature.](assets/hero.png){fig-alt="Constellation diagram of 175 papers in the FFM literature, with Banister 1975 at the top and modern Bayesian extensions at the bottom" width=100%}
+![The Banister Constellation: 50 years of fitness-fatigue model literature.](assets/hero.png){fig-alt="Constellation diagram of 175 papers in the FFM literature, with Banister 1975 at the top and modern Bayesian extensions at the bottom" width=100%}
 
 ## What this is
 
-In 1975, Eric Banister sketched a two-stock model — Fitness and Fatigue —
+In 1975, Eric Banister sketched a two-stock model, Fitness and Fatigue,
 that turned every training session into a pulse of stimulus, every adaptation
 into an exponential decay, and every performance prediction into the
 difference of two convolutions. The math fit on a napkin. Fifty years later,
 that napkin underwrites everything from elite-endurance taper planning to
-the Bayesian hierarchical models I use in my dissertation.
+the Bayesian hierarchical models I use in my own work.
 
 This visualization is the family tree.
 
 Every node is a paper. Every edge is a citation, drawn from the local
 `getpaid` literature pipeline
 (Semantic Scholar forward citations + CrossRef references). The **gold halos**
-mark the 14-paper Banister lineage — the direct chain of authorship from the
+mark the 14-paper Banister lineage: the direct chain of authorship from the
 1975 systems-model paper through the 2025 Bayesian-hierarchical critiques.
 **Colors** code the methodological family: classical Banister-Calvert,
 Busso's variable-dose extensions, the statistical-critique line, the
 PerPot metamodel, and the recent Bayesian-hierarchical wave.
 
-What the constellation reveals — and what I find most useful about it — is
+What the constellation reveals, and what I find most useful about it, is
 the *sparsity* of internal citation. The FFM literature is not a tightly
 woven graph. It's a small number of foundational papers, a long tail of
 isolated re-derivations, and a recent dense cluster of statistical
@@ -66,7 +66,7 @@ Toggle the **Lineage only** button to isolate the 14-paper Banister chain.
 
 For visitors who want to fork the source-editing experience, the marimo
 notebook is also available at
-[/citation-network/notebook/](/citation-network/notebook/) — though Pyodide
+[/citation-network/notebook/](/citation-network/notebook/), though Pyodide
 cold-start is ~30-60 s on first visit.
 
 ## How it was built
@@ -86,7 +86,7 @@ canonical_ffm_seeds.csv  ── 25 curated FFM founding papers
                                     └─ render_static.py (matplotlib)       →  hero + social cards
 ```
 
-The trunk is curated — 25 founding-equation papers anchored on Banister 1975
+The trunk is curated: 25 founding-equation papers anchored on Banister 1975
 and Calvert 1976, tagged with `family` (classical / variable-dose /
 statistical-critique / Bayesian-hierarchical / PerPot / review) and linked
 to their direct intellectual parent. The extension layer is automatically
