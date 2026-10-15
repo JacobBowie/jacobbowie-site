@@ -89,7 +89,7 @@ preference for reproducible, version-controlled, container-portable analysis.
 <div class="project project-thumb-image">
 <div class="project-thumb"><img src="img/bowie-2026-heat-tolerance.png" alt="Graphical abstract: methods, outcomes, and population-specific threshold criteria for heat tolerance classification" /></div>
 <div class="project-body">
-  <h3>Heat tolerance classification criteria require population-specific thresholds</h3>
+  <h3><a class="stretched-link" href="https://doi.org/10.14814/phy2.70745">Heat tolerance classification criteria require population-specific thresholds</a></h3>
   <div class="project-meta">Bowie et al., 2026 &middot; <em>Physiological Reports</em> &middot; published</div>
   <p>
   Re-examined the standard heat tolerance test classification criteria in a young
@@ -104,9 +104,11 @@ preference for reproducible, version-controlled, container-portable analysis.
 </div>
 </div>
 
-<!-- Project 2: leg-extension EMG fatigue salvage paper, in prep. -->
+<!-- Project 2: leg-extension EMG fatigue salvage paper, in prep. No destination
+     yet (no page, repo unreleased), so the card is deliberately NOT a link and
+     carries .project-static to drop the hover lift that implies one. -->
 
-<div class="project project-thumb-image">
+<div class="project project-thumb-image project-static">
 <div class="project-thumb"><img src="img/emg-model-effects.png" alt="Mixed-model marginal effects: predicted EMG features (RMS, MDF, MNF, sample entropy) as a function of bout completion at 40% versus 70% one-rep-max load" /></div>
 <div class="project-body">
   <h3>Surface EMG amplitude rises faster at low than high load during knee extension to failure</h3>
@@ -132,7 +134,7 @@ preference for reproducible, version-controlled, container-portable analysis.
 <div class="project project-thumb-image">
 <div class="project-thumb"><img src="img/rtsd-rm1-dose-response.png" alt="Reference-mode test RM1: doubled training dose produces roughly twice the rate of fitness gain over 52 weeks, the dose-response gate the simulator must satisfy" /></div>
 <div class="project-body">
-  <h3>rtSD Explorer: an interactive fitness-fatigue model explorer</h3>
+  <h3><a class="stretched-link" href="/rtsd/">rtSD Explorer: an interactive fitness-fatigue model explorer</a></h3>
   <div class="project-meta">Public release &middot; browser-side marimo + R Shiny + Docker</div>
   <p>
   A deterministic forward-simulator for the MEDv4 fitness-fatigue-signal ODE,
@@ -151,13 +153,13 @@ preference for reproducible, version-controlled, container-portable analysis.
 </div>
 
 <!-- Project 4: citation-network visualization. The literature-graph companion
-     to rtSD above. Hero PNG is shipped with the site; interactive viewer
-     and source repo are planned but deferred until the v0.1.0 release lands. -->
+     to rtSD above. Card links to the /citation-network/ case study; the
+     interactive and source repo are live (v0.1.0, 2026-05-13). -->
 
 <div class="project project-thumb-dark">
 <div class="project-thumb"><img src="img/banister-constellation-hero.png" alt="Citation network of 175 papers across 50 years of fitness-fatigue model research, with the founding Banister 1975 paper at the top and four downstream branches (classical, variable-dose, statistical critique, and Bayesian hierarchical)" /></div>
 <div class="project-body">
-  <h3>The Banister Constellation: a citation graph of the fitness-fatigue model lineage</h3>
+  <h3><a class="stretched-link" href="/citation-network/">The Banister Constellation: a citation graph of the fitness-fatigue model lineage</a></h3>
   <div class="project-meta">Research tooling &middot; Python + DuckDB + vis-network</div>
   <p>
   Fifty years of fitness-fatigue model literature in one constellation. A 175-paper,
@@ -168,7 +170,7 @@ preference for reproducible, version-controlled, container-portable analysis.
   isolate the 14-paper Banister lineage.
   </p>
 <div class="project-links">
-<a href="/citation-network/">Live viewer</a>
+<a href="/citation-network/interactive/">Live viewer</a>
 <a href="https://github.com/JacobBowie/citation-network">Repository</a>
 </div>
 </div>
@@ -181,7 +183,7 @@ preference for reproducible, version-controlled, container-portable analysis.
 <div class="project project-thumb-image">
 <div class="project-thumb"><img src="img/unlearning-hero.png" alt="Force-directed knowledge graph with 'Harry' at the center surrounded by Harry-Potter-specific words in red with fading red edges, and new green edges growing toward generic words like 'British' and 'actor'" /></div>
 <div class="project-body">
-  <h3>Who's Harry Potter? An interactive walk through approximate unlearning in LLMs</h3>
+  <h3><a class="stretched-link" href="/unlearning/">Who's Harry Potter? An interactive walk through approximate unlearning in LLMs</a></h3>
   <div class="project-meta">Portfolio piece &middot; browser-side marimo + Pyodide</div>
   <p>
   Llama-2-7B took 184,000 GPU-hours to train. In 2023, Eldan and Russinovich at
@@ -194,7 +196,7 @@ preference for reproducible, version-controlled, container-portable analysis.
   via marimo + Pyodide.
   </p>
 <div class="project-links">
-<a href="/unlearning/">Live demo</a>
+<a href="/unlearning/notebook/">Live demo</a>
 <a href="https://github.com/JacobBowie/marimo-unlearning">Repository</a>
 </div>
 </div>
@@ -205,7 +207,7 @@ preference for reproducible, version-controlled, container-portable analysis.
 <div class="project project-thumb-teal">
 <div class="project-thumb"><span>Literature &middot; citation graph</span></div>
 <div class="project-body">
-  <h3>Literature acquisition and citation-graph toolkit</h3>
+  <h3><a class="stretched-link" href="/work/literature-pipeline.html">Literature acquisition and citation-graph toolkit</a></h3>
   <div class="project-meta">Open-source &middot; Python + DuckDB</div>
   <p>
   An open-source biomedical paper acquisition and citation-graph snowballing
@@ -215,7 +217,9 @@ preference for reproducible, version-controlled, container-portable analysis.
   MathML-to-LaTeX rendering layer for JATS XML sidecars (76% pass rate
   through pdflatex on retrieved full-text articles).
   </p>
-  <p><a href="https://github.com/JacobBowie/literature-pipeline">Repository</a></p>
+<div class="project-links">
+<a href="https://github.com/JacobBowie/literature-pipeline">Repository</a>
+</div>
 </div>
 </div>
 
