@@ -31,16 +31,16 @@ Jacob Bowie, PhD
 ::: {.cv-entry}
 **Visiting Assistant Professor**, Exercise Science `#h(1fr)`{=typst}[2026–2027]{.cv-date}
 
-[Department of Kinesiology, University of Connecticut, Storrs, CT.]{style="color:#5a6470;font-style:italic"}
+[Department of Kinesiology, University of Connecticut, Storrs, CT]{style="color:#5a6470;font-style:italic"}
 :::
+
+## Education and Training
 
 ::: {.cv-entry}
 **Postdoctoral Researcher**, Human Performance Laboratory / ECLee Laboratory `#h(1fr)`{=typst}[2025–2026]{.cv-date}
 
 [Department of Kinesiology, University of Connecticut, Storrs, CT]{style="color:#5a6470;font-style:italic"}
 :::
-
-## Education and Training
 
 ::: {.cv-entry}
 **Ph.D., Kinesiology**, University of Connecticut, Storrs, CT `#h(1fr)`{=typst}[2020–2024]{.cv-date}
@@ -314,6 +314,15 @@ Interactive citation network of the fitness-fatigue modeling literature (175 pap
 ### Courses
 
 ::: {.cv-entry}
+KINS 4500, Exercise Physiology [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2026]{.cv-date}
+:::
+::: {.cv-entry}
+KINS 4501, Fundamentals of Exercise Testing (2 sections) [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2026]{.cv-date}
+:::
+::: {.cv-entry}
+KINS 2227, Exercise Prescription (Section 2 of 3, online) [· University of Connecticut]{.cv-inst} `#h(1fr)`{=typst}[2026]{.cv-date}
+:::
+::: {.cv-entry}
 EX 240, Statistics for Exercise Science [· University of Hartford]{.cv-inst} `#h(1fr)`{=typst}[2025]{.cv-date}
 :::
 ::: {.cv-entry}
@@ -397,7 +406,7 @@ Skype a Scientist `#h(1fr)`{=typst}[2018–present]{.cv-date}
 ## Additional Appointments
 
 ::: {.cv-entry}
-**Adjunct Assistant Professor**, Department of Health Sciences `#h(1fr)`{=typst}[2025–present]{.cv-date}
+**Adjunct Assistant Professor**, Department of Health Sciences `#h(1fr)`{=typst}[2025]{.cv-date}
 
 [University of Hartford, Hartford, CT]{style="color:#5a6470;font-style:italic"}
 :::
