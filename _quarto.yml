@@ -64,8 +64,8 @@ format:
     grid:
       body-width: 1000px
     # Site-wide footer. Kept as a LIST: a page-level include as a bare mapping
-    # would replace it. (The skip link is NOT here: include-before-body lands
-    # inside <main>, after the navbar; it is injected by script in the header.)
+    # would replace it. (The skip link is Quarto's own since 1.11:
+    # #quarto-skip-link, first in <body>; the site styles it in theme-common.scss.)
     include-after-body:
       - file: _includes/footer.html
     include-in-header:
@@ -246,17 +246,6 @@ format:
             }
           ]
         }
-        </script>
-        <script>
-        // Skip link as the FIRST focusable element (before the navbar).
-        // include-before-body would land inside <main>, after the navbar.
-        document.addEventListener("DOMContentLoaded", function () {
-          var a = document.createElement("a");
-          a.className = "visually-hidden-focusable skip-link";
-          a.href = "#quarto-document-content";
-          a.textContent = "Skip to main content";
-          document.body.insertBefore(a, document.body.firstChild);
-        });
         </script>
 
 execute:
