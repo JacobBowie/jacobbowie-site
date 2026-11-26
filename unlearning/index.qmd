@@ -11,6 +11,12 @@ image-alt: |
   A force-directed knowledge graph showing the word "Harry" surrounded by
   Harry-Potter-specific terms in red, with red edges fading and new green
   edges growing toward generic words like "British" and "actor".
+# Social-card copy, kept from the hand-written og_metadata.html it replaced.
+open-graph:
+  description: "Llama-2-7B took 184,000 GPU-hours to train. With one GPU-hour of fine-tuning, the authors made it forget Harry Potter. This interactive walkthrough explains how: edge surgery on the model's knowledge graph."
+twitter-card:
+  title: "Who's Harry Potter? Interactive walkthrough of LLM unlearning"
+  description: "Llama-2-7B took 184k GPU-hours to train. Microsoft Research made it forget Harry Potter in one. Drag a slider and watch the model's knowledge graph rearrange itself, built with marimo."
 format:
   html:
     # Light island: the embedded marimo WASM notebook is light-themed and an

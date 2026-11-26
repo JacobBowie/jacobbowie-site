@@ -16,7 +16,7 @@
   publish = "_site"
   command = """
     set -e
-    QUARTO_VERSION="1.10.19"
+    QUARTO_VERSION="1.11.9"
     mkdir -p /tmp/quarto
     curl -sSL "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz" \
       | tar -xz -C /tmp/quarto --strip-components=1
@@ -55,7 +55,7 @@
     # index.html + assets/ at its root, so /unlearning/notebook/ serves the marimo
     # app natively. -f so a missing/renamed release fails the build with a clear
     # curl error rather than a cryptic tar error.
-    UNLEARNING_TAG="v0.1.1"
+    UNLEARNING_TAG="v0.1.2"
     mkdir -p unlearning/notebook
     curl -fsSL "https://github.com/JacobBowie/marimo-unlearning/releases/download/${UNLEARNING_TAG}/unlearning-wasm.tar.gz" \
       | tar -xz -C unlearning/notebook

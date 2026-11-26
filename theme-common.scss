@@ -84,10 +84,12 @@ button:focus-visible,
   box-shadow: none;
 }
 
-/* Skip link, injected by include-before-body in _quarto.yml. Bootstrap's
-   .visually-hidden-focusable keeps it off-screen until it receives focus. */
-.skip-link:focus {
+/* Skip link: Quarto's own #quarto-skip-link since 1.11 (it replaced the
+   site's injected one). Bootstrap's .visually-hidden-focusable keeps it
+   off-screen until focus. `body` outranks Quarto's white-box focus rule. */
+body #quarto-skip-link:focus {
   position: fixed;
+  border: 0;
   top: 0.5rem;
   left: 0.5rem;
   z-index: 10000;

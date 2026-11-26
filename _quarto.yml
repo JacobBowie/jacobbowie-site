@@ -64,8 +64,8 @@ format:
     grid:
       body-width: 1000px
     # Site-wide footer. Kept as a LIST: a page-level include as a bare mapping
-    # would replace it. (The skip link is NOT here: include-before-body lands
-    # inside <main>, after the navbar; it is injected by script in the header.)
+    # would replace it. (The skip link is Quarto's own since 1.11:
+    # #quarto-skip-link, first in <body>; the site styles it in theme-common.scss.)
     include-after-body:
       - file: _includes/footer.html
     include-in-header:
@@ -125,13 +125,13 @@ format:
               "headline": "Heat tolerance classification criteria require population-specific thresholds for accurate assessment of acclimation state in adults",
               "author": [
                 {"@type": "Person", "name": "Jacob S Bowie", "sameAs": "https://orcid.org/0000-0002-6055-8220"},
-                {"@type": "Person", "name": "Margaret R Szymanski"},
-                {"@type": "Person", "name": "Justin F Struder"},
+                {"@type": "Person", "name": "Michael R Szymanski"},
+                {"@type": "Person", "name": "Jeb F Struder"},
                 {"@type": "Person", "name": "Erica M Filep"},
-                {"@type": "Person", "name": "Meghan C Morrissey-Basler"},
+                {"@type": "Person", "name": "Margaret C Morrissey-Basler"},
                 {"@type": "Person", "name": "Gabrielle J Brewer"},
-                {"@type": "Person", "name": "Sarah N Thornton"},
-                {"@type": "Person", "name": "Kevin J Mahoney"},
+                {"@type": "Person", "name": "Staci N Thornton"},
+                {"@type": "Person", "name": "Kyle J Mahoney"},
                 {"@type": "Person", "name": "Yasuki Sekiguchi"},
                 {"@type": "Person", "name": "Oh Sung Kwon"},
                 {"@type": "Person", "name": "Ki Chon"},
@@ -144,6 +144,8 @@ format:
                 "name": "Physiological Reports",
                 "issn": "2051-817X"
               },
+              "volumeNumber": "14",
+              "issueNumber": "4",
               "identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "DOI",
@@ -188,10 +190,10 @@ format:
               "@id": "https://doi.org/10.3390/metabo13090970",
               "headline": "Plasma proteomics-based discovery of mechanistic biomarkers of hyperbaric stress and pulmonary oxygen toxicity",
               "author": [
-                {"@type": "Person", "name": "Kevin J Mahoney"},
+                {"@type": "Person", "name": "Kyle J Mahoney"},
                 {"@type": "Person", "name": "Jacob S Bowie", "sameAs": "https://orcid.org/0000-0002-6055-8220"},
-                {"@type": "Person", "name": "Aaron E Ford"},
-                {"@type": "Person", "name": "Nathaniel Perera"},
+                {"@type": "Person", "name": "Austin E Ford"},
+                {"@type": "Person", "name": "Neranjan Perera"},
                 {"@type": "Person", "name": "Yasuki Sekiguchi"},
                 {"@type": "Person", "name": "David M Fothergill"},
                 {"@type": "Person", "name": "Elaine C Lee"}
@@ -219,7 +221,7 @@ format:
               "author": [
                 {"@type": "Person", "name": "Elaine C Lee"},
                 {"@type": "Person", "name": "Jacob S Bowie", "sameAs": "https://orcid.org/0000-0002-6055-8220"},
-                {"@type": "Person", "name": "Alexa Fiol"},
+                {"@type": "Person", "name": "Aidan P Fiol"},
                 {"@type": "Person", "name": "Robert A Huggins"}
               ],
               "datePublished": "2020",
@@ -246,17 +248,6 @@ format:
             }
           ]
         }
-        </script>
-        <script>
-        // Skip link as the FIRST focusable element (before the navbar).
-        // include-before-body would land inside <main>, after the navbar.
-        document.addEventListener("DOMContentLoaded", function () {
-          var a = document.createElement("a");
-          a.className = "visually-hidden-focusable skip-link";
-          a.href = "#quarto-document-content";
-          a.textContent = "Skip to main content";
-          document.body.insertBefore(a, document.body.firstChild);
-        });
         </script>
 
 execute:

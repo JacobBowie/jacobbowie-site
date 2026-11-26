@@ -1,6 +1,6 @@
 ---
-title: "Literature pipeline: a shared discovery layer across six research projects"
-description: "A Python toolkit that acquires, indexes, and snowballs scientific literature for any opted-in project from a single shared workspace. 17,617 DOIs and 21,104 citation edges across six projects, MIT-licensed, CI-tested on Linux and Windows."
+title: "Literature pipeline: a shared discovery layer across a research portfolio"
+description: "A Python toolkit that acquires, indexes, and snowballs scientific literature for any opted-in project from a single shared workspace. MIT-licensed, CI-tested on Linux and Windows."
 pagetitle: "Literature pipeline case study"
 date: 2026-05-21
 categories: [research software, data engineering, bibliometrics, Python, DuckDB]
@@ -18,7 +18,7 @@ format:
 
 ::: {.callout-note appearance="simple"}
 **Try it:** [Repository](https://github.com/JacobBowie/literature-pipeline) ·
-MIT licensed · CI green on Python 3.11-3.13 (Ubuntu + Windows) · 83/83 tests passing.
+MIT licensed · CI green on Python 3.11 and 3.13 (Ubuntu + Windows).
 :::
 
 ![Snowball convergence on the Tier 1 systematic-review corpus that backs the [rtSD Explorer](../rtsd/) and [Banister Constellation](../citation-network/) case studies. Each pass is one `snowball.py` run (forward citations + reverse citations + recommendations + abstracts + reindex); a pass terminates when iteration growth drops below 1%. Adding new seed papers to the queue triggers a fresh expansion in the next pass.](../img/lit-pipeline-convergence.png){fig-alt="Step plot showing the Tier 1 corpus growing from 9,810 candidate DOIs at seed to 17,248 after Pass A iter 1 (+76%) then converged; Pass B on May 13 added 1,484 more (+8.6%) on newly added seeds and reconverged at 18,732 by May 19." width=100%}
@@ -27,7 +27,7 @@ MIT licensed · CI green on Python 3.11-3.13 (Ubuntu + Windows) · 83/83 tests p
 
 A working researcher's literature stack is fragmented. Unpaywall finds the open-access copy when there is one, PubMed Central holds the JATS XML for the NIH-funded subset, arXiv and bioRxiv carry the preprints, EndNote or Zotero stores the citations, and the PDF library on disk drifts out of sync with all of them. Across multiple projects the same paper gets pulled twice with different filenames, the citation graph never gets walked, and "what do I have on heat acclimation across these three projects" is not a question you can answer without grep and luck.
 
-The pipeline started inside one project. A wheel-reinvention audit in April 2026 mapped each of its nine capability buckets to its closest open-source replacement, confirmed that no off-the-shelf tool did the whole job, and the pipeline got promoted to portfolio level. It now serves six projects from one shared workspace.
+The pipeline started inside one project. A wheel-reinvention audit in April 2026 mapped each of its nine capability buckets to its closest open-source replacement, confirmed that no off-the-shelf tool did the whole job, and the pipeline got promoted to portfolio level. It now serves more than twenty projects from one shared workspace.
 
 ## What it is
 
@@ -69,30 +69,16 @@ The forward plan is staged. Stage A is an embedding-similarity ranking layer usi
 
 ## Try it
 
-Two minutes from clone to your first PDF.
+Setup needs [uv](https://docs.astral.sh/uv/) and Python 3.11 to 3.13:
 
 ```bash
 git clone https://github.com/JacobBowie/literature-pipeline.git
 cd literature-pipeline
-pip install -r requirements.txt
-export LITPIPE_EMAIL="you@example.org"
-
-cp projects.json.template projects.json
-# Edit projects.json with one Tier 2 entry pointing at any directory.
-
-mkdir -p ~/my_review/literature
-cd ~/my_review
-cat > lit_pull_queue.csv <<'EOF'
-doi,title,authors,year,destination,notes
-10.1152/jappl.1972.32.6.812,Predicting rectal temperature,Givoni B; Goldman R,1972,literature/,baseline
-EOF
-
-python /path/to/literature-pipeline/sweep.py --project my_review --dry-run
-python /path/to/literature-pipeline/sweep.py --project my_review
-# → ~/my_review/literature/1972_Givoni_PredictingRectalTemperature.pdf
-# → ~/my_review/literature/1972_Givoni_PredictingRectalTemperature.fulltext.json
-# → ~/my_review/literature/1972_Givoni_PredictingRectalTemperature.ris
+uv sync
+export LITPIPE_EMAIL="your.name@your-institution.edu"   # a real address; placeholder domains are rejected
 ```
+
+Then follow the README's [Quickstart](https://github.com/JacobBowie/literature-pipeline#quickstart) to register one project and fetch your first PDF.
 
 The same project registry feeds every downstream tool. `snowball.py --until-convergence` walks the citation graph until candidate growth drops below one percent. `audit_filenames.py --execute` cascades CrossRef-canonical renames across PDFs and their sidecars. Full command reference and DuckDB sample queries in the [README](https://github.com/JacobBowie/literature-pipeline/blob/main/README.md).
 

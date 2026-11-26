@@ -246,7 +246,7 @@ preference for reproducible, version-controlled, container-portable analysis.
     Heat tolerance classification criteria require population-specific
     thresholds for accurate assessment of acclimation state in adults.
     <span class="pub-venue">Physiological Reports</span>,
-    <span class="pub-year">2026</span>.
+    <span class="pub-year">2026</span>; 14(4): e70745.
     <a href="https://doi.org/10.14814/phy2.70745">doi:10.14814/phy2.70745</a>
   </li>
   <li>
