@@ -94,23 +94,25 @@ Linda S. Pescatello Scholarship, University of Connecticut `#h(1fr)`{=typst}[20
 
 1\. Lee EC, **Bowie JS**, Fiol AP, Huggins RA. (2020). Molecular aspects of thermal tolerance and exertional heat illness susceptibility. In Adams WM, Jardine JF, eds. *Exertional Heat Illness: A Clinical and Evidence-Based Guide*. Cham: Springer International Publishing; 149–168. [doi:10.1007/978-3-030-27805-2_8](https://doi.org/10.1007/978-3-030-27805-2_8)
 
+## Manuscripts Under Review
+
+2\. Brewer GJ, Chun OK, Szymanski MR, Struder JF, Morrissey-Basler MC, Filep EM, Thornton SN, **Bowie JS**, Martin DG, Hirsch KR, Huggins RA, Lee EC, Casa DJ. The impact of blackcurrant supplementation on thermoregulatory and metabolic responses to exercise-heat exposure surrounding heat acclimation. Submitted to *Journal of Science and Medicine in Sport*, November 2026.
+
+1\. **Bowie JS**, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Sekiguchi Y, Kwon OS, Chon K, Casa DJ, Lee EC. Short-term heat acclimation produces similar adaptations in females and males across two different heat tolerance tests. Submitted to *Journal of Applied Physiology*, November 2026.
+
 ## Manuscripts in Preparation
 
-13\. **Bowie JS**, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Sekiguchi Y, Kwon OS, Chon K, Casa DJ, Lee EC. Similar heat acclimation outcomes despite sex-specific response patterns: evidence for equivalent adaptation potential in males and females during uncompensable heat stress.
+11\. **Bowie JS**, Oh S, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Thornton SN, Sekiguchi Y, Casa DJ, Lee EC. Sex-specific transcriptome responses in circulating immune cells during exercise-heat stress and acclimation.
 
-12\. **Bowie JS**, Oh S, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Thornton SN, Sekiguchi Y, Casa DJ, Lee EC. Sex-specific transcriptome responses in circulating immune cells during exercise-heat stress and acclimation.
+10\. **Bowie JS**, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Sekiguchi Y, Kwon OS, Chon K, Casa DJ, Lee EC. Beyond group-level comparisons: machine learning-based clustering identifies sex-specific heat acclimation phenotypes and response patterns.
 
-11\. **Bowie JS**, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Sekiguchi Y, Kwon OS, Chon K, Casa DJ, Lee EC. Beyond group-level comparisons: machine learning-based clustering identifies sex-specific heat acclimation phenotypes and response patterns.
+9\. **Bowie JS**, Casa DJ, Lee EC. Measurement of heat acclimation.
 
-10\. **Bowie JS**, Casa DJ, Lee EC. Measurement of heat acclimation.
+8\. **Bowie JS**, Lee EC. One-hour weekly exercise protocol improves strength and aerobic fitness.
 
-9\. **Bowie JS**, Lee EC. One-hour weekly exercise protocol improves strength and aerobic fitness.
+7\. **Bowie JS**, Barreira T, Heinjen M, Ballard T, Tseh W. Assessing muscular fatigue via surface electromyography during dynamic knee extensions.
 
-8\. **Bowie JS**, Barreira T, Heinjen M, Ballard T, Tseh W. Assessing muscular fatigue via surface electromyography during dynamic knee extensions.
-
-7\. **Bowie JS**, Ford AE, Lee EC. Genome-wide RNAi screen of kinase pathways regulating *rrt-1* constitutive cytoprotective gene expression.
-
-6\. Brewer GJ, Chun OK, Szymanski MR, Struder JF, Morrissey-Basler MC, Filep EM, Thornton SN, **Bowie JS**, Martin DG, Dierickx E, Hirsch KR, Huggins RA, Lee EC, Casa DJ. The impact of blackcurrant supplementation on thermoregulatory and metabolic responses to exercise-heat exposure surrounding heat acclimation.
+6\. **Bowie JS**, Ford AE, Lee EC. Genome-wide RNAi screen of kinase pathways regulating *rrt-1* constitutive cytoprotective gene expression.
 
 5\. Snell A, Pescatello LM, Chun OK, Brewer GJ, Edwards KM, Earp J, **Bowie JS**, Lee EC. Oral contraceptive use and grip strength in females: an NHANES cross-sectional analysis.
 
@@ -270,17 +272,23 @@ I assisted with the planning of study recruitment efforts and initial pilot test
 [University of North Carolina Wilmington · $150 · 2nd place]{style="color:#5a6470;font-style:italic"}
 :::
 
+## Invited Talks
+
+1\. **Bowie JS**. Heat tolerance testing for athletes. Korey Stringer Institute Symposium (area expert speaker), Dodd Center for Human Rights, University of Connecticut, Storrs, CT, March 3, 2026.
+
 ## Selected Abstracts
 
-8\. Edwards KE, Lee EC, **Bowie JS**, Szymanski MR, Addario A, Ky A, Webb C, Mahoney KM, Sopena B, Wimmer M, Murray D, Ertel C, Sumner J. Can shoe foam impact biomarkers of damage and inflammation? Annual Brooks Run Symposium (corporate internal), October 29, 2025, Seattle, WA, Brooks Running.
+9\. Edwards KE, Lee EC, **Bowie JS**, Szymanski MR, Addario A, Ky A, Webb C, Mahoney KM, Sopena B, Wimmer M, Murray D, Ertel C, Sumner J. Can shoe foam impact biomarkers of damage and inflammation? Annual Brooks Run Symposium (corporate internal), October 29, 2025, Seattle, WA, Brooks Running.
 
-7\. **Bowie JS**, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Mahoney KJ, Sekiguchi Y, Kwon OS, Chon K, Casa DJ, Lee EC. Similar heat acclimation outcomes despite sex-specific response patterns: evidence for equivalent adaptation potential in males and females during uncompensable heat stress. Military Health System Research Symposium, 2025; American Physiological Society Summit, April 2025 (invited speaker, "Thriving in the elements: emerging concepts in environmental physiology" session, and Free Communication).
+8\. **Bowie JS**, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Sekiguchi Y, Lee EC, Casa DJ. Beyond group-level comparisons: machine learning-based clustering identifies sex-specific heat acclimation phenotypes and response patterns. Free Communication, American Physiological Society Summit, April 2025. [doi:10.1152/physiol.2025.40.S1.1744](https://doi.org/10.1152/physiol.2025.40.S1.1744)
 
-6\. **Bowie JS**, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Mahoney KJ, Sekiguchi Y, Kwon OS, Chon K, Casa DJ, Lee EC. Sex-specific heat tolerance criteria are necessary for accurate return-to-activity assessments. Military Health System Research Symposium, 2025; Free Communication, American Physiological Society Summit, April 2025.
+7\. **Bowie JS**, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Sekiguchi Y, Lee EC, Casa DJ. Similar heat acclimation outcomes despite sex-specific response patterns: evidence for equivalent adaptation potential in males and females during uncompensable heat stress. Military Health System Research Symposium, 2025; American Physiological Society Summit, April 2025 (invited speaker, "Thriving in the elements: emerging concepts in environmental physiology" session, and Free Communication). [doi:10.1152/physiol.2025.40.S1.1731](https://doi.org/10.1152/physiol.2025.40.S1.1731)
+
+6\. **Bowie JS**, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Sekiguchi Y, Lee EC, Casa DJ. Sex-specific heat tolerance criteria are necessary for accurate return-to-activity assessments. Military Health System Research Symposium, 2025; Free Communication, American Physiological Society Summit, April 2025. [doi:10.1152/physiol.2025.40.S1.1713](https://doi.org/10.1152/physiol.2025.40.S1.1713)
 
 5\. **Bowie JS**, Struder JF. A minimal training protocol improves strength and aerobic fitness in trained and untrained populations. Free Communication, American College of Sports Medicine National Conference, May 2024; American College of Sports Medicine New England Chapter Annual Meeting, November 2023.
 
-4\. **Bowie JS**, Oh S, Szymanski M, Struder JF, Filep EM, Morrissey-Basler M, Thornton SN, Mahoney KJ, Sekiguchi Y, Casa DJ, Lee EC. Sex-specific transcriptome responses in circulating immune cells during exercise-heat stress and acclimation. Free Communication, American Physiological Society Summit, April 2024.
+4\. **Bowie JS**, Oh S, Szymanski M, Struder JF, Filep EM, Morrissey-Basler M, Thornton SN, Mahoney KJ, Sekiguchi Y, Casa DJ, Lee EC. Sex-specific transcriptome responses in circulating immune cells during exercise-heat stress and acclimation. Free Communication, American Physiological Society Summit, April 2024. [doi:10.1152/physiol.2024.39.S1.965](https://doi.org/10.1152/physiol.2024.39.S1.965)
 
 3\. Gordon TJ, Reynoso ST, Gonzalez D, **Bowie JS**, Ford A, Lee EC. Transcriptomic differences between mutants and wild-type *C. elegans* that differ in osmotic stress resiliency. McNair Scholar Symposium, University of Connecticut, Storrs, CT, July 2019.
 
