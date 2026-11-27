@@ -110,11 +110,11 @@ Linda S. Pescatello Scholarship, University of Connecticut `#h(1fr)`{=typst}[20
 
 8\. **Bowie JS**, Lee EC. One-hour weekly exercise protocol improves strength and aerobic fitness.
 
-7\. **Bowie JS**, Barreira T, Heinjen M, Ballard T, Tseh W. Assessing muscular fatigue via surface electromyography during dynamic knee extensions.
+7\. **Bowie JS**, Barreira T, Heijnen MJ, Ballard T, Tseh W. Assessing muscular fatigue via surface electromyography during dynamic knee extensions.
 
 6\. **Bowie JS**, Ford AE, Lee EC. Genome-wide RNAi screen of kinase pathways regulating *rrt-1* constitutive cytoprotective gene expression.
 
-5\. Snell A, Pescatello LM, Chun OK, Brewer GJ, Edwards KM, Earp J, **Bowie JS**, Lee EC. Oral contraceptive use and grip strength in females: an NHANES cross-sectional analysis.
+5\. Snell A, Pescatello LS, Chun OK, Brewer GJ, Edwards KM, Earp J, **Bowie JS**, Lee EC. Oral contraceptive use and grip strength in females: an NHANES cross-sectional analysis.
 
 4\. Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Mahoney KJ, Sekiguchi Y, **Bowie JS**, Casa DJ, Lee EC. Seasonal acclimatization effects may persist and impact adaptations to heat acclimation in winter months.
 
@@ -278,7 +278,7 @@ I assisted with the planning of study recruitment efforts and initial pilot test
 
 ## Selected Abstracts
 
-9\. Edwards KE, Lee EC, **Bowie JS**, Szymanski MR, Addario A, Ky A, Webb C, Mahoney KM, Sopena B, Wimmer M, Murray D, Ertel C, Sumner J. Can shoe foam impact biomarkers of damage and inflammation? Annual Brooks Run Symposium (corporate internal), October 29, 2025, Seattle, WA, Brooks Running.
+9\. Edwards KM, Lee EC, **Bowie JS**, Szymanski MR, Addario A, Ky A, Webb C, Mahoney KJ, Sopena B, Wimmer M, Murray D, Ertel C, Sumner J. Can shoe foam impact biomarkers of damage and inflammation? Annual Brooks Run Symposium (corporate internal), October 29, 2025, Seattle, WA, Brooks Running.
 
 8\. **Bowie JS**, Szymanski MR, Struder JF, Filep EM, Morrissey-Basler MC, Brewer GJ, Thornton SN, Sekiguchi Y, Lee EC, Casa DJ. Beyond group-level comparisons: machine learning-based clustering identifies sex-specific heat acclimation phenotypes and response patterns. Free Communication, American Physiological Society Summit, April 2025. [doi:10.1152/physiol.2025.40.S1.1744](https://doi.org/10.1152/physiol.2025.40.S1.1744)
 
@@ -294,7 +294,7 @@ I assisted with the planning of study recruitment efforts and initial pilot test
 
 2\. **Bowie JS**, Sterczala AJ, Kraemer WJ, Maresh CM, Comstock BA, Flanagan SD, Szivak TK, Hooper DR, Lee EC. Acute heavy resistance exercise protocol induces significant physiological stress elevating extracellular heat shock protein. Free Communication, American College of Sports Medicine Annual Meeting, May 2019; American College of Sports Medicine New England Chapter Annual Meeting, November 2018; College of Agriculture, Natural Resources, and Health Graduate Student Research Symposium, University of Connecticut.
 
-1\. **Bowie JS**, Barreira T, Heinjen M, Ballard T, Tseh W. Assessing muscular fatigue via surface electromyography during dynamic knee extensions. American College of Sports Medicine Annual Meeting; State of North Carolina Undergraduate Research Symposium; 5th Annual University of North Carolina Wilmington Fall Student Research and Creativity Showcase.
+1\. **Bowie JS**, Barreira T, Heijnen MJ, Ballard T, Tseh W. Assessing muscular fatigue via surface electromyography during dynamic knee extensions. American College of Sports Medicine Annual Meeting; State of North Carolina Undergraduate Research Symposium; 5th Annual University of North Carolina Wilmington Fall Student Research and Creativity Showcase.
 
 ## Selected Software and Projects
 
